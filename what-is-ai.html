@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is AI? — AI Tool 4 Me</title>
+<meta name="description" content="AI Tool 4 Me explains what AI is in plain English — what it can do, what it cannot, and how to get started safely. No jargon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aitool4me.com/what-is-ai/">
+<meta property="og:title" content="What is AI? — AI Tool 4 Me">
+<meta property="og:description" content="AI Tool 4 Me explains what AI is in plain English — what it can do, what it cannot, and how to get started safely. No jargon.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f7f4;--surface:#fff;--surface2:#f1efe9;--border:#e4e1d8;
+  --text:#1a1916;--muted:#6b6860;--light:#9c9a94;
+  --blue:#2563eb;--blue-bg:#eff6ff;--blue-mid:#bfdbfe;
+  --teal:#0d9488;--teal-bg:#f0fdfa;
+  --amber:#d97706;--amber-bg:#fffbeb;
+  --green:#16a34a;--green-bg:#f0fdf4;
+  --red:#dc2626;--red-bg:#fef2f2;
+  --shadow:0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg:0 12px 40px rgba(0,0,0,0.12);
+  --r:12px;--r2:18px;
+  --font-d:'Fraunces',Georgia,serif;
+  --font-b:'DM Sans',-apple-system,sans-serif;
+  --nav-h:66px;--max:1100px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1{font-family:var(--font-d);font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.15;font-weight:600}
+h2{font-family:var(--font-d);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2;font-weight:600}
+h3{font-family:var(--font-d);font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.25;font-weight:600}
+h4{font-size:.95rem;font-weight:600;font-family:var(--font-b)}
+p{color:var(--muted);line-height:1.8}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-family:var(--font-b);font-size:.9rem;font-weight:500;cursor:pointer;border:none;transition:all .2s;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 2px 8px rgba(37,99,235,.3)}
+.btn-primary:hover{background:#1d4ed8;transform:translateY(-1px);text-decoration:none}
+.btn-ghost{background:var(--surface);color:var(--text);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-bg);text-decoration:none}
+.btn-sm{padding:8px 16px;font-size:.83rem;border-radius:8px}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:#0f766e;text-decoration:none}
+.tag{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:.72rem;font-weight:600;letter-spacing:.03em}
+.tag-blue{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-mid)}
+.tag-teal{background:var(--teal-bg);color:var(--teal);border:1px solid #99f6e4}
+.tag-green{background:var(--green-bg);color:var(--green);border:1px solid #bbf7d0}
+.tag-amber{background:var(--amber-bg);color:var(--amber);border:1px solid #fcd34d}
+.tag-red{background:var(--red-bg);color:var(--red);border:1px solid #fca5a5}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:24px;transition:all .22s}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block}
+.warn{background:var(--amber-bg);border:1.5px solid #fcd34d;border-radius:var(--r);padding:16px 20px;display:flex;gap:12px}
+.info{background:var(--blue-bg);border:1.5px solid var(--blue-mid);border-radius:var(--r);padding:16px 20px;display:flex;gap:12px}
+.good{background:var(--green-bg);border:1.5px solid #bbf7d0;border-radius:var(--r);padding:16px 20px;display:flex;gap:12px}
+/* Nav */
+nav{position:sticky;top:0;z-index:100;height:var(--nav-h);background:rgba(248,247,244,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-d);font-size:1.25rem;color:var(--text);display:flex;align-items:center;gap:8px}
+.logo-dot{width:8px;height:8px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.nav-logo span{color:var(--blue)}
+.nav-links a{padding:7px 12px;border-radius:8px;font-size:.85rem;color:var(--muted);transition:all .18s}
+.nav-links a:hover{background:var(--surface2);color:var(--text);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:2px}
+/* Hero band */
+.page-hero{background:linear-gradient(135deg,var(--bg) 0%,var(--blue-bg) 60%,var(--teal-bg) 100%);padding:56px 0 52px;border-bottom:1px solid var(--border)}
+.page-hero h1{margin-bottom:14px}
+.page-hero .lead{font-size:1.08rem;color:var(--muted);max-width:600px;margin-bottom:24px;line-height:1.8}
+.breadcrumb{font-size:.78rem;color:var(--light);margin-bottom:18px;display:flex;align-items:center;gap:6px}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--blue)}
+/* Content */
+.content-wrap{max-width:820px}
+.section{padding:56px 0}
+.section-wide{padding:56px 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+/* Tool cards */
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:24px;display:flex;flex-direction:column;transition:all .22s}
+.tool-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.tc-logo{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.tc-pro{background:var(--green-bg);border-radius:8px;padding:9px 11px;font-size:.78rem;color:#166534}
+.tc-con{background:var(--red-bg);border-radius:8px;padding:9px 11px;font-size:.78rem;color:#991b1b}
+.pro-con{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.aff-badge{font-size:.68rem;color:var(--amber);background:var(--amber-bg);border:1px solid #fcd34d;padding:2px 7px;border-radius:4px;font-weight:600}
+.checked{font-size:.72rem;color:var(--light)}
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;gap:16px}
+.faq-q h4{font-size:.93rem;color:var(--text)}
+.faq-icon{color:var(--teal);font-size:1.2rem;transition:transform .25s;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 0 18px;font-size:.9rem}
+.faq-item.open .faq-a{max-height:400px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+/* Sidebar layout */
+.with-sidebar{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:22px;margin-bottom:20px}
+.sidebar-card h4{margin-bottom:10px;color:var(--text)}
+/* CTA box */
+.cta-box{background:linear-gradient(135deg,var(--blue-bg),var(--teal-bg));border:1.5px solid var(--blue-mid);border-radius:var(--r2);padding:32px;text-align:center;margin:40px 0}
+.cta-box h3{margin-bottom:8px}
+.cta-box p{margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto}
+/* Footer */
+footer{background:#0f0e0d;color:rgba(255,255,255,.5);padding:40px 0 24px;margin-top:0}
+.footer-inner{max-width:var(--max);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:var(--font-d);color:rgba(255,255,255,.8);font-size:1.1rem}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.4);transition:color .18s}
+.footer-links a:hover{color:rgba(255,255,255,.75);text-decoration:none}
+/* Ad placeholder */
+.ad-ph{border:1px dashed var(--border);border-radius:var(--r);padding:10px 16px;text-align:center;font-size:.72rem;color:var(--light);margin:16px 0}
+/* Responsive */
+@media(max-width:900px){
+  .with-sidebar{grid-template-columns:1fr}
+  .g2,.g3{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .g2,.g3{grid-template-columns:1fr}
+}
+
+/* ===== MONETISATION COMPONENTS — AI Tool 4 Me ===== */
+.affiliate-button{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:9px;background:#0d9488;color:#fff;font-family:var(--font-b,'DM Sans',sans-serif);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.affiliate-button:hover{background:#0f766e;transform:translateY(-1px);text-decoration:none}
+.affiliate-button.sec{background:transparent;color:#2563eb;border:1.5px solid #2563eb}
+.affiliate-button.sec:hover{background:#eff6ff}
+.aff-label{font-size:.68rem;color:#9c9a94;display:block;margin-top:4px}
+.rec-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:18px}
+.rec-card{background:#fff;border:1px solid #e4e1d8;border-radius:12px;padding:18px;transition:all .2s}
+.rec-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-2px)}
+.rec-card h4{font-size:.9rem;margin-bottom:5px;color:#1a1916}
+.rec-card p{font-size:.82rem;color:#6b6860;margin-bottom:12px;line-height:1.6}
+.rec-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.email-capture-box{background:linear-gradient(135deg,#eff6ff 0%,#f0fdfa 100%);border:1.5px solid #bfdbfe;border-radius:14px;padding:28px;margin:32px 0}
+.email-capture-box h3{font-family:var(--font-d,'Fraunces',serif);font-size:1.25rem;margin-bottom:8px;color:#1a1916}
+.email-capture-box p{font-size:.88rem;margin-bottom:18px;max-width:480px}
+.capture-form{display:flex;flex-wrap:wrap;gap:9px;align-items:flex-end}
+.capture-form input{flex:1;min-width:140px;padding:10px 15px;border:1.5px solid #e4e1d8;border-radius:8px;font-family:var(--font-b,'DM Sans',sans-serif);font-size:.88rem;background:#fff;outline:none;transition:border-color .2s}
+.capture-form input:focus{border-color:#2563eb}
+.btn-capture{padding:10px 20px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:var(--font-b,'DM Sans',sans-serif);transition:all .2s;white-space:nowrap}
+.btn-capture:hover{background:#1d4ed8;transform:translateY(-1px)}
+.capture-note{font-size:.74rem;color:#9c9a94;margin-top:7px}
+.trust-line{font-size:.75rem;color:#9c9a94;border-top:1px solid #e4e1d8;padding-top:10px;margin-top:14px;line-height:1.6}
+.calc-cta-box{background:linear-gradient(135deg,#f0fdf4,#eff6ff);border:1.5px solid #bbf7d0;border-radius:12px;padding:22px 26px;margin-top:22px;text-align:center}
+.calc-cta-box h4{font-size:.97rem;margin-bottom:5px;color:#1a1916}
+.calc-cta-box p{font-size:.83rem;margin-bottom:12px}
+.sponsored-card{display:none;background:#fff;border:1px solid #e4e1d8;border-radius:10px;padding:16px 18px;margin:18px 0}
+.sponsored-card.sponsor-active{display:block}
+.sponsor-label{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9c9a94;margin-bottom:7px;display:block}
+@media(max-width:600px){.capture-form{flex-direction:column}.capture-form input,.btn-capture{width:100%}.rec-cards-grid{grid-template-columns:1fr}.email-capture-box{padding:20px 16px}}
+/* ===== END MONETISATION COMPONENTS ===== */
+
+/* Multi-currency price badges */
+.price-primary{font-size:.82rem;font-weight:600;color:var(--text,#1a1916);display:block;margin-bottom:1px}
+.price-secondary{font-size:.71rem;color:var(--light,#9c9a94);display:block;line-height:1.4}
+.price-secondary::before{content:'≈ ';opacity:.7}
+.price-badge{font-size:.78rem;font-weight:500;color:var(--muted,#6b6860);background:var(--surface2,#f1efe9);border-radius:4px;padding:2px 7px;display:inline-block}
+.currency-region-note{font-size:.74rem;color:var(--light,#9c9a94);background:var(--surface2,#f1efe9);border:1px solid var(--border,#e4e1d8);border-radius:6px;padding:6px 12px;display:inline-block;margin-bottom:16px}
+/* Update price display based on detected currency */
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is AI? A Plain English Explanation",
+  "description": "What is AI in simple terms? We explain artificial intelligence plainly — what it can do, what it cannot, and how to start safely.",
+  "url": "https://aitool4me.com/what-is-ai/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool 4 Me",
+    "url": "https://aitool4me.com"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://aitool4me.com"},
+      {"@type":"ListItem","position":2,"name":"What is AI?","item":"https://aitool4me.com/what-is-ai/"}
+    ]
+  }
+}
+</script>
+</head>
+<body><!-- GLOBAL DISCLAIMER BANNER -->
+<div style="background:#1a1916;border-bottom:1px solid #333;padding:8px 24px;text-align:center;font-size:.75rem;color:#9c9a94;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
+  <span>⚡ <strong style="color:#f0ebdf">AI moves fast:</strong> Tool pricing and features change frequently. Always verify before purchasing.</span>
+  <span style="color:#555">·</span>
+  <a href="/#affiliate-disclosure" style="color:#0d9488;text-decoration:none;font-weight:500">Affiliate links disclosed</a>
+  <span style="color:#555">·</span>
+  <span>Last reviewed: June 2026</span>
+</div>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><div class="logo-dot"></div>AI Tool <span>4 Me</span></a>
+    <div class="nav-links">
+      <a href="/what-is-ai/">What is AI?</a>
+      <a href="/best-ai-tools-for-beginners/">Best Tools</a>
+      <a href="/chatgpt-vs-claude-vs-gemini/">Compare</a>
+      <a href="/ai-savings-calculator/">Calculator</a>
+      <a href="/best-ai-tools-for-small-business/">For Business</a>
+    </div>
+    <a href="/" class="btn btn-primary btn-sm">← Back to home</a>
+  </div>
+</nav>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> › What is AI?</div>
+    <span class="eyebrow">Beginner guide</span>
+    <h1>What is AI?<br><em style="font-style:italic;color:var(--blue)">A plain English explanation</em></h1>
+    <p class="lead">Artificial intelligence is everywhere right now — but most explanations are written for engineers, not everyday people. This guide explains AI in plain English: what it actually is, what it can and cannot do, and how to start using it safely.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a href="#what-ai-can-do" class="btn btn-primary">What can AI do? →</a>
+      <a href="/#tool-finder" class="btn btn-ghost">Find my AI tool</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="with-sidebar">
+      <div class="content-wrap">
+        <span class="eyebrow">The basics</span>
+        <h2>What is AI in simple terms?</h2>
+        <p style="margin:14px 0 18px">AI — artificial intelligence — is software that can understand language, answer questions, write text, create images, and carry out tasks that previously needed a human to do them.</p>
+        <p style="margin-bottom:18px">The most useful AI tools today work like this: you type what you need — a question, a request, a piece of writing — and the AI responds with something useful. It's a bit like having a very capable, very fast assistant who never sleeps and never gets annoyed.</p>
+        <p style="margin-bottom:28px">The important thing to understand is that AI doesn't think the way humans do. It doesn't understand anything, really. It's extremely good at recognising patterns in text and producing useful-sounding responses — but it can be wrong, sometimes confidently. That's why a human always needs to stay in the loop.</p>
+
+        <div class="warn" style="margin-bottom:32px">
+          <span style="font-size:1.1rem;flex-shrink:0">⚠️</span>
+          <div>
+            <strong style="font-size:.88rem">AI is powerful — but not always right.</strong>
+            <p style="margin:6px 0 0;font-size:.85rem">Never trust AI alone for legal, medical, tax, or financial decisions. It makes confident mistakes. Always treat its output as a first draft that needs a human to review it.</p>
+          </div>
+        </div>
+
+        <h2 id="what-ai-can-do" style="margin-bottom:16px">What can AI actually do?</h2>
+        <p style="margin-bottom:22px">Here are the things AI is genuinely good at right now — not in theory, but in practice, today, for real people and small businesses:</p>
+
+        <div class="g2" style="margin-bottom:32px">
+          <div class="card"><div style="font-size:1.4rem;margin-bottom:10px">✍️</div><h4>Write and improve text</h4><p style="font-size:.85rem;margin-top:6px">Emails, website copy, social posts, proposals — drafted or polished in seconds. You describe what you need; AI produces a first draft.</p></div>
+          <div class="card"><div style="font-size:1.4rem;margin-bottom:10px">🧠</div><h4>Answer questions</h4><p style="font-size:.85rem;margin-top:6px">Ask anything in plain English and get a clear, detailed answer. Like a knowledgeable colleague available 24 hours a day.</p></div>
+          <div class="card"><div style="font-size:1.4rem;margin-bottom:10px">📄</div><h4>Summarise documents</h4><p style="font-size:.85rem;margin-top:6px">Paste in a long contract, report, or article. AI will pull out the key points in plain language — in seconds.</p></div>
+          <div class="card"><div style="font-size:1.4rem;margin-bottom:10px">🎨</div><h4>Create images and visuals</h4><p style="font-size:.85rem;margin-top:6px">Generate professional graphics, marketing images, and illustrations — no design experience needed.</p></div>
+          <div class="card"><div style="font-size:1.4rem;margin-bottom:10px">⚡</div><h4>Automate repetitive tasks</h4><p style="font-size:.85rem;margin-top:6px">Connect your apps and let AI handle the tasks that eat your week — data entry, emails, notifications, scheduling.</p></div>
+          <div class="card"><div style="font-size:1.4rem;margin-bottom:10px">🔍</div><h4>Research and summarise</h4><p style="font-size:.85rem;margin-top:6px">Ask AI to research a topic, compare options, or find information — it can do in minutes what might take you hours.</p></div>
+        </div>
+
+        <h2 style="margin-bottom:16px">What AI cannot do — and where to be careful</h2>
+        <p style="margin-bottom:18px">Understanding the limits is just as important as knowing the capabilities. AI is not good at everything.</p>
+
+        <div class="g2" style="margin-bottom:32px">
+          <div style="background:var(--red-bg);border:1px solid #fca5a5;border-radius:var(--r);padding:18px">
+            <h4 style="color:var(--red);margin-bottom:10px">❌ Do not rely on AI alone for:</h4>
+            <ul style="list-style:none;padding:0">
+              <li style="font-size:.85rem;color:#7f1d1d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.3)">Legal advice or contract decisions</li>
+              <li style="font-size:.85rem;color:#7f1d1d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.3)">Medical diagnoses or health decisions</li>
+              <li style="font-size:.85rem;color:#7f1d1d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.3)">Tax returns or financial advice</li>
+              <li style="font-size:.85rem;color:#7f1d1d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.3)">Anything where being wrong has serious consequences</li>
+              <li style="font-size:.85rem;color:#7f1d1d;padding:4px 0">Current news or very recent events</li>
+            </ul>
+          </div>
+          <div style="background:var(--green-bg);border:1px solid #bbf7d0;border-radius:var(--r);padding:18px">
+            <h4 style="color:var(--green);margin-bottom:10px">✅ AI works well for:</h4>
+            <ul style="list-style:none;padding:0">
+              <li style="font-size:.85rem;color:#14532d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.5)">First drafts of emails and documents</li>
+              <li style="font-size:.85rem;color:#14532d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.5)">Explaining complex topics simply</li>
+              <li style="font-size:.85rem;color:#14532d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.5)">Summarising long documents</li>
+              <li style="font-size:.85rem;color:#14532d;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.5)">Generating ideas and options</li>
+              <li style="font-size:.85rem;color:#14532d;padding:4px 0">Automating repetitive communication tasks</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 style="margin-bottom:14px">Which AI tools should I start with?</h2>
+        <p style="margin-bottom:22px">If you're completely new to AI, the best starting point is one of these three tools. All have free versions worth trying before spending anything.</p>
+        <div class="g3" style="margin-bottom:32px">
+          <div class="card" style="text-align:center"><div style="font-size:1.6rem;margin-bottom:8px">🤖</div><h4>ChatGPT</h4><p style="font-size:.82rem;margin:6px 0 10px">The most widely used. Handles almost any task. Free version is genuinely useful.</p><a href="https://chat.openai.com" target="_blank" rel="nofollow" class="btn btn-primary btn-sm">Try free →</a></div>
+          <div class="card" style="text-align:center"><div style="font-size:1.6rem;margin-bottom:8px">🔵</div><h4>Claude</h4><p style="font-size:.82rem;margin:6px 0 10px">More careful and measured. Excellent for business writing. Free to start.</p><a href="https://claude.ai" target="_blank" rel="nofollow" class="btn btn-primary btn-sm">Try free →</a></div>
+          <div class="card" style="text-align:center"><div style="font-size:1.6rem;margin-bottom:8px">✨</div><h4>Google Gemini</h4><p style="font-size:.82rem;margin:6px 0 10px">Connects to Google Docs, Gmail, and Drive. Best if you already use Google.</p><a href="https://gemini.google.com" target="_blank" rel="nofollow" class="btn btn-primary btn-sm">Try free →</a></div>
+        </div>
+
+        <div class="cta-box">
+  <h3>Ready to find the right AI tool for you?</h3>
+  <p>Answer 4 quick questions and get a personalised recommendation — free, no sign-up needed.</p>
+  <a href="/#tool-finder" class="btn btn-primary">Take the AI tool finder quiz →</a>
+</div>
+
+        <h2 style="margin-bottom:14px">Frequently asked questions</h2>
+        <div class="faq-wrap"><div class="faq-item"><div class="faq-q"><h4>Is AI the same as robots?</h4><span class="faq-icon">+</span></div><div class="faq-a"><p>No. Most AI today is software — programs you interact with by typing or speaking. Physical robots are a separate area. The AI tools on this site are all software you use on your phone or computer.</p></div></div>
+<div class="faq-item"><div class="faq-q"><h4>Do I need to be technical to use AI?</h4><span class="faq-icon">+</span></div><div class="faq-a"><p>Not at all. Modern AI tools work by typing in plain English — just like sending a text message. If you can type, you can use AI.</p></div></div>
+<div class="faq-item"><div class="faq-q"><h4>Is AI going to take my job?</h4><span class="faq-icon">+</span></div><div class="faq-a"><p>AI is changing many jobs, but for most people right now it's more useful as a tool that helps you do your job faster and better — not a replacement. The people most at risk are those who refuse to learn how to use it.</p></div></div>
+<div class="faq-item"><div class="faq-q"><h4>Is AI free to use?</h4><span class="faq-icon">+</span></div><div class="faq-a"><p>Most leading AI tools have a genuinely useful free tier. ChatGPT, Claude, and Google Gemini all offer free versions. Paid plans unlock more usage and advanced features, but you can get real value without spending anything.</p></div></div>
+<div class="faq-item"><div class="faq-q"><h4>How do I know if AI output is correct?</h4><span class="faq-icon">+</span></div><div class="faq-a"><p>You read it critically and check anything important. AI makes mistakes — sometimes very confidently. Always treat AI output as a first draft. For anything legally, medically, or financially significant, get a professional to review it.</p></div></div>
+</div>
+      </div>
+      <aside>
+  <div class="sidebar-card">
+    <h4>🔍 Find your AI tool</h4>
+    <p style="font-size:.84rem;margin-bottom:14px">Answer 4 quick questions and get a personalised recommendation.</p>
+    <a href="/#tool-finder" class="btn btn-primary btn-sm" style="width:100%;justify-content:center">Take the quiz →</a>
+  </div>
+  <div class="sidebar-card">
+    <h4>💰 Calculate your savings</h4>
+    <p style="font-size:.84rem;margin-bottom:14px">See how many hours AI could save you per week — and what that's worth.</p>
+    <a href="/ai-savings-calculator/" class="btn btn-ghost btn-sm" style="width:100%;justify-content:center">Use the calculator →</a>
+  </div>
+  <div class="sidebar-card">
+    <h4>📧 Free weekly AI email</h4>
+    <p style="font-size:.84rem;margin-bottom:14px">Plain-English AI updates for small businesses. No spam.</p>
+    <a href="/#newsletter" class="btn btn-ghost btn-sm" style="width:100%;justify-content:center">Sign up free →</a>
+  </div>
+  <div class="ad-ph">[ Ad placeholder — Google AdSense ]</div>
+</aside>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">AI Tool 4 Me</span>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/what-is-ai/">What is AI?</a>
+      <a href="/best-ai-tools-for-beginners/">Best Tools</a>
+      <a href="/chatgpt-vs-claude-vs-gemini/">Compare</a>
+      <a href="/ai-savings-calculator/">Calculator</a>
+      <a href="/affiliate-disclosure.html">Affiliate disclosure</a>
+      <a href="/#privacy">Privacy policy</a>
+    
+        <a href="mailto:hello@aitool4me.com">Contact</a>
+      </div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>item.classList.toggle('open'));
+});
+</script>
+
+<script>
+/* Currency auto-detection — matches homepage logic */
+(function(){
+  try{
+    var locale=(navigator.language||navigator.languages[0]||'en-US').toLowerCase();
+    var cur='usd';
+    if(locale.startsWith('en-gb')||locale==='en-ie'||locale==='cy') cur='gbp';
+    else{
+      var eu=['de','fr','es','it','nl','pt','pl','sv','da','fi','nb','ro','hu','cs'];
+      if(eu.some(function(e){return locale.startsWith(e);})) cur='eur';
+    }
+    /* Update all secondary price displays to show local currency first */
+    document.querySelectorAll('.price-secondary').forEach(function(el){
+      var val=el.getAttribute('data-'+cur)||el.getAttribute('data-usd')||'';
+      var usd=el.getAttribute('data-usd')||'';
+      var gbp=el.getAttribute('data-gbp')||'';
+      var eur=el.getAttribute('data-eur')||'';
+      /* Show primary in local, others secondary */
+      var others=[];
+      if(cur!=='usd'&&usd) others.push(usd);
+      if(cur!=='gbp'&&gbp) others.push(gbp);
+      if(cur!=='eur'&&eur) others.push(eur);
+      el.textContent=others.join(' · ');
+    });
+    document.querySelectorAll('.price-primary').forEach(function(el){
+      /* If element has data attribute, swap to local currency */
+      var sec=el.nextElementSibling;
+      if(sec&&sec.classList.contains('price-secondary')){
+        var localVal=sec.getAttribute('data-'+cur);
+        if(localVal){
+          var currentText=el.textContent;
+          var hasFree=currentText.startsWith('Free');
+          el.textContent=(hasFree?'Free / ':'')+localVal;
+        }
+      }
+    });
+    /* Update any currency note */
+    var note=document.querySelector('.currency-region-note');
+    if(note){
+      var labels={usd:'USD ($)',gbp:'GBP (£)',eur:'EUR (€)'};
+      note.textContent='💱 Prices shown in '+( labels[cur]||'USD ($)')+' · Approx only · Always verify on provider's website';
+    }
+  }catch(e){}
+})();
+</script>
+</body></html>

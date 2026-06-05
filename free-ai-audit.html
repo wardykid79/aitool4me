@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Audit for Your Business — AI Tool 4 Me</title>
+<meta name="description" content="Tell us about your business and get a free plain-English AI opportunity report. No sales calls. No obligation. AITool4Me.com.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aitool4me.com/free-ai-audit/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f8f7f4; --surface:#fff; --surface2:#f1efe9; --border:#e4e1d8;
+  --text:#1a1916; --muted:#6b6860; --light:#9c9a94;
+  --blue:#2563eb; --blue-bg:#eff6ff; --blue-mid:#bfdbfe;
+  --teal:#0d9488; --teal-bg:#f0fdfa;
+  --green:#16a34a; --green-bg:#f0fdf4;
+  --amber:#d97706; --amber-bg:#fffbeb;
+  --shadow:0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg:0 16px 48px rgba(0,0,0,0.14);
+  --r:12px; --r2:18px;
+  --font-d:'Fraunces',Georgia,serif;
+  --font-b:'DM Sans',-apple-system,sans-serif;
+  --nav-h:66px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1{font-family:var(--font-d);font-size:clamp(2rem,4.5vw,3rem);line-height:1.15;font-weight:600}
+h2{font-family:var(--font-d);font-size:clamp(1.4rem,2.5vw,1.9rem);line-height:1.2;font-weight:600}
+h3{font-family:var(--font-d);font-size:1.2rem;font-weight:600}
+h4{font-size:.95rem;font-weight:600}
+p{color:var(--muted);line-height:1.8}
+a{color:var(--blue);text-decoration:none}
+
+/* Layout */
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:10px;font-family:var(--font-b);font-size:.92rem;font-weight:600;cursor:pointer;border:none;transition:all .22s;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 2px 12px rgba(37,99,235,.3)}
+.btn-primary:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:0 4px 20px rgba(37,99,235,.4)}
+.btn-ghost{background:var(--surface);color:var(--text);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-lg{padding:16px 36px;font-size:1rem;border-radius:12px}
+.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:10px}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:100;height:var(--nav-h);background:rgba(248,247,244,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-d);font-size:1.2rem;color:var(--text);display:flex;align-items:center;gap:8px}
+.logo-dot{width:8px;height:8px;background:var(--teal);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.nav-logo span{color:var(--blue)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#f8f7f4 0%,#eff6ff 55%,#f0fdfa 100%);padding:60px 0 52px;border-bottom:1px solid var(--border)}
+.hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero h1{margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero-lead{font-size:1.06rem;color:var(--muted);margin-bottom:28px;line-height:1.8}
+.trust-row{display:flex;flex-wrap:wrap;gap:14px}
+.trust-pill{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--light)}
+.trust-pill svg{color:var(--teal);flex-shrink:0}
+
+/* What you get card */
+.get-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:28px;box-shadow:var(--shadow-lg)}
+.get-card-header{background:linear-gradient(135deg,#0f3460,#0d4a3f);border-radius:var(--r);padding:16px 20px;margin-bottom:20px}
+.get-card-header h4{color:#fff;font-size:.9rem;margin-bottom:2px}
+.get-card-header p{font-size:.78rem;color:rgba(255,255,255,.6);margin:0}
+.report-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.report-item:last-child{border-bottom:none;padding-bottom:0}
+.report-icon{width:32px;height:32px;background:var(--teal-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;margin-top:1px}
+.report-item h4{margin-bottom:2px;font-size:.88rem}
+.report-item p{font-size:.8rem;margin:0}
+
+/* Form */
+.form-section{padding:60px 0}
+.form-wrap{display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:start}
+.audit-form{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r2);padding:40px;box-shadow:var(--shadow-lg)}
+.audit-form h2{margin-bottom:6px}
+.audit-form>p{margin-bottom:32px;font-size:.9rem}
+
+/* Progress */
+.form-progress{display:flex;gap:5px;margin-bottom:32px}
+.fp-seg{height:3px;flex:1;background:var(--border);border-radius:2px;transition:background .35s}
+.fp-seg.done{background:var(--teal)}
+
+/* Step */
+.form-step{display:none;animation:fadeUp .25s ease}
+.form-step.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.step-label{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--light);margin-bottom:18px}
+
+/* Fields */
+.field{margin-bottom:20px}
+.field label{display:block;font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:7px}
+.field label span{color:var(--teal);margin-left:2px}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--r);
+  font-family:var(--font-b);font-size:.9rem;color:var(--text);background:var(--bg);
+  transition:all .2s;outline:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--blue);background:#fff;
+  box-shadow:0 0 0 3px rgba(37,99,235,.08);
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--light)}
+.field textarea{resize:vertical;min-height:90px;line-height:1.6}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239c9a94' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field-hint{font-size:.76rem;color:var(--light);margin-top:5px}
+
+/* Chips selection */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .18s;color:var(--muted);background:var(--bg);user-select:none}
+.chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-bg)}
+.chip.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Step nav */
+.step-nav{display:flex;gap:10px;margin-top:28px}
+.step-counter{font-size:.78rem;color:var(--light);display:flex;align-items:center;margin-left:auto}
+
+/* Validation */
+.field-error{border-color:var(--amber) !important;background:var(--amber-bg) !important}
+.error-msg{font-size:.76rem;color:var(--amber);margin-top:5px;display:none}
+.error-msg.on{display:block}
+
+/* Success state */
+.success-state{display:none;text-align:center;padding:20px 0}
+.success-state.on{display:block;animation:fadeUp .4s ease}
+.success-icon{width:72px;height:72px;background:var(--green-bg);border:2px solid #bbf7d0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 22px}
+.success-state h2{margin-bottom:10px}
+.success-state p{max-width:400px;margin:0 auto 24px}
+
+/* Sidebar */
+.audit-sidebar{}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:22px;margin-bottom:18px}
+.sidebar-card h4{color:var(--text);margin-bottom:8px}
+.sidebar-card p{font-size:.84rem;margin-bottom:12px}
+.testimonial{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:22px;position:relative}
+.testimonial::before{content:'"';font-family:var(--font-d);font-size:3.5rem;color:var(--blue-mid);position:absolute;top:-4px;left:16px;line-height:1}
+.testimonial p{font-size:.88rem;padding-top:20px;margin-bottom:12px;font-style:italic}
+.testimonial-name{font-size:.78rem;font-weight:600;color:var(--text)}
+.testimonial-role{font-size:.74rem;color:var(--light)}
+
+/* What happens next */
+.next-steps{padding:60px 0;background:var(--surface)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--r2);overflow:hidden;margin-top:44px}
+.step-box{background:var(--surface);padding:32px 28px;position:relative}
+.step-box::before{content:attr(data-n);font-family:var(--font-d);font-size:4rem;color:rgba(0,0,0,.04);position:absolute;top:8px;right:16px;line-height:1}
+.step-num{width:32px;height:32px;background:var(--teal-bg);border:1px solid #99f6e4;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--teal);margin-bottom:14px}
+.step-box h4{margin-bottom:6px}
+.step-box p{font-size:.84rem}
+
+/* Footer */
+footer{background:#0f0e0d;padding:32px 0}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-logo{font-family:var(--font-d);color:rgba(255,255,255,.7);font-size:1.1rem}
+.footer-links{display:flex;gap:18px}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.35);transition:color .18s}
+.footer-links a:hover{color:rgba(255,255,255,.7)}
+
+@media(max-width:900px){
+  .hero-wrap{grid-template-columns:1fr}
+  .get-card{display:none}
+  .form-wrap{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .audit-form{padding:24px 18px}
+  .field-row{grid-template-columns:1fr}
+  .hero{padding:44px 0 36px}
+}
+
+/* ===== MONETISATION COMPONENTS — AI Tool 4 Me ===== */
+.affiliate-button{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:9px;background:#0d9488;color:#fff;font-family:var(--font-b,'DM Sans',sans-serif);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.affiliate-button:hover{background:#0f766e;transform:translateY(-1px);text-decoration:none}
+.affiliate-button.sec{background:transparent;color:#2563eb;border:1.5px solid #2563eb}
+.affiliate-button.sec:hover{background:#eff6ff}
+.aff-label{font-size:.68rem;color:#9c9a94;display:block;margin-top:4px}
+.rec-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:18px}
+.rec-card{background:#fff;border:1px solid #e4e1d8;border-radius:12px;padding:18px;transition:all .2s}
+.rec-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-2px)}
+.rec-card h4{font-size:.9rem;margin-bottom:5px;color:#1a1916}
+.rec-card p{font-size:.82rem;color:#6b6860;margin-bottom:12px;line-height:1.6}
+.rec-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.email-capture-box{background:linear-gradient(135deg,#eff6ff 0%,#f0fdfa 100%);border:1.5px solid #bfdbfe;border-radius:14px;padding:28px;margin:32px 0}
+.email-capture-box h3{font-family:var(--font-d,'Fraunces',serif);font-size:1.25rem;margin-bottom:8px;color:#1a1916}
+.email-capture-box p{font-size:.88rem;margin-bottom:18px;max-width:480px}
+.capture-form{display:flex;flex-wrap:wrap;gap:9px;align-items:flex-end}
+.capture-form input{flex:1;min-width:140px;padding:10px 15px;border:1.5px solid #e4e1d8;border-radius:8px;font-family:var(--font-b,'DM Sans',sans-serif);font-size:.88rem;background:#fff;outline:none;transition:border-color .2s}
+.capture-form input:focus{border-color:#2563eb}
+.btn-capture{padding:10px 20px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:var(--font-b,'DM Sans',sans-serif);transition:all .2s;white-space:nowrap}
+.btn-capture:hover{background:#1d4ed8;transform:translateY(-1px)}
+.capture-note{font-size:.74rem;color:#9c9a94;margin-top:7px}
+.trust-line{font-size:.75rem;color:#9c9a94;border-top:1px solid #e4e1d8;padding-top:10px;margin-top:14px;line-height:1.6}
+.calc-cta-box{background:linear-gradient(135deg,#f0fdf4,#eff6ff);border:1.5px solid #bbf7d0;border-radius:12px;padding:22px 26px;margin-top:22px;text-align:center}
+.calc-cta-box h4{font-size:.97rem;margin-bottom:5px;color:#1a1916}
+.calc-cta-box p{font-size:.83rem;margin-bottom:12px}
+.sponsored-card{display:none;background:#fff;border:1px solid #e4e1d8;border-radius:10px;padding:16px 18px;margin:18px 0}
+.sponsored-card.sponsor-active{display:block}
+.sponsor-label{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9c9a94;margin-bottom:7px;display:block}
+@media(max-width:600px){.capture-form{flex-direction:column}.capture-form input,.btn-capture{width:100%}.rec-cards-grid{grid-template-columns:1fr}.email-capture-box{padding:20px 16px}}
+/* ===== END MONETISATION COMPONENTS ===== */
+
+/* Multi-currency price badges */
+.price-primary{font-size:.82rem;font-weight:600;color:var(--text,#1a1916);display:block;margin-bottom:1px}
+.price-secondary{font-size:.71rem;color:var(--light,#9c9a94);display:block;line-height:1.4}
+.price-secondary::before{content:'≈ ';opacity:.7}
+.price-badge{font-size:.78rem;font-weight:500;color:var(--muted,#6b6860);background:var(--surface2,#f1efe9);border-radius:4px;padding:2px 7px;display:inline-block}
+.currency-region-note{font-size:.74rem;color:var(--light,#9c9a94);background:var(--surface2,#f1efe9);border:1px solid var(--border,#e4e1d8);border-radius:6px;padding:6px 12px;display:inline-block;margin-bottom:16px}
+/* Update price display based on detected currency */
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><div class="logo-dot"></div>AI Tool <span>4 Me</span></a>
+    <a href="/" class="btn btn-ghost" style="font-size:.85rem;padding:8px 16px;border-radius:8px">← Back to AI Tool 4 Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-wrap">
+      <div>
+        <span class="eyebrow">Free for UK businesses</span>
+        <h1>Free AI Audit for Small Businesses</h1>
+        <p class="hero-lead">Tell us what type of business you run and we'll show you where AI could save time, reduce admin, or improve your customer replies. Free, no obligation, no sales pressure.</p>
+        <div class="trust-row">
+          <div class="trust-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            No sales calls
+          </div>
+          <div class="trust-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            No obligation
+          </div>
+          <div class="trust-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Genuinely free
+          </div>
+          <div class="trust-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Delivered to your inbox within 48 hours
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="get-card">
+          <div class="get-card-header">
+            <h4>📋 What's in your report:</h4>
+            <p>Personalised to your business type and situation</p>
+          </div>
+          <div class="report-item">
+            <div class="report-icon">🎯</div>
+            <div><h4>Your top 3 AI opportunities</h4><p>The specific tasks where AI will save you the most time, based on your business type and admin headaches.</p></div>
+          </div>
+          <div class="report-item">
+            <div class="report-icon">🔧</div>
+            <div><h4>Exact tools to use</h4><p>A shortlist of 3–5 tools matched to your budget, skill level, and the tasks you want to automate.</p></div>
+          </div>
+          <div class="report-item">
+            <div class="report-icon">💰</div>
+            <div><h4>Realistic time and cost savings</h4><p>An honest estimate of how many hours per week AI could save you — and what that's worth annually.</p></div>
+          </div>
+          <div class="report-item">
+            <div class="report-icon">🚀</div>
+            <div><h4>A plain-English action plan</h4><p>Step-by-step: what to set up first, what to do in week one, and how to build from there.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section">
+  <div class="wrap">
+    <div class="form-wrap">
+
+      <!-- THE FORM -->
+      <div class="audit-form" id="audit-form-wrap">
+
+        <!-- Progress bar -->
+        
+    <!-- Formspree configuration fields -->
+    <input type="hidden" name="_subject" value="New AI Audit Request — aitool4me.com">
+    <input type="hidden" name="_next" value="https://aitool4me.com/free-ai-audit.html">
+    <input type="hidden" name="_replyto" value="">
+    <input type="hidden" name="_cc" value="">
+    <div class="form-progress">
+          <div class="fp-seg done" id="fp0"></div>
+          <div class="fp-seg" id="fp1"></div>
+          <div class="fp-seg" id="fp2"></div>
+        </div>
+
+        <!-- Step 1: About you -->
+        <div class="form-step active" id="step-0">
+          <div class="step-label">Step 1 of 3 — About you</div>
+          <h2 style="margin-bottom:6px">Tell us about yourself</h2>
+          <p style="margin-bottom:26px;font-size:.9rem">We use this to personalise your report. Nothing is shared or sold.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label>Your name <span>*</span></label>
+              <input type="text" id="f-name" placeholder="e.g. Sarah Johnson" autocomplete="name">
+              <div class="error-msg" id="e-name">Please enter your name</div>
+            </div>
+            <div class="field">
+              <label>Email address <span>*</span></label>
+              <input type="email" id="f-email" placeholder="you@yourbusiness.co.uk" autocomplete="email">
+              <div class="error-msg" id="e-email">Please enter a valid email address</div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label>Business type <span>*</span></label>
+              <select id="f-biztype">
+                <option value="">Select your business type</option>
+                <option>Taxi / private hire company</option>
+                <option>Airbnb / short-term lettings</option>
+                <option>Landlord / property management</option>
+                <option>Estate agent</option>
+                <option>Builder / tradesperson</option>
+                <option>Beauty salon / spa</option>
+                <option>Restaurant / café / hospitality</option>
+                <option>Accountancy / bookkeeping</option>
+                <option>Legal / professional services</option>
+                <option>Retail / e-commerce</option>
+                <option>Marketing / creative agency</option>
+                <option>Recruitment / HR</option>
+                <option>Healthcare / dental / optician</option>
+                <option>Construction / engineering</option>
+                <option>Self-employed / freelancer</option>
+                <option>Other small business</option>
+              </select>
+              <div class="error-msg" id="e-biztype">Please select your business type</div>
+            </div>
+            <div class="field">
+              <label>How many staff?</label>
+              <select id="f-staff">
+                <option value="">Select team size</option>
+                <option>Just me</option>
+                <option>2–5 people</option>
+                <option>6–15 people</option>
+                <option>16–50 people</option>
+                <option>50+ people</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Business website</label>
+            <input type="url" id="f-website" placeholder="https://yourbusiness.co.uk" autocomplete="url">
+            <div class="field-hint">Optional — helps us understand your current online presence</div>
+          </div>
+
+          <div class="step-nav">
+            <button class="btn btn-primary" onclick="nextStep(1)">Next: Your challenges →</button>
+            <span class="step-counter">1 of 3</span>
+          </div>
+        </div>
+
+        <!-- Step 2: Your challenges -->
+        <div class="form-step" id="step-1">
+          <div class="step-label">Step 2 of 3 — Your challenges</div>
+          <h2 style="margin-bottom:6px">Where does the time go?</h2>
+          <p style="margin-bottom:26px;font-size:.9rem">This is the most important part — the more honest you are, the more useful your report will be.</p>
+
+          <div class="field">
+            <label>What do you most want AI to help with? <span>*</span><br><span style="font-weight:400;color:var(--light);font-size:.8rem">Select all that apply</span></label>
+            <div class="chips" id="chips-help">
+              <span class="chip" onclick="toggleChip(this)">✉️ Writing emails</span>
+              <span class="chip" onclick="toggleChip(this)">💬 Customer replies</span>
+              <span class="chip" onclick="toggleChip(this)">📱 Social media content</span>
+              <span class="chip" onclick="toggleChip(this)">📄 Documents and proposals</span>
+              <span class="chip" onclick="toggleChip(this)">⭐ Review management</span>
+              <span class="chip" onclick="toggleChip(this)">🌐 Website content</span>
+              <span class="chip" onclick="toggleChip(this)">⚡ Automating workflows</span>
+              <span class="chip" onclick="toggleChip(this)">🔍 Research and summarising</span>
+              <span class="chip" onclick="toggleChip(this)">🎨 Creating images and graphics</span>
+              <span class="chip" onclick="toggleChip(this)">📋 Admin and scheduling</span>
+              <span class="chip" onclick="toggleChip(this)">📊 Reporting and data</span>
+              <span class="chip" onclick="toggleChip(this)">💼 Staff onboarding and policies</span>
+            </div>
+            <div class="error-msg" id="e-help">Please select at least one option</div>
+          </div>
+
+          <div class="field" style="margin-top:4px">
+            <label>Biggest admin headache right now <span>*</span></label>
+            <textarea id="f-headache" placeholder="e.g. I spend hours every week replying to the same customer questions by email, and I never have time to post on social media..."></textarea>
+            <div class="field-hint">Be specific — this is what shapes your report most</div>
+            <div class="error-msg" id="e-headache">Please describe your biggest admin headache</div>
+          </div>
+
+          <div class="step-nav">
+            <button class="btn btn-ghost" onclick="prevStep(0)">← Back</button>
+            <button class="btn btn-primary" onclick="nextStep(2)">Next: Budget →</button>
+            <span class="step-counter">2 of 3</span>
+          </div>
+        </div>
+
+        <!-- Step 3: Budget + submit -->
+        <div class="form-step" id="step-2">
+          <div class="step-label">Step 3 of 3 — Budget and expectations</div>
+          <h2 style="margin-bottom:6px">Almost done</h2>
+          <p style="margin-bottom:26px;font-size:.9rem">This helps us recommend tools at the right price point for your situation.</p>
+
+          <div class="field">
+            <label>Monthly software budget for AI tools</label>
+            <select id="f-budget">
+              <option value="">Select your budget</option>
+              <option>Free only — I want to start at zero cost</option>
+              <option>Up to £20/month</option>
+              <option>£20–£50/month</option>
+              <option>£50–£150/month</option>
+              <option>£150+/month — business investment</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>What AI tools have you already tried? <span style="font-weight:400;color:var(--light)">(optional)</span></label>
+            <div class="chips" id="chips-tried">
+              <span class="chip" onclick="toggleChip(this)">ChatGPT</span>
+              <span class="chip" onclick="toggleChip(this)">Claude</span>
+              <span class="chip" onclick="toggleChip(this)">Google Gemini</span>
+              <span class="chip" onclick="toggleChip(this)">Canva</span>
+              <span class="chip" onclick="toggleChip(this)">Grammarly</span>
+              <span class="chip" onclick="toggleChip(this)">Copilot</span>
+              <span class="chip" onclick="toggleChip(this)">None yet</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Anything else we should know? <span style="font-weight:400;color:var(--light)">(optional)</span></label>
+            <textarea id="f-extra" placeholder="e.g. We have a very specific workflow, or our industry has strict compliance requirements..." style="min-height:70px"></textarea>
+          </div>
+
+          <div style="background:var(--surface2);border-radius:var(--r);padding:14px 18px;margin:8px 0 22px;font-size:.8rem;color:var(--muted);line-height:1.65">
+            🔒 Your information is used only to prepare your report and contact you with it. We do not sell or share your data. You can unsubscribe at any time. <a href="/#affiliate-disclosure" style="color:var(--blue)">Read our full disclosure.</a>
+          </div>
+
+          <div class="step-nav" style="justify-content:flex-start">
+            <button class="btn btn-ghost" onclick="prevStep(1)">← Back</button>
+            <button class="btn btn-primary btn-lg" onclick="submitForm()" id="submit-btn">
+              Get my free AI audit →
+            </button>
+          </div>
+          <p style="font-size:.76rem;color:var(--light);margin-top:12px">We aim to deliver your report within 48 hours by email.</p>
+        </div>
+
+        <!-- SUCCESS STATE -->
+        <div class="success-state" id="success-state">
+          <div class="success-icon">🎉</div>
+          <h2>You're in — report on its way!</h2>
+          <p>Your AI Opportunity Report is being prepared and will arrive at <strong id="confirm-email"></strong> within 48 hours.</p>
+          <div style="background:var(--teal-bg);border:1.5px solid #99f6e4;border-radius:var(--r);padding:18px 22px;margin:22px auto;max-width:420px;text-align:left">
+            <strong style="font-size:.85rem;color:var(--teal);display:block;margin-bottom:10px">While you wait, start exploring for free:</strong>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <a href="https://chat.openai.com" target="_blank" rel="nofollow" style="font-size:.85rem;color:var(--text);display:flex;align-items:center;gap:8px"><span style="font-size:1rem">🤖</span> Try ChatGPT free — paste your biggest admin task and ask it to help</a>
+              <a href="/best-ai-tools-for-beginners/" style="font-size:.85rem;color:var(--text);display:flex;align-items:center;gap:8px"><span style="font-size:1rem">📖</span> Read our beginner guide to the best free AI tools</a>
+              <a href="/ai-savings-calculator/" style="font-size:.85rem;color:var(--text);display:flex;align-items:center;gap:8px"><span style="font-size:1rem">💰</span> Use the calculator to estimate your potential savings</a>
+            </div>
+          </div>
+          <a href="/" class="btn btn-ghost" style="margin-top:8px">← Back to AI Tool 4 Me</a>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="audit-sidebar">
+        <div class="sidebar-card">
+          <h4>📋 What's in your report</h4>
+          <div style="margin-top:12px">
+            <div style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)">
+              <span style="color:var(--teal);flex-shrink:0">✓</span>
+              <p style="font-size:.84rem;margin:0">Your top 3 AI opportunities, specific to your business type</p>
+            </div>
+            <div style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)">
+              <span style="color:var(--teal);flex-shrink:0">✓</span>
+              <p style="font-size:.84rem;margin:0">Exact tools to use — matched to your budget</p>
+            </div>
+            <div style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)">
+              <span style="color:var(--teal);flex-shrink:0">✓</span>
+              <p style="font-size:.84rem;margin:0">Realistic hours and £ savings estimate</p>
+            </div>
+            <div style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)">
+              <span style="color:var(--teal);flex-shrink:0">✓</span>
+              <p style="font-size:.84rem;margin:0">A plain-English step-by-step action plan</p>
+            </div>
+            <div style="display:flex;gap:10px;padding:9px 0">
+              <span style="color:var(--teal);flex-shrink:0">✓</span>
+              <p style="font-size:.84rem;margin:0">No jargon. No sales pitch. Just useful, honest advice.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>I had no idea where to start with AI. The report told me exactly which two tools to try first and what to use them for. Within a week I'd saved myself about 4 hours."</p>
+          <div class="testimonial-name">Sarah K.</div>
+          <div class="testimonial-role">Owner, independent beauty salon — Birmingham</div>
+        </div>
+
+        <div class="testimonial" style="margin-top:14px">
+          <p>As a landlord with 12 properties, I was drowning in tenant emails. The audit pointed me to ChatGPT templates. Game-changer for my mornings."</p>
+          <div class="testimonial-name">David T.</div>
+          <div class="testimonial-role">Landlord — Manchester</div>
+        </div>
+
+        <div style="background:var(--amber-bg);border:1px solid #fcd34d;border-radius:var(--r);padding:16px 18px;margin-top:14px">
+          <strong style="font-size:.82rem;color:var(--amber);display:block;margin-bottom:5px">⚠️ A note on testimonials</strong>
+          <p style="font-size:.78rem;margin:0">These are representative examples. Results vary depending on your business type, how consistently you use AI, and your starting point. We do not promise specific outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next-steps">
+  <div class="wrap">
+    <div class="tc" style="text-align:center">
+      <span class="eyebrow">The process</span>
+      <h2>What happens next</h2>
+      <p style="max-width:480px;margin:10px auto 0;font-size:.9rem">No surprises. No sales calls unless you ask for one. Just a useful report, delivered by email.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-box" data-n="01">
+        <div class="step-num">1</div>
+        <h4>We review your submission</h4>
+        <p style="font-size:.84rem">A human reads your answers — not an automated system. We look at your business type, your headaches, and your budget before writing anything.</p>
+      </div>
+      <div class="step-box" data-n="02">
+        <div class="step-num">2</div>
+        <h4>We prepare your report</h4>
+        <p style="font-size:.84rem">Your personalised AI Opportunity Report is written within 48 hours. It covers your top opportunities, recommended tools, and a plain-English action plan.</p>
+      </div>
+      <div class="step-box" data-n="03">
+        <div class="step-num">3</div>
+        <h4>You receive it by email</h4>
+        <p style="font-size:.84rem">Your report arrives by email. No phone call unless you request one. If you want to go further, we offer a paid AI setup service — but there is absolutely no obligation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">AI Tool 4 Me</span>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/what-is-ai/">What is AI?</a>
+      <a href="/best-ai-tools-for-beginners/">Best Tools</a>
+      <a href="/#affiliate-disclosure">Privacy & Affiliates</a>
+    
+        <a href="mailto:hello@aitool4me.com">Contact</a>
+      </div>
+  </div>
+</footer>
+
+<script>
+let currentStep = 0;
+
+/* Progress bar */
+function setProgress(step) {
+  document.querySelectorAll('.fp-seg').forEach((s, i) => {
+    s.classList.toggle('done', i <= step);
+  });
+}
+
+/* Show step */
+function showStep(n) {
+  document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('step-' + n).classList.add('active');
+  currentStep = n;
+  setProgress(n);
+  window.scrollTo({ top: document.getElementById('audit-form-wrap').offsetTop - 90, behavior: 'smooth' });
+}
+
+/* Chip toggle */
+function toggleChip(el) {
+  el.classList.toggle('on');
+}
+
+/* Get selected chips */
+function getChips(id) {
+  return Array.from(document.querySelectorAll('#' + id + ' .chip.on')).map(c => c.textContent.trim());
+}
+
+/* Validate step 1 */
+function validateStep1() {
+  let ok = true;
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const biz = document.getElementById('f-biztype').value;
+
+  document.getElementById('e-name').classList.toggle('on', !name);
+  document.getElementById('f-name').classList.toggle('field-error', !name);
+  if (!name) ok = false;
+
+  const emailOk = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  document.getElementById('e-email').classList.toggle('on', !emailOk);
+  document.getElementById('f-email').classList.toggle('field-error', !emailOk);
+  if (!emailOk) ok = false;
+
+  document.getElementById('e-biztype').classList.toggle('on', !biz);
+  document.getElementById('f-biztype').classList.toggle('field-error', !biz);
+  if (!biz) ok = false;
+
+  return ok;
+}
+
+/* Validate step 2 */
+function validateStep2() {
+  let ok = true;
+  const chips = getChips('chips-help');
+  const headache = document.getElementById('f-headache').value.trim();
+
+  document.getElementById('e-help').classList.toggle('on', chips.length === 0);
+  if (chips.length === 0) ok = false;
+
+  document.getElementById('e-headache').classList.toggle('on', !headache);
+  document.getElementById('f-headache').classList.toggle('field-error', !headache);
+  if (!headache) ok = false;
+
+  return ok;
+}
+
+/* Step navigation */
+function nextStep(n) {
+  if (n === 1 && !validateStep1()) return;
+  if (n === 2 && !validateStep2()) return;
+  showStep(n);
+}
+
+function prevStep(n) {
+  showStep(n);
+}
+
+/* Submit */
+function submitForm(e) {
+  if(e) e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const data = {
+    name:     document.getElementById('f-name').value.trim(),
+    email:    document.getElementById('f-email').value.trim(),
+    biztype:  document.getElementById('f-biztype').value,
+    staff:    document.getElementById('f-staff').value,
+    website:  document.getElementById('f-website').value.trim(),
+    help:     getChips('chips-help').join(', '),
+    headache: document.getElementById('f-headache').value.trim(),
+    budget:   document.getElementById('f-budget').value,
+    tried:    getChips('chips-tried').join(', '),
+    extra:    document.getElementById('f-extra').value.trim(),
+    _subject: 'New AI Audit Request — aitool4me.com',
+  };
+
+  fetch('https://formspree.io/f/xgobvqqq', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json','Accept':'application/json'},
+    body: JSON.stringify(data)
+  })
+  .then(function(r){
+    if(r.ok){
+      document.getElementById('confirm-email').textContent = data.email;
+      document.querySelectorAll('.form-step').forEach(function(s){s.style.display='none';});
+      document.getElementById('success-state').classList.add('on');
+      var prog = document.querySelector('.form-progress');
+      if(prog) prog.style.display='none';
+    } else {
+      btn.textContent = 'Get my free AI audit →';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again or email hello@aitool4me.com');
+    }
+  })
+  .catch(function(){
+    btn.textContent = 'Get my free AI audit →';
+    btn.disabled = false;
+    alert('Connection error. Please try again or email hello@aitool4me.com');
+  });
+}
+
+/* Clear errors on input */
+document.addEventListener('input', e => {
+  if (e.target.matches('input, select, textarea')) {
+    e.target.classList.remove('field-error');
+  }
+});
+</script>
+
+<script>
+/* Currency auto-detection — matches homepage logic */
+(function(){
+  try{
+    var locale=(navigator.language||navigator.languages[0]||'en-US').toLowerCase();
+    var cur='usd';
+    if(locale.startsWith('en-gb')||locale==='en-ie'||locale==='cy') cur='gbp';
+    else{
+      var eu=['de','fr','es','it','nl','pt','pl','sv','da','fi','nb','ro','hu','cs'];
+      if(eu.some(function(e){return locale.startsWith(e);})) cur='eur';
+    }
+    /* Update all secondary price displays to show local currency first */
+    document.querySelectorAll('.price-secondary').forEach(function(el){
+      var val=el.getAttribute('data-'+cur)||el.getAttribute('data-usd')||'';
+      var usd=el.getAttribute('data-usd')||'';
+      var gbp=el.getAttribute('data-gbp')||'';
+      var eur=el.getAttribute('data-eur')||'';
+      /* Show primary in local, others secondary */
+      var others=[];
+      if(cur!=='usd'&&usd) others.push(usd);
+      if(cur!=='gbp'&&gbp) others.push(gbp);
+      if(cur!=='eur'&&eur) others.push(eur);
+      el.textContent=others.join(' · ');
+    });
+    document.querySelectorAll('.price-primary').forEach(function(el){
+      /* If element has data attribute, swap to local currency */
+      var sec=el.nextElementSibling;
+      if(sec&&sec.classList.contains('price-secondary')){
+        var localVal=sec.getAttribute('data-'+cur);
+        if(localVal){
+          var currentText=el.textContent;
+          var hasFree=currentText.startsWith('Free');
+          el.textContent=(hasFree?'Free / ':'')+localVal;
+        }
+      }
+    });
+    /* Update any currency note */
+    var note=document.querySelector('.currency-region-note');
+    if(note){
+      var labels={usd:'USD ($)',gbp:'GBP (£)',eur:'EUR (€)'};
+      note.textContent='💱 Prices shown in '+( labels[cur]||'USD ($)')+' · Approx only · Always verify on provider's website';
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
