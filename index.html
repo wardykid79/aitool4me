@@ -308,6 +308,34 @@ footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
 }
 .fade-up{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
 .fade-up.visible{opacity:1;transform:none}
+
+/* ===== MONETISATION COMPONENTS — AI Tool 4 Me ===== */
+.affiliate-button{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:9px;background:#0d9488;color:#fff;font-family:var(--font-b,'DM Sans',sans-serif);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.affiliate-button:hover{background:#0f766e;transform:translateY(-1px);text-decoration:none}
+.aff-label{font-size:.68rem;color:#9c9a94;display:block;margin-top:4px}
+.email-capture-box{background:linear-gradient(135deg,#eff6ff 0%,#f0fdfa 100%);border:1.5px solid #bfdbfe;border-radius:14px;padding:28px;margin:32px 0}
+.email-capture-box h3{font-family:var(--font-display,'Fraunces',serif);font-size:1.25rem;margin-bottom:8px;color:#1a1916}
+.email-capture-box p{font-size:.88rem;margin-bottom:18px;max-width:480px}
+.capture-form{display:flex;flex-wrap:wrap;gap:9px;align-items:flex-end}
+.capture-form input{flex:1;min-width:140px;padding:10px 15px;border:1.5px solid #e4e1d8;border-radius:8px;font-family:var(--font-body,'DM Sans',sans-serif);font-size:.88rem;background:#fff;outline:none;transition:border-color .2s}
+.capture-form input:focus{border-color:#2563eb}
+.btn-capture{padding:10px 20px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:var(--font-body,'DM Sans',sans-serif);transition:all .2s;white-space:nowrap}
+.btn-capture:hover{background:#1d4ed8;transform:translateY(-1px)}
+.capture-note{font-size:.74rem;color:#9c9a94;margin-top:7px}
+.trust-line-global{font-size:.75rem;color:#9c9a94;line-height:1.6}
+.sponsored-card{display:none;background:var(--surface,#fff);border:1px solid var(--border,#e4e1d8);border-radius:10px;padding:16px 18px;margin:16px 0}
+.sponsored-card.sponsor-active{display:block}
+.sponsor-label{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9c9a94;margin-bottom:7px;display:block}
+@media(max-width:600px){.capture-form{flex-direction:column}.capture-form input,.btn-capture{width:100%}.email-capture-box{padding:20px 16px}}
+/* ===== END MONETISATION COMPONENTS ===== */
+
+/* Multi-currency price display */
+.tool-price{font-size:.82rem;color:var(--text-muted);margin-bottom:2px;font-weight:500}
+.tool-price-alt{font-size:.72rem;color:var(--text-light);line-height:1.3}
+.tool-price-alt::before{content:'≈ ';opacity:.6}
+/* Currency note on tools section */
+.currency-note{font-size:.76rem;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:6px}
+.currency-note span{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-weight:500}
 </style>
 <script type="application/ld+json">
 {
@@ -405,7 +433,7 @@ footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
   <span style="color:#555">·</span>
   <a href="#affiliate-disclosure" style="color:#0d9488;text-decoration:none;font-weight:500">Affiliate links disclosed</a>
   <span style="color:#555">·</span>
-  <span>Last reviewed: June 2026 · aitool4me.com</span>
+  <span>Last reviewed: June 2026 · aitool4me.com · <a href="/affiliate-disclosure.html" style="color:#0d9488">Affiliate links disclosed</a></span>
   <button onclick="document.getElementById('disclaimer-bar').style.display='none'" style="background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0 0 0 6px;line-height:1" aria-label="Dismiss">×</button>
 </div>
 <nav id="main-nav">
@@ -499,6 +527,15 @@ footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
 <!-- AD -->
 <div class="container" style="padding-top:12px;padding-bottom:4px">
   <div class="ad-placeholder">[ Advertisement — header banner ad placeholder ]</div>
+
+<!-- SPONSORED CARD — INACTIVE. Add class "sponsor-active" to activate.
+     TODO: Agree rate, replace content, activate when first sponsor confirmed. -->
+<div class="sponsored-card" id="sponsored-slot-home">
+  <span class="sponsor-label">Sponsored placement</span>
+  <h4>[Tool Name]</h4>
+  <p style="font-size:.82rem;color:#6b6860;margin-bottom:10px">[Plain-English description — recommended for small businesses that want to save time on admin.]</p>
+  <a href="#" rel="nofollow sponsored" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;background:#0d9488;color:#fff;font-size:.82rem;font-weight:600;text-decoration:none">Learn more →</a>
+</div>
 </div>
 
 <!-- WHAT IS AI -->
@@ -799,6 +836,32 @@ footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
 </section>
 
 <!-- EMAIL -->
+
+<!-- EMAIL CHECKLIST CAPTURE — between tool finder and newsletter
+     TODO: Replace action="#" with Mailchimp/ConvertKit/Formspree endpoint -->
+<section style="padding:52px 0;background:#fff;border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="email-capture-box" style="max-width:660px;margin:0 auto">
+      <h3>📋 Free AI Starter Checklist</h3>
+      <p>Get the simple 7-step checklist for using AI in your business — without wasting money on the wrong tools. Used by beginners and small business owners across the UK.</p>
+      <form class="capture-form" action="#" method="POST" onsubmit="handleChecklist(event)">
+        <input type="text" name="firstname" placeholder="First name" required autocomplete="given-name">
+        <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+        <button type="submit" class="btn-capture">Send me the checklist →</button>
+      </form>
+      <div class="capture-note">🔒 No spam. Just practical AI tips and honest tool recommendations. Unsubscribe anytime.</div>
+      <div id="checklist-ok" style="display:none;margin-top:10px;color:#16a34a;font-weight:600;font-size:.86rem">✅ On its way — check your inbox shortly!</div>
+    </div>
+  </div>
+</section>
+<script>
+function handleChecklist(e){
+  e.preventDefault();
+  var ok=document.getElementById('checklist-ok');
+  if(ok) ok.style.display='block';
+  e.target.style.display='none';
+}
+</script>
 <section class="email-section" id="newsletter">
   <div class="container">
     <div class="section-label" style="justify-content:center;color:#7dd3fc">Weekly email</div>
@@ -876,10 +939,11 @@ footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
       <span>© 2026 AI Tool 4 Me · aitool4me.com · All rights reserved.</span>
       <div class="footer-bottom-links">
         <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#affiliate-disclosure">Affiliate disclosure</a>
-        <a href="#">Privacy policy</a>
-        <a href="#">Cookie policy</a>
+        <a href="mailto:hello@aitool4me.com">Contact</a>
+        <a href="/affiliate-disclosure.html">Affiliate disclosure</a>
+        <a href="/privacy.html">Privacy policy</a>
+        <a href="/terms.html">Terms of use</a>
+        <a href="/#cookie-banner">Cookie settings</a>
       </div>
     </div>
   </div>
@@ -888,19 +952,75 @@ footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
 <script>
 const useCaseData={taxi:{emoji:'🚕',title:'AI for taxi companies',intro:"AI can save taxi operators hours every week on admin, customer communication, and marketing — without hiring extra staff.",tasks:['Customer enquiry replies','Complaint handling letters','Driver notices and updates','Invoice wording and templates','Tender and contract documents','Website content and FAQs','Review replies (Google/TripAdvisor)','Social media posts','Booking confirmation messages','Lost property responses'],tools:['ChatGPT','Claude','Google Gemini','Canva','Grammarly'],tip:"Start with ChatGPT — type 'Reply to this customer complaint professionally: [paste complaint]' and you'll have a draft in seconds."},airbnb:{emoji:'🏠',title:'AI for Airbnb hosts',intro:"AI can help you handle guest communication, create better listings, and build a polished brand — even with just one property.",tasks:['Guest reply templates','Review response drafts','Listing descriptions','Local area guides','Cleaning checklists','Welcome booklets','Complaint replies','Social media posts','Pricing strategy summaries','House rules documents'],tools:['ChatGPT','Claude','Canva','Grammarly','Jasper'],tip:"Ask ChatGPT to 'write a warm, professional reply to a guest who left a 3-star review mentioning the wifi was slow' — personalise it and post."},sme:{emoji:'🏢',title:'AI for small business owners',intro:"AI is probably the biggest time-saver available to small businesses right now — and most of it costs less than a cup of coffee a day.",tasks:['Professional emails','Website content','Customer service replies','Quote and proposal wording','Marketing social posts','Admin system templates','Review management','Staff policies and procedures','Lead capture copy','Business planning documents'],tools:['ChatGPT','Claude','Canva','Zapier','Google Gemini','Notion AI'],tip:"The best starting point for most small business owners is ChatGPT Plus. It handles writing, research, and basic automation."},selfemployed:{emoji:'🧑‍💼',title:'AI for self-employed people',intro:"When you're working alone, AI becomes your assistant, copywriter, and admin support — all in one.",tasks:['Client email drafts','Invoicing templates','Proposal documents','LinkedIn and social content','Portfolio descriptions','Quote responses','Meeting summaries','Contract templates','Research and competitor analysis','Tax document summaries'],tools:['ChatGPT','Claude','Notion AI','Grammarly','Canva'],tip:"Use Claude for anything that needs careful, accurate writing — it tends to be more thoughtful and less prone to errors."},landlord:{emoji:'🏘️',title:'AI for landlords',intro:"From tenancy agreements to maintenance notices, AI can help landlords communicate professionally and save hours every month.",tasks:['Tenancy renewal letters','Maintenance notice templates','Deposit dispute responses','Inspection report summaries','Rent increase letters','Tenant welcome packs','Reference request replies','Letting agent communications','Property listing descriptions','Compliance document summaries'],tools:['ChatGPT','Claude','Grammarly','Canva','Google Gemini'],tip:"Always have a solicitor review legally-sensitive documents — AI can draft them, but a professional should check them."},estate:{emoji:'🏡',title:'AI for estate agents',intro:"AI can write property listings, handle enquiries, and help estate agents work faster and look more professional.",tasks:['Property listing descriptions','Buyer and seller email replies','Market update newsletters','Social media property posts','Viewings feedback summaries','Offer negotiation scripts','Website content','Client onboarding letters','Competitor analysis','Lead follow-up emails'],tools:['ChatGPT','Claude','Canva','Jasper','Grammarly'],tip:"Paste a property's basic details into ChatGPT and ask it to write a compelling listing — then add your local knowledge."},builder:{emoji:'🔨',title:'AI for builders and tradespeople',intro:"Not just for office workers — AI can save tradespeople serious time on quotes, invoices, and customer communication.",tasks:['Quote and estimate wording','Invoice templates','Customer update messages','Review reply drafts','Job completion letters','Website content','Social media posts','Material cost summaries','Contract terms templates','Complaint response letters'],tools:['ChatGPT','Google Gemini','Canva','Grammarly'],tip:"Voice-to-text AI tools (like Whisper in ChatGPT) mean you can describe a job verbally and get a written quote draft without typing a word."},salon:{emoji:'💇',title:'AI for beauty salons',intro:"AI can help beauty salons look polished online, handle bookings professionally, and market more effectively.",tasks:['Booking confirmation messages','Client follow-up emails','Social media captions','Promotional content','Review replies','Staff scheduling templates','Price list copy','Website homepage text','Treatment descriptions','Client consultation forms'],tools:['ChatGPT','Canva','Claude','Google Gemini'],tip:"Use Canva's AI features to create polished social media graphics for your treatments — no design experience needed."},restaurant:{emoji:'🍽️',title:'AI for restaurants and cafés',intro:"AI can help with menus, marketing, reviews, and customer communication — without a marketing budget.",tasks:['Menu descriptions','Review reply drafts','Social media captions','Special event promotions','Staff rota templates','Supplier email drafts','Food allergy policy documents','Customer complaint responses','Booking confirmation messages','Website content'],tools:['ChatGPT','Canva','Claude','Google Gemini','Grammarly'],tip:"Replying to every Google review matters for SEO. Use ChatGPT to draft personalised replies to all reviews in minutes."},student:{emoji:'🎓',title:'AI for students',intro:"AI can help you research, plan, summarise, and improve your work — but always follow your institution's AI policy.",tasks:['Essay planning and structure','Research summaries','Complex topic explanations','Revision flashcard creation','Proofreading and grammar checks','Presentation slide ideas','Cover letter drafts','Deadline planning','Note summarisation','Bibliography formatting'],tools:['ChatGPT','Claude','Perplexity','Grammarly','Notion AI'],tip:"⚠️ Important: Check your school or university AI policy before using AI in assessed work. Undisclosed AI use may count as academic dishonesty."},teacher:{emoji:'📚',title:'AI for teachers',intro:"AI can dramatically reduce planning time and help teachers create better, more personalised learning materials.",tasks:['Lesson plan creation','Worksheet and quiz generation','Differentiation for different abilities','Parent communication templates','Report writing assistance','Resource and activity ideas','Marking rubric creation','Curriculum planning','Assessment question banks','SEN support materials'],tools:['ChatGPT','Claude','Canva','Google Gemini','Grammarly'],tip:"Use Claude for anything requiring careful, measured language — especially for parent communication or sensitive student situations."},creator:{emoji:'🎬',title:'AI for content creators',intro:"AI is a content creator's secret weapon — generating ideas, scripts, captions, thumbnails, and more at speed.",tasks:['Video script drafts','YouTube title and description ideas','Social media captions','Blog post outlines','Podcast show notes','Thumbnail concept ideas','Brand name suggestions','Content calendar planning','Hashtag research','Sponsorship pitch emails'],tools:['ChatGPT','Claude','Canva','Runway','ElevenLabs','Synthesia'],tip:"Try Runway for AI video editing, ElevenLabs for voiceovers, and Canva for thumbnails. Together they can replace a small production team."},admin:{emoji:'📊',title:'AI for office and admin workers',intro:"If your job involves emails, documents, spreadsheets, or communication, AI can automate a significant part of your day.",tasks:['Email drafting and replies','Meeting summary notes','Document formatting','Data summarisation','Report writing','Presentation content','Process documentation','Internal communications','Scheduling assistance','Policy document drafting'],tools:['Microsoft Copilot','ChatGPT','Claude','Notion AI','Grammarly'],tip:"Microsoft Copilot is built into Microsoft 365 and can read your emails, summarise meetings, and draft Word documents without leaving your existing tools."},jobseeker:{emoji:'💼',title:'AI for job seekers',intro:"A strong CV, targeted cover letters, and confident interview prep — AI can help you stand out in a competitive market.",tasks:['CV writing and formatting','Cover letter personalisation','LinkedIn profile optimisation','Interview question practice','Job description analysis','Skills gap identification','Resignation letter drafts','Reference request emails','Career change planning','Salary research summaries'],tools:['ChatGPT','Claude','Grammarly','Perplexity','LinkedIn AI features'],tip:"Paste the job description into ChatGPT and ask it to help tailor your CV bullet points to match exactly what the employer is looking for."}};
 
+/* ── TOOL PRICING ──────────────────────────────────────────────────
+   Each tool has a pricing object with USD (primary), GBP, and EUR.
+   usd = the canonical price in US dollars (what the tool officially charges)
+   gbp/eur = honest approximations shown to UK/EU visitors
+   free = true means a genuine free tier exists (not just a trial)
+   flat = true means price does not change by region (e.g. M365)
+   TODO: Review all prices every 90 days. Update checked date when you do.
+   Last verified: June 2026
+──────────────────────────────────────────────────────────────── */
 const toolsData=[
-  {name:'ChatGPT',emoji:'🤖',bg:'#10a37f',price:'Free / ~£16/mo',best:'Writing, research, Q&A',filters:['writing','beginner','free'],level:'Beginner',pros:'Most capable free tool. Huge range of uses.',cons:'Free version has limits. Can make mistakes.',aff:true,checked:'June 2026'},
-  {name:'Claude',emoji:'🔵',bg:'#7c3aed',price:'Free / ~£15/mo',best:'Careful writing & summaries',filters:['writing','beginner'],level:'Beginner',pros:'More thoughtful responses. Great for business writing.',cons:'Slightly fewer integrations than ChatGPT.',aff:true,checked:'June 2026'},
-  {name:'Google Gemini',emoji:'✨',bg:'#1a73e8',price:'Free / ~£17/mo',best:'Research & Google users',filters:['writing','free','beginner'],level:'Beginner',pros:'Integrates with Google Docs, Gmail, Search.',cons:'Still catching up on some tasks.',aff:false,checked:'June 2026'},
-  {name:'Microsoft Copilot',emoji:'🪟',bg:'#0078d4',price:'Included in M365',best:'Microsoft Office users',filters:['writing','business'],level:'Business',pros:'Built into Word, Excel, Outlook, Teams.',cons:'Requires Microsoft 365 subscription.',aff:false,checked:'June 2026'},
-  {name:'Canva AI',emoji:'🎨',bg:'#00c4cc',price:'Free / ~£10/mo',best:'Images, design & social media',filters:['image','beginner','free'],level:'Beginner',pros:'No design skills needed. Huge template library.',cons:'Free tier limited. Best for standard formats.',aff:true,checked:'June 2026'},
-  {name:'Zapier',emoji:'⚡',bg:'#ff4a00',price:'Free / ~£17/mo',best:'Workflow automation',filters:['automation','business'],level:'Intermediate',pros:'Connects 6,000+ apps. No coding needed.',cons:'Can get complex. Costs scale with usage.',aff:true,checked:'June 2026'},
-  {name:'Make',emoji:'🔗',bg:'#6d00cc',price:'Free / ~£7/mo',best:'Advanced automation',filters:['automation','business'],level:'Advanced',pros:'More powerful than Zapier. Cheaper at scale.',cons:'Steeper learning curve.',aff:true,checked:'June 2026'},
-  {name:'Perplexity',emoji:'🔍',bg:'#1fb8cd',price:'Free / ~£15/mo',best:'Research with sources',filters:['writing','free','beginner'],level:'Beginner',pros:'Cites sources. Good for research and fact-checking.',cons:'Not great for creative writing tasks.',aff:false,checked:'June 2026'},
-  {name:'Grammarly',emoji:'✅',bg:'#15c39a',price:'Free / ~£10/mo',best:'Writing & proofreading',filters:['writing','beginner','free'],level:'Beginner',pros:'Works inside email, Google Docs, browsers.',cons:'Free version limited. Business tone can feel stiff.',aff:true,checked:'June 2026'},
-  {name:'Notion AI',emoji:'📝',bg:'#191919',price:'Adds ~£7/mo',best:'Notes, docs & planning',filters:['writing','business'],level:'Intermediate',pros:'Great for teams. AI built into your workspace.',cons:'Need to use Notion already.',aff:true,checked:'June 2026'},
-  {name:'Runway',emoji:'🎬',bg:'#e40171',price:'Free / ~£12/mo',best:'AI video creation',filters:['video'],level:'Intermediate',pros:'Impressive video generation. Improves fast.',cons:'Output quality varies. Limits on free tier.',aff:false,checked:'June 2026'},
-  {name:'ElevenLabs',emoji:'🎙️',bg:'#1e293b',price:'Free / ~£5/mo',best:'AI voiceovers',filters:['video','business'],level:'Intermediate',pros:'Realistic AI voices. Great for podcasts and videos.',cons:'Can sound slightly unnatural on free tier.',aff:false,checked:'June 2026'},
+  {name:'ChatGPT',emoji:'🤖',bg:'#10a37f',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£16/mo',eur:'~€19/mo'},
+   best:'Writing, research, Q&A',filters:['writing','beginner','free'],level:'Beginner',
+   pros:'Most versatile free tool. Handles almost any task.',cons:'Free version has daily limits. Can make confident mistakes.',aff:true,checked:'June 2026'},
+
+  {name:'Claude',emoji:'🔵',bg:'#7c3aed',
+   pricing:{free:true,usd:'~$18/mo',gbp:'~£15/mo',eur:'~€17/mo'},
+   best:'Careful writing & summaries',filters:['writing','beginner'],level:'Beginner',
+   pros:'More thoughtful, measured responses. Great for business writing.',cons:'Slightly fewer third-party integrations than ChatGPT.',aff:true,checked:'June 2026'},
+
+  {name:'Google Gemini',emoji:'✨',bg:'#1a73e8',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£17/mo',eur:'~€19/mo'},
+   best:'Research & Google Workspace users',filters:['writing','free','beginner'],level:'Beginner',
+   pros:'Integrates with Gmail, Google Docs, Drive, and Search.',cons:'Still catching up to ChatGPT and Claude on some tasks.',aff:false,checked:'June 2026'},
+
+  {name:'Microsoft Copilot',emoji:'🪟',bg:'#0078d4',
+   pricing:{free:false,usd:'Included in M365',gbp:'Included in M365',eur:'Included in M365',flat:true},
+   best:'Microsoft Office users',filters:['writing','business'],level:'Business',
+   pros:'Built directly into Word, Excel, Outlook, and Teams.',cons:'Requires an active Microsoft 365 subscription.',aff:false,checked:'June 2026'},
+
+  {name:'Canva AI',emoji:'🎨',bg:'#00c4cc',
+   pricing:{free:true,usd:'~$15/mo',gbp:'~£10/mo',eur:'~€14/mo'},
+   best:'Images, design & social media',filters:['image','beginner','free'],level:'Beginner',
+   pros:'No design skills needed. Huge template library. AI image generation built in.',cons:'Free tier limits AI features. Best for standard social formats.',aff:true,checked:'June 2026'},
+
+  {name:'Zapier',emoji:'⚡',bg:'#ff4a00',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£17/mo',eur:'~€19/mo'},
+   best:'Workflow automation',filters:['automation','business'],level:'Intermediate',
+   pros:'Connects 6,000+ apps. No coding needed. Saves hours of admin.',cons:'Can get complex quickly. Cost scales with usage.',aff:true,checked:'June 2026'},
+
+  {name:'Make',emoji:'🔗',bg:'#6d00cc',
+   pricing:{free:true,usd:'~$9/mo',gbp:'~£7/mo',eur:'~€8/mo'},
+   best:'Advanced automation',filters:['automation','business'],level:'Advanced',
+   pros:'More powerful than Zapier. Much cheaper at scale.',cons:'Steeper learning curve — not beginner-friendly.',aff:true,checked:'June 2026'},
+
+  {name:'Perplexity',emoji:'🔍',bg:'#1fb8cd',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£15/mo',eur:'~€18/mo'},
+   best:'Research with cited sources',filters:['writing','free','beginner'],level:'Beginner',
+   pros:'Always cites sources. Excellent for research and fact-checking.',cons:'Not designed for creative writing or long-form content.',aff:false,checked:'June 2026'},
+
+  {name:'Grammarly',emoji:'✅',bg:'#15c39a',
+   pricing:{free:true,usd:'~$12/mo',gbp:'~£10/mo',eur:'~€11/mo'},
+   best:'Writing improvement & proofreading',filters:['writing','beginner','free'],level:'Beginner',
+   pros:'Works automatically inside your browser, email, and Google Docs.',cons:'Free version is limited. Can make writing feel slightly stiff.',aff:true,checked:'June 2026'},
+
+  {name:'Notion AI',emoji:'📝',bg:'#191919',
+   pricing:{free:false,usd:'Adds ~$10/mo',gbp:'Adds ~£7/mo',eur:'Adds ~€9/mo'},
+   best:'Notes, documents & team planning',filters:['writing','business'],level:'Intermediate',
+   pros:'AI built directly into your Notion workspace. Great for teams.',cons:'Only useful if you already use Notion.',aff:true,checked:'June 2026'},
+
+  {name:'Runway',emoji:'🎬',bg:'#e40171',
+   pricing:{free:true,usd:'~$15/mo',gbp:'~£12/mo',eur:'~€14/mo'},
+   best:'AI video creation & editing',filters:['video'],level:'Intermediate',
+   pros:'Impressive video generation quality. Improving rapidly.',cons:'Output quality varies. Free tier has strict limits.',aff:false,checked:'June 2026'},
+
+  {name:'ElevenLabs',emoji:'🎙️',bg:'#1e293b',
+   pricing:{free:true,usd:'~$5/mo',gbp:'~£4/mo',eur:'~€5/mo'},
+   best:'AI voiceovers & narration',filters:['video','business'],level:'Intermediate',
+   pros:'Remarkably realistic AI voices. Great for videos and podcasts.',cons:'Can sound slightly unnatural on the free tier.',aff:false,checked:'June 2026'},
 ];
 
 const compareCardsData=[
@@ -957,8 +1077,79 @@ function getRecommendations(){const{task,skill,budget}=finderAnswers;let recs=[{
 
 function resetFinder(){finderAnswers={task:'',skill:'',budget:'',priority:''};document.getElementById('recommendation-panel').classList.remove('visible');document.querySelectorAll('.finder-progress-bar').forEach(b=>b.classList.remove('done'));document.getElementById('prog-0').classList.add('done');document.querySelectorAll('.finder-step').forEach(s=>s.classList.remove('active'));document.getElementById('finder-step-0').classList.add('active');document.querySelectorAll('.finder-opt').forEach(o=>o.classList.remove('selected'));}
 
-function buildToolsGrid(){document.getElementById('tools-grid').innerHTML=toolsData.map(t=>`<div class="tool-card" data-filters="${t.filters.join(' ')}"><div class="tool-card-head"><div style="display:flex;align-items:center;gap:12px"><div class="tool-logo" style="background:${t.bg}20;color:${t.bg}">${t.emoji}</div><div><h3>${t.name} ${t.aff?'<span style="font-size:.7rem;color:var(--amber)">⭐ Affiliate</span>':''}</h3><div class="tool-price">${t.price}</div></div></div><span class="badge badge-blue">${t.level}</span></div><p><strong style="color:var(--text);font-size:.83rem">Best for:</strong> ${t.best}</p><div class="tool-card-tags">${t.filters.map(f=>`<span class="badge badge-teal">${f}</span>`).join('')}</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px"><div style="background:var(--green-light);border-radius:6px;padding:8px;font-size:.78rem"><strong style="color:var(--green);display:block;margin-bottom:2px">✅ Pro</strong>${t.pros}</div><div style="background:var(--red-light);border-radius:6px;padding:8px;font-size:.78rem"><strong style="color:var(--red);display:block;margin-bottom:2px">⚠️ Con</strong>${t.cons}</div></div><div class="tool-card-footer"><a href="#" onclick="return false" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">Try tool →</a><a href="#" onclick="return false" class="btn btn-secondary btn-sm">Review</a></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><span class="last-checked">Last checked: ${t.checked}</span><span class="report-link" onclick="alert('Thanks! We will review this shortly.')">Report outdated info</span></div></div>`).join('');}
 
+/* ── CURRENCY AUTO-DETECT ─────────────────────────────────────────
+   Detects visitor's likely region from browser locale.
+   Shows USD / GBP / EUR price first based on region.
+   Falls back to USD if locale undetected.
+   No API calls, no tracking — purely client-side browser locale.
+   ──────────────────────────────────────────────────────────────── */
+const userCurrency = (function(){
+  try {
+    const locale = navigator.language || navigator.languages[0] || 'en-US';
+    const lang = locale.toLowerCase();
+    if(lang.startsWith('en-gb') || lang === 'en-ie' || lang === 'cy' || lang === 'gd') return 'gbp';
+    if(lang.startsWith('en-au') || lang.startsWith('en-nz') || lang.startsWith('en-ca')) return 'usd';
+    // EU country codes
+    const euLocales = ['de','fr','es','it','nl','pt','pl','sv','da','fi','nb','ro','hu','cs','sk','hr','bg','el','lv','lt','et','sl','mt','ga','lb'];
+    if(euLocales.some(eu => lang.startsWith(eu))) return 'eur';
+    // Default to USD for en-US and anything else
+    return 'usd';
+  } catch(e){ return 'usd'; }
+})();
+
+function formatPrice(t){
+  if(!t.pricing) return t.price || 'Check site';
+  const p = t.pricing;
+  if(p.flat) return p.usd; // e.g. "Included in M365" — same everywhere
+  const primary = p[userCurrency] || p.usd;
+  const free = p.free ? 'Free / ' : '';
+  // Build secondary display (other two currencies, smaller)
+  const others = [];
+  if(userCurrency !== 'usd' && p.usd) others.push(p.usd);
+  if(userCurrency !== 'gbp' && p.gbp) others.push(p.gbp);
+  if(userCurrency !== 'eur' && p.eur) others.push(p.eur);
+  const secondary = others.length ? others.join(' · ') : '';
+  return {primary: free + primary, secondary};
+}
+
+function buildToolsGrid(){
+  document.getElementById('tools-grid').innerHTML=toolsData.map(t=>{
+    const priceData = formatPrice(t);
+    const primaryPrice = typeof priceData === 'object' ? priceData.primary : priceData;
+    const secondaryPrice = typeof priceData === 'object' && priceData.secondary ? priceData.secondary : '';
+    const priceHTML = secondaryPrice
+      ? `<div class="tool-price">${primaryPrice}</div>
+         <div class="tool-price-alt" title="Approximate prices in other currencies">${secondaryPrice}</div>`
+      : `<div class="tool-price">${primaryPrice}</div>`;
+    return `<div class="tool-card" data-filters="${t.filters.join(' ')}">
+      <div class="tool-card-head">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="tool-logo" style="background:${t.bg}20;color:${t.bg}">${t.emoji}</div>
+          <div>
+            <h3 style="color:var(--text)">${t.name} ${t.aff?'<span style="font-size:.7rem;color:var(--amber)">⭐ Affiliate</span>':''}</h3>
+            ${priceHTML}
+          </div>
+        </div>
+        <span class="badge badge-blue">${t.level}</span>
+      </div>
+      <p><strong style="color:var(--text);font-size:.83rem">Best for:</strong> ${t.best}</p>
+      <div class="tool-card-tags">${t.filters.map(f=>`<span class="badge badge-teal">${f}</span>`).join('')}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+        <div style="background:var(--green-light);border-radius:6px;padding:8px;font-size:.78rem"><strong style="color:var(--green);display:block;margin-bottom:2px">✅ Pro</strong>${t.pros}</div>
+        <div style="background:var(--red-light);border-radius:6px;padding:8px;font-size:.78rem"><strong style="color:var(--red);display:block;margin-bottom:2px">⚠️ Con</strong>${t.cons}</div>
+      </div>
+      <div class="tool-card-footer">
+        <a href="#" onclick="return false" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">Try tool →</a>
+        <a href="#" onclick="return false" class="btn btn-secondary btn-sm">Review</a>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+        <span class="last-checked">Last checked: ${t.checked}</span>
+        <span class="report-link" onclick="alert('Thanks! We will review this shortly.')">Report outdated info</span>
+      </div>
+    </div>`;
+  }).join('');
+}
 function filterTools(filter,btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.tool-card').forEach(card=>{if(filter==='all'||card.dataset.filters.includes(filter))card.classList.remove('hidden');else card.classList.add('hidden');});}
 
 function buildCompareCards(){document.getElementById('compare-cards').innerHTML=compareCardsData.map(c=>`<div class="compare-card"><div class="compare-card-top"><span class="badge ${c.badge}">${c.difficulty}</span><span class="last-checked">Last checked: ${c.checked}</span></div><h3>${c.title}</h3><p>${c.desc}</p><div class="compare-meta"><span class="badge badge-teal">Best for: ${c.bestFor}</span></div><div style="display:flex;justify-content:space-between;align-items:center"><a href="#" onclick="return false" class="btn btn-outline-blue btn-sm">Compare tools →</a><span class="report-link" onclick="alert('Thanks! We will review this shortly.')">Report outdated info</span></div></div>`).join('');}
@@ -984,6 +1175,15 @@ function closeMobileMenu(){document.getElementById('mobile-menu').classList.remo
 const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 
+
+/* Update currency note label after detection */
+document.addEventListener('DOMContentLoaded', function(){
+  const label = document.getElementById('currency-label');
+  if(label){
+    const labels = {usd:'USD ($)', gbp:'GBP (£)', eur:'EUR (€)'};
+    label.textContent = labels[userCurrency] || 'USD ($)';
+  }
+});
 buildToolsGrid();buildCompareCards();buildNews();buildFAQ();buildReadiness();updateCalc();
 setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));},200);
 
