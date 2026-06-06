@@ -336,6 +336,20 @@ footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
 /* Currency note on tools section */
 .currency-note{font-size:.76rem;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:6px}
 .currency-note span{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-weight:500}
+
+/* ── SVG TOOL ICONS ─────────────────────────────────────────
+   Custom placeholder icons — not official brand logos.
+   Easy to swap: replace SVG in toolSVGs object with
+   official affiliate-approved assets when received.
+   ────────────────────────────────────────────────────────── */
+.tool-logo-wrap svg,
+.tool-logo-wrap img {
+  width: 52px !important;
+  height: 52px !important;
+  display: block;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1213,6 +1227,21 @@ function formatPrice(t){
   return {primary: free + primary, secondary};
 }
 
+const toolSVGs = {
+  'ChatGPT': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT custom icon"><rect width="52" height="52" rx="14" fill="#0F766E"/><circle cx="26" cy="26" r="15" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/><circle cx="26" cy="26" r="5" fill="#FFFFFF" opacity="0.25"/><text x="26" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">G</text></svg>`,
+  'Claude': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude custom icon"><rect width="52" height="52" rx="14" fill="#C15F3C"/><path d="M14 36 C19 16 33 16 38 36" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.28"/><text x="26" y="33" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="600" font-style="italic" fill="#FFFFFF">C</text></svg>`,
+  'Grammarly': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grammarly custom icon"><rect width="52" height="52" rx="14" fill="#12A37F"/><path d="M15 27 L23 35 L38 18" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">G</text></svg>`,
+  'Canva AI': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Canva custom icon"><rect width="52" height="52" rx="14" fill="#00AFC1"/><path d="M14 36 C19 15 34 15 39 36" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.25"/><text x="26" y="33" text-anchor="middle" font-family="Georgia, serif" font-size="27" font-weight="700" fill="#FFFFFF">C</text></svg>`,
+  'Zapier': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zapier custom icon"><rect width="52" height="52" rx="14" fill="#FF4A00"/><path d="M29 8 L15 29 H25 L22 44 L38 21 H28 Z" fill="#FFFFFF" opacity="0.25"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">Z</text></svg>`,
+  'Google Gemini': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Gemini custom icon"><rect width="52" height="52" rx="14" fill="#1A73E8"/><path d="M26 8 L30 22 L44 26 L30 30 L26 44 L22 30 L8 26 L22 22 Z" fill="#FFFFFF" opacity="0.9"/><circle cx="38" cy="14" r="3" fill="#FFFFFF" opacity="0.35"/><circle cx="14" cy="38" r="2.5" fill="#FFFFFF" opacity="0.25"/></svg>`,
+  'Microsoft Copilot': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Copilot custom icon"><rect width="52" height="52" rx="14" fill="#0078D4"/><circle cx="21" cy="26" r="11" fill="#FFFFFF" opacity="0.24"/><circle cx="31" cy="26" r="11" fill="#FFFFFF" opacity="0.24"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">Co</text></svg>`,
+  'Make': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Make custom icon"><rect width="52" height="52" rx="14" fill="#6D00CC"/><circle cx="17" cy="17" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="26" cy="17" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="35" cy="17" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="17" cy="26" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="35" cy="26" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="17" cy="35" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="26" cy="35" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="35" cy="35" r="3" fill="#FFFFFF" opacity="0.3"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">M</text></svg>`,
+  'Perplexity': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Perplexity custom icon"><rect width="52" height="52" rx="14" fill="#1FB8CD"/><rect x="14" y="14" width="24" height="24" rx="6" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.32"/><path d="M14 26 H38 M26 14 V38" stroke="#FFFFFF" stroke-width="3" opacity="0.22" stroke-linecap="round"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">P</text></svg>`,
+  'Notion AI': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Notion AI custom icon"><rect width="52" height="52" rx="14" fill="#191919"/><rect x="15" y="11" width="22" height="30" rx="5" fill="#FFFFFF" opacity="0.15"/><path d="M20 20 H32 M20 26 H31 M20 32 H28" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" opacity="0.3"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">N</text></svg>`,
+  'Runway': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Runway custom icon"><rect width="52" height="52" rx="14" fill="#E40171"/><path d="M20 15 L39 26 L20 37 Z" fill="#FFFFFF" opacity="0.26"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">R</text></svg>`,
+  'ElevenLabs': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ElevenLabs custom icon"><rect width="52" height="52" rx="14" fill="#0F172A"/><rect x="14" y="15" width="4" height="22" rx="2" fill="#FFFFFF" opacity="0.25"/><rect x="22" y="10" width="4" height="32" rx="2" fill="#FFFFFF" opacity="0.2"/><rect x="30" y="15" width="4" height="22" rx="2" fill="#FFFFFF" opacity="0.25"/><rect x="38" y="20" width="4" height="12" rx="2" fill="#FFFFFF" opacity="0.18"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="800" fill="#FFFFFF">11</text></svg>`,
+};
+
 function buildToolsGrid(){
   document.getElementById('tools-grid').innerHTML=toolsData.map(t=>{
     const priceData = formatPrice(t);
@@ -1225,7 +1254,7 @@ function buildToolsGrid(){
     return `<div class="tool-card" data-filters="${t.filters.join(' ')}">
       <div class="tool-card-head">
         <div style="display:flex;align-items:center;gap:12px">
-          <div class="tool-logo" style="background:${t.bg}20;color:${t.bg}">${t.emoji}</div>
+          ${toolSVGs[t.name] ? '<div style="width:52px;height:52px;flex-shrink:0">'+toolSVGs[t.name]+'</div>' : '<div class="tool-logo" style="background:'+t.bg+'20;color:'+t.bg+'">'+t.emoji+'</div>'}
           <div>
             <h3 style="color:var(--text)">${t.name} ${t.aff?'<span style="font-size:.7rem;color:var(--amber)">⭐ Affiliate</span>':''}</h3>
             ${priceHTML}
