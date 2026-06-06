@@ -1,0 +1,9 @@
+# robots.txt — aitool4me.com
+# Allows all search engines to crawl all pages
+# Last updated: June 2026
+
+User-agent: *
+Allow: /
+
+# Point to sitemap
+Sitemap: https://aitool4me.com/sitemap.xml
