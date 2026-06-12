@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tool 4 Me — Find the Right AI Tool for You | aitool4me.com</title>
+<meta name="description" content="AI Tool 4 Me helps beginners, everyday people, and small business owners find the right AI tools, understand what AI can do, and avoid wasting money on the wrong software.">
+<meta property="og:title" content="AI Tool 4 Me — Find the Right AI Tool for You | aitool4me.com">
+<meta property="og:description" content="Stop guessing. Find your AI tool. Save time. AI Tool 4 Me helps beginners and small businesses find the right AI tools without wasting money.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f8f7f4;--surface:#ffffff;--surface2:#f1efe9;--border:#e4e1d8;
+  --text:#1a1916;--text-muted:#6b6860;--text-light:#9c9a94;
+  --blue:#2563eb;--blue-light:#eff6ff;--blue-mid:#bfdbfe;
+  --teal:#0d9488;--teal-light:#f0fdfa;
+  --purple:#7c3aed;--purple-light:#f5f3ff;
+  --amber:#d97706;--amber-light:#fffbeb;
+  --red:#dc2626;--red-light:#fef2f2;
+  --green:#16a34a;--green-light:#f0fdf4;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --shadow:0 4px 16px rgba(0,0,0,0.08),0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg:0 12px 40px rgba(0,0,0,0.12),0 4px 12px rgba(0,0,0,0.06);
+  --radius:14px;--radius-sm:8px;--radius-lg:20px;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'DM Sans',-apple-system,sans-serif;
+  --nav-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.2}
+h1{font-size:clamp(2.1rem,5vw,3.5rem);font-weight:600}
+h2{font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:600}
+h3{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:600}
+h4{font-size:1rem;font-weight:600;font-family:var(--font-body)}
+p{color:var(--text-muted);line-height:1.7}
+a{text-decoration:none;color:var(--blue)}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+.section-sm{padding:52px 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.text-center{text-align:center}
+.mt-4{margin-top:16px}.mt-6{margin-top:24px}.mt-8{margin-top:32px}
+.mb-4{margin-bottom:16px}.mb-6{margin-bottom:24px}.mb-8{margin-bottom:32px}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-family:var(--font-body);font-size:.95rem;font-weight:500;cursor:pointer;border:none;transition:all .2s ease;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 2px 8px rgba(37,99,235,.3)}
+.btn-primary:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:0 4px 14px rgba(37,99,235,.4)}
+.btn-secondary{background:var(--surface);color:var(--text);border:1.5px solid var(--border)}
+.btn-secondary:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 2px 8px rgba(13,148,136,.3)}
+.btn-teal:hover{background:#0f766e;transform:translateY(-1px)}
+.btn-outline-blue{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.btn-outline-blue:hover{background:var(--blue-light)}
+.btn-sm{padding:8px 16px;font-size:.85rem;border-radius:8px}
+.btn-lg{padding:15px 32px;font-size:1.05rem}
+/* Cards */
+.card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:24px;box-shadow:var(--shadow-sm);transition:all .25s ease}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+/* Badges */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:500;font-family:var(--font-body)}
+.badge-blue{background:var(--blue-light);color:var(--blue)}
+.badge-teal{background:var(--teal-light);color:var(--teal)}
+.badge-purple{background:var(--purple-light);color:var(--purple)}
+.badge-amber{background:var(--amber-light);color:var(--amber)}
+.badge-green{background:var(--green-light);color:var(--green)}
+.badge-red{background:var(--red-light);color:var(--red)}
+.pill{display:inline-flex;align-items:center;padding:6px 14px;border-radius:20px;background:var(--surface2);border:1.5px solid var(--border);font-size:.85rem;font-weight:500;cursor:pointer;transition:all .18s ease;color:var(--text)}
+.pill:hover,.pill.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.section-label{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.section-label::before{content:'';width:18px;height:2px;background:var(--blue);border-radius:2px}
+.warning-box{background:var(--amber-light);border:1.5px solid #fcd34d;border-radius:var(--radius-sm);padding:16px 20px;display:flex;gap:12px;align-items:flex-start}
+.info-box{background:var(--blue-light);border:1.5px solid var(--blue-mid);border-radius:var(--radius-sm);padding:16px 20px;display:flex;gap:12px;align-items:flex-start}
+.trust-box{background:var(--green-light);border:1.5px solid #bbf7d0;border-radius:var(--radius-sm);padding:16px 20px;display:flex;gap:12px;align-items:flex-start}
+/* Nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(248,247,244,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:var(--nav-h)}
+.nav-inner{max-width:1160px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px}
+.nav-logo span{color:var(--blue)}
+.logo-dot{width:8px;height:8px;background:var(--teal);border-radius:50%;display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:7px 13px;border-radius:8px;font-size:.88rem;font-weight:500;color:var(--text-muted);transition:all .18s ease}
+.nav-links a:hover{background:var(--surface2);color:var(--text)}
+.nav-btns{display:flex;align-items:center;gap:10px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;transition:all .25s}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:20px 24px;z-index:99;box-shadow:var(--shadow)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:12px 0;font-size:1rem;font-weight:500;color:var(--text);border-bottom:1px solid var(--border)}
+.mobile-menu a:last-of-type{border-bottom:none}
+.mobile-menu-btns{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+/* Hero */
+.hero{padding:72px 0 80px;background:linear-gradient(135deg,#f8f7f4 0%,#eff6ff 50%,#f0fdfa 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(37,99,235,.06) 0%,transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(13,148,136,.06) 0%,transparent 70%);border-radius:50%}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:20px;padding:5px 14px;font-size:.82rem;font-weight:600;color:var(--blue);margin-bottom:20px}
+.hero h1{margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero-sub{font-size:1.05rem;color:var(--text-muted);margin-bottom:32px;max-width:480px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.hero-trust{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--text-light)}
+.hero-card{background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);box-shadow:var(--shadow-lg);overflow:hidden;animation:floatUp .8s ease both}
+@keyframes floatUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero-card-header{background:linear-gradient(135deg,var(--blue) 0%,#4f46e5 100%);padding:18px 22px;color:#fff}
+.hero-card-header h4{font-family:var(--font-body);font-size:.9rem;font-weight:600;color:#fff}
+.hero-card-header p{font-size:.8rem;color:rgba(255,255,255,.75);margin-top:2px}
+.hero-card-body{padding:20px 22px}
+.hero-card-body>p{font-size:.9rem;font-weight:500;color:var(--text);margin-bottom:12px}
+.pill-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.hero-pill{padding:6px 12px;background:var(--surface2);border:1.5px solid var(--border);border-radius:20px;font-size:.82rem;font-weight:500;cursor:pointer;transition:all .18s;color:var(--text)}
+.hero-pill:hover,.hero-pill.selected{background:var(--blue);color:#fff;border-color:var(--blue)}
+.hero-result{background:var(--teal-light);border:1px solid #99f6e4;border-radius:var(--radius-sm);padding:12px 16px;display:flex;align-items:center;gap:10px}
+.hero-result-dot{width:8px;height:8px;background:var(--teal);border-radius:50%;flex-shrink:0}
+.hero-result p{font-size:.82rem;color:var(--teal);font-weight:600;margin:0}
+/* Stats */
+.stats-bar{background:var(--text);color:#fff;padding:20px 0}
+.stats-inner{display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:24px}
+.stat-item{text-align:center}
+.stat-num{font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:#fff;display:block}
+.stat-label{font-size:.8rem;color:rgba(255,255,255,.55);margin-top:2px}
+/* What is AI */
+.what-ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ai-cap-card{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;transition:all .2s}
+.ai-cap-card:hover{border-color:var(--blue-mid);background:var(--blue-light)}
+.ai-cap-icon{width:36px;height:36px;background:var(--blue-light);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.ai-cap-card h4{margin-bottom:2px}
+.ai-cap-card p{font-size:.85rem;margin:0}
+/* Use Cases */
+.use-cases-section{background:var(--surface2)}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-bottom:32px}
+.cat-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px 12px;text-align:center;cursor:pointer;transition:all .2s}
+.cat-card:hover{border-color:var(--blue);box-shadow:var(--shadow);transform:translateY(-2px)}
+.cat-card.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.cat-card.active p{color:rgba(255,255,255,.8)}
+.cat-emoji{font-size:1.6rem;margin-bottom:6px}
+.cat-card h4{font-size:.85rem;font-family:var(--font-body);font-weight:600}
+.cat-card p{font-size:.75rem;color:var(--text-muted);margin-top:2px}
+.use-case-panel{background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);padding:32px;box-shadow:var(--shadow);display:none;animation:fadeIn .3s ease}
+.use-case-panel.visible{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.use-case-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.use-case-tag{padding:5px 12px;background:var(--blue-light);color:var(--blue);border-radius:20px;font-size:.8rem;font-weight:500}
+.tool-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tool-chip{padding:4px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;font-size:.78rem;font-weight:500;color:var(--text)}
+/* Tool Finder */
+.tool-finder-wrap{background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);padding:40px;box-shadow:var(--shadow-lg);max-width:800px;margin:0 auto}
+.finder-step{display:none}
+.finder-step.active{display:block;animation:fadeIn .3s ease}
+.finder-progress{display:flex;gap:6px;margin-bottom:32px}
+.finder-progress-bar{height:4px;flex:1;background:var(--border);border-radius:2px;transition:background .3s}
+.finder-progress-bar.done{background:var(--blue)}
+.finder-question{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:6px}
+.finder-hint{font-size:.85rem;color:var(--text-muted);margin-bottom:20px}
+.finder-options{display:flex;flex-wrap:wrap;gap:10px}
+.finder-opt{padding:10px 18px;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-weight:500;cursor:pointer;background:var(--surface);transition:all .18s;color:var(--text)}
+.finder-opt:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
+.finder-opt.selected{background:var(--blue);color:#fff;border-color:var(--blue)}
+.finder-nav{display:flex;gap:12px;margin-top:28px}
+.recommendation-panel{background:linear-gradient(135deg,var(--blue-light),var(--teal-light));border:1.5px solid var(--blue-mid);border-radius:var(--radius-lg);padding:32px;display:none;animation:fadeIn .4s ease}
+.recommendation-panel.visible{display:block}
+.rec-tool{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:18px 20px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.rec-tool-info h4{margin-bottom:2px}
+.rec-tool-info p{font-size:.83rem;margin:0}
+.rec-tool-btns{display:flex;gap:8px}
+/* Comparison */
+.compare-card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:22px;box-shadow:var(--shadow-sm);transition:all .25s;cursor:pointer}
+.compare-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);border-color:var(--blue-mid)}
+.compare-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.last-checked{font-size:.74rem;color:var(--text-light)}
+.compare-card h3{font-size:1rem;margin-bottom:6px}
+.compare-card p{font-size:.84rem;margin-bottom:14px}
+.compare-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.report-link{font-size:.74rem;color:var(--text-light);border-bottom:1px dotted var(--text-light);cursor:pointer}
+/* Tools section */
+.tools-section{background:var(--surface2)}
+.tool-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filter-btn{padding:7px 15px;border-radius:20px;font-size:.83rem;font-weight:500;border:1.5px solid var(--border);background:var(--surface);cursor:pointer;transition:all .18s;color:var(--text)}
+.filter-btn:hover,.filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm);transition:all .25s;display:flex;flex-direction:column}
+.tool-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.tool-card-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.tool-logo{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.tool-card h3{font-size:1.05rem;margin-bottom:2px}
+.tool-card .tool-price{font-size:.8rem;color:var(--text-muted);margin-bottom:10px}
+.tool-card p{font-size:.84rem;flex:1}
+.tool-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0}
+.tool-card-footer{display:flex;gap:8px;margin-top:14px}
+.tool-card.hidden{display:none}
+/* Calculator */
+.calc-section{background:var(--text);color:#fff}
+.calc-section h2{color:#fff}
+.calc-section .section-label{color:#7dd3fc}
+.calc-section .section-label::before{background:#7dd3fc}
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.calc-field{margin-bottom:20px}
+.calc-field label{display:block;font-size:.88rem;font-weight:500;color:rgba(255,255,255,.8);margin-bottom:8px}
+.calc-input-row{display:flex;align-items:center;gap:12px}
+.calc-input-row input[type=range]{flex:1;accent-color:var(--teal)}
+.calc-val{min-width:52px;background:rgba(255,255,255,.1);border-radius:6px;padding:4px 8px;font-size:.9rem;font-weight:600;color:#fff;text-align:center}
+.calc-results{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:28px}
+.calc-result-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.calc-result-item:last-of-type{border-bottom:none}
+.calc-result-label{font-size:.88rem;color:rgba(255,255,255,.65)}
+.calc-result-val{font-size:1.4rem;font-weight:700;color:var(--teal);font-family:var(--font-display)}
+.calc-disclaimer{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.5}
+/* Readiness */
+.readiness-wrap{max-width:700px;margin:0 auto;background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);padding:40px;box-shadow:var(--shadow-lg)}
+.readiness-q{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);gap:16px}
+.readiness-q p{font-size:.92rem;font-weight:500;color:var(--text);margin:0;flex:1}
+.toggle-wrap{display:flex;gap:6px;flex-shrink:0}
+.toggle-btn{padding:6px 14px;border-radius:20px;font-size:.8rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:transparent;color:var(--text-muted);transition:all .18s}
+.toggle-btn.yes.active{background:var(--green);color:#fff;border-color:var(--green)}
+.toggle-btn.no.active{background:var(--red-light);color:var(--red);border-color:#fca5a5}
+.score-bar-wrap{margin-top:28px}
+.score-bar-bg{height:16px;background:var(--border);border-radius:8px;overflow:hidden;margin-bottom:6px}
+.score-bar-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--teal));border-radius:8px;transition:width .5s ease;width:0%}
+.score-label{display:flex;justify-content:space-between;font-size:.82rem;color:var(--text-muted)}
+.score-result{margin-top:20px;display:none;animation:fadeIn .3s ease}
+.score-result.visible{display:block}
+/* News */
+.news-section{background:var(--surface2)}
+.news-card-img{height:4px;border-radius:3px;margin-bottom:16px}
+.news-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.news-date{font-size:.75rem;color:var(--text-light)}
+.news-card h3{font-size:1rem;margin-bottom:6px}
+.news-card p{font-size:.84rem}
+.news-impact{margin-top:12px;padding:10px 14px;background:var(--blue-light);border-radius:var(--radius-sm);font-size:.8rem;color:var(--blue);font-weight:500}
+.news-impact strong{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+/* Trust */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.trust-item{padding:20px 22px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+.trust-icon{font-size:1.5rem;margin-bottom:10px}
+.trust-item h4{margin-bottom:4px}
+.trust-item p{font-size:.84rem}
+.affiliate-disclaimer{background:var(--amber-light);border:1.5px solid #fcd34d;border-radius:var(--radius);padding:20px 24px;margin-top:32px}
+/* Email */
+.email-section{background:linear-gradient(135deg,#1e1b4b 0%,#1e3a5f 50%,#134e4a 100%);color:#fff;text-align:center;padding:72px 0}
+.email-section h2{color:#fff}
+.email-section p{color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 28px}
+.email-form{display:flex;gap:10px;max-width:440px;margin:0 auto 12px}
+.email-input{flex:1;padding:12px 18px;border-radius:10px;border:none;font-family:var(--font-body);font-size:.95rem;outline:none}
+.email-privacy{font-size:.78rem;color:rgba(255,255,255,.45)}
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;gap:16px}
+.faq-q h4{font-size:.95rem;font-weight:600;color:var(--text)}
+.faq-icon{font-size:1.2rem;color:var(--text-muted);flex-shrink:0;transition:transform .25s}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 0 18px;font-size:.9rem}
+.faq-item.open .faq-a{max-height:300px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+/* Footer */
+footer{background:#0f0e0d;color:rgba(255,255,255,.6);padding:60px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:12px;display:block}
+.footer-brand p{font-size:.84rem;line-height:1.6;max-width:240px}
+.footer-col h5{color:#fff;font-size:.85rem;font-weight:600;margin-bottom:14px;letter-spacing:.05em;text-transform:uppercase}
+.footer-col a{display:block;font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:9px;transition:color .18s}
+.footer-col a:hover{color:rgba(255,255,255,.9)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-links a{color:rgba(255,255,255,.4);transition:color .18s}
+.footer-bottom-links a:hover{color:rgba(255,255,255,.75)}
+/* Ad placeholder */
+.ad-placeholder{background:repeating-linear-gradient(45deg,rgba(0,0,0,.015),rgba(0,0,0,.015) 4px,transparent 4px,transparent 10px);border:1.5px dashed var(--border);border-radius:var(--radius-sm);padding:12px;text-align:center;font-size:.75rem;color:var(--text-light);letter-spacing:.04em;margin:16px 0}
+/* Search */
+.ai-search-wrap{max-width:640px;margin:0 auto 40px;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}
+.ai-search-inner{display:flex;align-items:center;padding:4px 4px 4px 18px;gap:10px}
+.ai-search-inner input{flex:1;border:none;outline:none;font-family:var(--font-body);font-size:.95rem;color:var(--text);background:transparent;padding:10px 0}
+.ai-search-inner input::placeholder{color:var(--text-light)}
+.ai-search-result{border-top:1px solid var(--border);padding:16px 18px;background:var(--surface2);display:none;animation:fadeIn .3s ease}
+.ai-search-result.visible{display:block}
+.ai-search-result h4{font-size:.88rem;color:var(--blue);margin-bottom:6px}
+.ai-search-result p{font-size:.84rem}
+.ai-search-result ul{margin:8px 0 0 16px}
+.ai-search-result ul li{font-size:.83rem;color:var(--text-muted);margin-bottom:3px}
+/* Responsive */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .what-ai-grid{grid-template-columns:1fr}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr 1fr}
+  .calc-wrap{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links,.nav-btns{display:none}
+  .hamburger{display:block}
+}
+@media(max-width:600px){
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .tool-finder-wrap{padding:24px 18px}
+  .readiness-wrap{padding:24px 18px}
+  .email-form{flex-direction:column}
+  .section{padding:52px 0}
+  .hero{padding:48px 0 52px}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{justify-content:center}
+}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.fade-up.visible{opacity:1;transform:none}
+
+/* ===== MONETISATION COMPONENTS — AI Tool 4 Me ===== */
+.affiliate-button{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:9px;background:#0d9488;color:#fff;font-family:var(--font-b,'DM Sans',sans-serif);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.affiliate-button:hover{background:#0f766e;transform:translateY(-1px);text-decoration:none}
+.aff-label{font-size:.68rem;color:#9c9a94;display:block;margin-top:4px}
+.email-capture-box{background:linear-gradient(135deg,#eff6ff 0%,#f0fdfa 100%);border:1.5px solid #bfdbfe;border-radius:14px;padding:28px;margin:32px 0}
+.email-capture-box h3{font-family:var(--font-display,'Fraunces',serif);font-size:1.25rem;margin-bottom:8px;color:#1a1916}
+.email-capture-box p{font-size:.88rem;margin-bottom:18px;max-width:480px}
+.capture-form{display:flex;flex-wrap:wrap;gap:9px;align-items:flex-end}
+.capture-form input{flex:1;min-width:140px;padding:10px 15px;border:1.5px solid #e4e1d8;border-radius:8px;font-family:var(--font-body,'DM Sans',sans-serif);font-size:.88rem;background:#fff;outline:none;transition:border-color .2s}
+.capture-form input:focus{border-color:#2563eb}
+.btn-capture{padding:10px 20px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:var(--font-body,'DM Sans',sans-serif);transition:all .2s;white-space:nowrap}
+.btn-capture:hover{background:#1d4ed8;transform:translateY(-1px)}
+.capture-note{font-size:.74rem;color:#9c9a94;margin-top:7px}
+.trust-line-global{font-size:.75rem;color:#9c9a94;line-height:1.6}
+.sponsored-card{display:none;background:var(--surface,#fff);border:1px solid var(--border,#e4e1d8);border-radius:10px;padding:16px 18px;margin:16px 0}
+.sponsored-card.sponsor-active{display:block}
+.sponsor-label{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9c9a94;margin-bottom:7px;display:block}
+@media(max-width:600px){.capture-form{flex-direction:column}.capture-form input,.btn-capture{width:100%}.email-capture-box{padding:20px 16px}}
+/* ===== END MONETISATION COMPONENTS ===== */
+
+/* Multi-currency price display */
+.tool-price{font-size:.82rem;color:var(--text-muted);margin-bottom:2px;font-weight:500}
+.tool-price-alt{font-size:.72rem;color:var(--text-light);line-height:1.3}
+.tool-price-alt::before{content:'≈ ';opacity:.6}
+/* Currency note on tools section */
+.currency-note{font-size:.76rem;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:6px}
+.currency-note span{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-weight:500}
+
+/* ── SVG TOOL ICONS ─────────────────────────────────────────
+   Custom placeholder icons — not official brand logos.
+   Easy to swap: replace SVG in toolSVGs object with
+   official affiliate-approved assets when received.
+   ────────────────────────────────────────────────────────── */
+.tool-logo-wrap svg,
+.tool-logo-wrap img {
+  width: 52px !important;
+  height: 52px !important;
+  display: block;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI in simple terms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI (artificial intelligence) is software that can understand language, answer questions, write text, create images, and automate tasks. Think of it as a very capable assistant that never sleeps, never gets tired, and can help with a wide range of jobs — but one that needs supervision and can sometimes make mistakes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can AI help my small business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost certainly yes. Most small businesses can save meaningful time on emails, customer replies, social media, admin, and marketing content. The best starting point is usually a general AI writing tool like ChatGPT or Claude."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best AI tool for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT (free version) is the most widely recommended starting point. It is free, easy to use, and handles a huge range of tasks. For writing and business communication specifically, Claude is also excellent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are free AI tools good enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most everyday tasks — writing help, answering questions, summarising documents — yes, free tools are genuinely good enough. Paid plans unlock more usage, faster responses, and advanced features, but they are not necessary to get started."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AI always correct?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. AI tools can and do make mistakes — sometimes confidently. Always treat AI output as a first draft and have a human review anything important, especially legal, medical, or financial content."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does AI Tool 4 Me make money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI Tool 4 Me uses affiliate links (marked clearly), display advertising, and a business AI consultation service. Affiliate links mean we may earn a small commission when you sign up for a tool through our link — at no extra cost to you. This never changes our recommendations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often are AI tool recommendations updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We aim to verify pricing, features, and accuracy every 3 months. Every tool card shows a last checked date. If you spot something out of date, use the Report outdated info link and we will update it quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can someone set AI up for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — that is exactly what our free business AI audit is for. We can review your business, identify the best AI opportunities, recommend the right tools, and help you get set up properly."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Tool 4 Me",
+  "url": "https://aitool4me.com",
+  "description": "AI Tool 4 Me helps beginners, everyday people, and small business owners find the right AI tools and avoid wasting money on the wrong software.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://aitool4me.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+  <link rel="canonical" href="https://aitool4me.com/">
+</head>
+<body>
+
+<!-- NAV -->
+<!-- GLOBAL DISCLAIMER BANNER -->
+<div id="disclaimer-bar" style="background:#1a1916;border-bottom:1px solid #333;padding:9px 24px;text-align:center;font-size:.76rem;color:#9c9a94;font-family:var(--font-body);display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
+  <span>⚡ <strong style="color:#f0ebdf">AI moves fast:</strong> Tool pricing, features, and availability change frequently. Always verify before purchasing.</span>
+  <span style="color:#555">·</span>
+  <a href="#affiliate-disclosure" style="color:#0d9488;text-decoration:none;font-weight:500">Affiliate links disclosed</a>
+  <span style="color:#555">·</span>
+  <span>Last reviewed: June 2026 · aitool4me.com · <a href="/affiliate-disclosure.html" style="color:#0d9488">Affiliate links disclosed</a></span>
+  <button onclick="document.getElementById('disclaimer-bar').style.display='none'" style="background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0 0 0 6px;line-height:1" aria-label="Dismiss">×</button>
+</div>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><div class="logo-dot"></div>AI Tool <span>4 Me</span></a>
+    <div class="nav-links">
+      <a href="#what-is-ai">What is AI?</a>
+      <a href="#use-cases">What can AI do?</a>
+      <a href="#compare">Compare Tools</a>
+      <a href="#calculator">Calculators</a>
+      <a href="#updates">AI Guides</a>
+      <a href="#done-for-you">Done For You</a>
+    </div>
+    <div class="nav-btns">
+      <a href="#what-is-ai" class="btn btn-secondary btn-sm">AI Basics</a>
+      <a href="#tool-finder" class="btn btn-primary btn-sm">Find My AI Tool</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#what-is-ai" onclick="closeMobileMenu()">What is AI?</a>
+  <a href="#use-cases" onclick="closeMobileMenu()">What can AI do?</a>
+  <a href="#compare" onclick="closeMobileMenu()">Compare Tools</a>
+  <a href="#calculator" onclick="closeMobileMenu()">Calculators</a>
+  <a href="#updates" onclick="closeMobileMenu()">AI Guides</a>
+  <div class="mobile-menu-btns">
+    <a href="#tool-finder" class="btn btn-primary" onclick="closeMobileMenu()">Find My AI Tool →</a>
+    <a href="#what-is-ai" class="btn btn-secondary" onclick="closeMobileMenu()">Start with AI Basics</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow"><span>✨</span> Honest AI advice for everyday people and businesses</div>
+        <h1>Find the right AI tool <em>for you.</em></h1>
+        <p class="hero-sub">AITool4Me.com helps beginners, everyday people, and small business owners understand what AI can do, compare the best AI tools, and avoid wasting money on the wrong software.</p>
+        <div class="hero-btns">
+          <a href="#tool-finder" class="btn btn-primary btn-lg">Find My AI Tool →</a>
+          <a href="#what-is-ai" class="btn btn-secondary btn-lg">What is AI?</a>
+        </div>
+        <div class="hero-trust">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)"><polyline points="20 6 9 17 4 12"/></svg>
+          AI explained simply. Tools compared honestly.
+        </div>
+      </div>
+      <div>
+        <div class="hero-card">
+          <div class="hero-card-header"><h4>🔍 AI Tool Finder — Free</h4><p>Free · Takes 30 seconds</p></div>
+          <div class="hero-card-body">
+            <p>What do you need help with?</p>
+            <div class="pill-grid">
+              <span class="hero-pill" onclick="selectHeroPill(this)">✉️ Emails</span>
+              <span class="hero-pill" onclick="selectHeroPill(this)">💬 Customer replies</span>
+              <span class="hero-pill" onclick="selectHeroPill(this)">🌐 Website</span>
+              <span class="hero-pill" onclick="selectHeroPill(this)">📱 Social media</span>
+              <span class="hero-pill" onclick="selectHeroPill(this)">📋 Admin</span>
+              <span class="hero-pill" onclick="selectHeroPill(this)">🎨 Images</span>
+              <span class="hero-pill" onclick="selectHeroPill(this)">🎬 Video</span>
+              <span class="hero-pill" onclick="selectHeroPill(this)">⚡ Automation</span>
+            </div>
+            <div class="hero-result" id="hero-result" style="display:none">
+              <div class="hero-result-dot"></div>
+              <p id="hero-result-text">Recommended: 3 beginner-friendly AI tools matched</p>
+            </div>
+            <div style="margin-top:14px">
+              <a href="#tool-finder" class="btn btn-primary" style="width:100%;justify-content:center">Get full recommendation →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item"><span class="stat-num">12</span><div class="stat-label">Beginner-friendly AI tools reviewed</div></div>
+      <div class="stat-item"><span class="stat-num">14</span><div class="stat-label">Business types covered</div></div>
+      <div class="stat-item"><span class="stat-num">100%</span><div class="stat-label">Plain English, no jargon</div></div>
+      <div class="stat-item"><span class="stat-num">Free</span><div class="stat-label">Always free to use</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- AD -->
+<div class="container" style="padding-top:12px;padding-bottom:4px">
+  <div class="ad-placeholder">[ Advertisement — header banner ad placeholder ]</div>
+
+<!-- SPONSORED CARD — INACTIVE. Add class "sponsor-active" to activate.
+     TODO: Agree rate, replace content, activate when first sponsor confirmed. -->
+<div class="sponsored-card" id="sponsored-slot-home">
+  <span class="sponsor-label">Sponsored placement</span>
+  <h4>[Tool Name]</h4>
+  <p style="font-size:.82rem;color:#6b6860;margin-bottom:10px">[Plain-English description — recommended for small businesses that want to save time on admin.]</p>
+  <a href="#" rel="nofollow sponsored" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;background:#0d9488;color:#fff;font-size:.82rem;font-weight:600;text-decoration:none">Learn more →</a>
+</div>
+</div>
+
+<!-- WHAT IS AI -->
+<section class="section" id="what-is-ai">
+  <div class="container">
+    <div class="what-ai-grid">
+      <div>
+        <div class="section-label">Start Here</div>
+        <h2>What is AI?</h2>
+        <p style="margin:16px 0 20px">AI is software that can understand, write, summarise, create, analyse, plan, and automate tasks. It can help with emails, documents, customer messages, images, websites, business admin, research, marketing, and more.</p>
+        <p style="margin-bottom:24px">You don't need to be technical to use AI tools. Most work by you simply typing what you need — just like sending a message — and the AI responds with something useful.</p>
+        <div class="warning-box" style="margin-bottom:24px">
+          <div style="font-size:1.1rem;flex-shrink:0;margin-top:1px">⚠️</div>
+          <div>
+            <strong style="font-size:.88rem">AI is powerful, but not always right.</strong>
+            <p style="margin:4px 0 0;font-size:.84rem">Don't trust it with legal, medical, tax, or financial decisions without human review. Treat AI as a helpful assistant, not an expert.</p>
+          </div>
+        </div>
+        <a href="#use-cases" class="btn btn-primary">See what AI can do for you →</a>
+      </div>
+      <div>
+        <div class="ai-cap-card fade-up"><div class="ai-cap-icon">✍️</div><div><h4>Write and improve text</h4><p>Emails, proposals, descriptions, and social posts — written or improved in seconds.</p></div></div>
+        <div class="ai-cap-card fade-up"><div class="ai-cap-icon">🧠</div><div><h4>Answer questions</h4><p>Ask anything and get a clear answer — like a knowledgeable colleague always on hand.</p></div></div>
+        <div class="ai-cap-card fade-up"><div class="ai-cap-icon">📄</div><div><h4>Summarise documents</h4><p>Upload a long report or contract and get a plain-English summary in moments.</p></div></div>
+        <div class="ai-cap-card fade-up"><div class="ai-cap-icon">🎨</div><div><h4>Create images and videos</h4><p>Generate professional graphics or marketing images without a designer.</p></div></div>
+        <div class="ai-cap-card fade-up"><div class="ai-cap-icon">⚡</div><div><h4>Automate repetitive work</h4><p>Connect your tools and let AI handle the boring, repetitive tasks automatically.</p></div></div>
+        <div class="ai-cap-card fade-up"><div class="ai-cap-icon">💰</div><div><h4>Save businesses time and money</h4><p>Most small businesses can save 5–10 hours per week once they start using AI properly.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section use-cases-section" id="use-cases">
+  <div class="container">
+    <div class="section-label">Practical AI</div>
+    <h2 style="margin-bottom:10px">What can AI do for you?</h2>
+    <p style="margin-bottom:32px;max-width:560px">Choose what best describes you and see practical, real-world AI use cases in plain English.</p>
+    <div class="ai-search-wrap">
+      <div class="ai-search-inner">
+        <span style="font-size:1.1rem">🔍</span>
+        <input type="text" id="ai-search-input" placeholder='Try: "I run a taxi company" or "I need help with invoices"' oninput="handleAISearch(this.value)">
+        <button class="btn btn-primary btn-sm" onclick="handleAISearch(document.getElementById('ai-search-input').value)" style="margin:4px">Search</button>
+      </div>
+      <div class="ai-search-result" id="ai-search-result"></div>
+    </div>
+    <div class="category-grid" id="category-grid">
+      <div class="cat-card" onclick="showUseCase('taxi')" data-cat="taxi"><div class="cat-emoji">🚕</div><h4>Taxi company</h4><p>Transport</p></div>
+      <div class="cat-card" onclick="showUseCase('airbnb')" data-cat="airbnb"><div class="cat-emoji">🏠</div><h4>Airbnb host</h4><p>Lettings</p></div>
+      <div class="cat-card" onclick="showUseCase('sme')" data-cat="sme"><div class="cat-emoji">🏢</div><h4>Small business</h4><p>General</p></div>
+      <div class="cat-card" onclick="showUseCase('selfemployed')" data-cat="selfemployed"><div class="cat-emoji">🧑‍💼</div><h4>Self-employed</h4><p>Freelancer</p></div>
+      <div class="cat-card" onclick="showUseCase('landlord')" data-cat="landlord"><div class="cat-emoji">🏘️</div><h4>Landlord</h4><p>Property</p></div>
+      <div class="cat-card" onclick="showUseCase('estate')" data-cat="estate"><div class="cat-emoji">🏡</div><h4>Estate agent</h4><p>Property</p></div>
+      <div class="cat-card" onclick="showUseCase('builder')" data-cat="builder"><div class="cat-emoji">🔨</div><h4>Builder / trade</h4><p>Construction</p></div>
+      <div class="cat-card" onclick="showUseCase('salon')" data-cat="salon"><div class="cat-emoji">💇</div><h4>Beauty salon</h4><p>Beauty</p></div>
+      <div class="cat-card" onclick="showUseCase('restaurant')" data-cat="restaurant"><div class="cat-emoji">🍽️</div><h4>Restaurant / café</h4><p>Hospitality</p></div>
+      <div class="cat-card" onclick="showUseCase('student')" data-cat="student"><div class="cat-emoji">🎓</div><h4>Student</h4><p>Education</p></div>
+      <div class="cat-card" onclick="showUseCase('teacher')" data-cat="teacher"><div class="cat-emoji">📚</div><h4>Teacher</h4><p>Education</p></div>
+      <div class="cat-card" onclick="showUseCase('creator')" data-cat="creator"><div class="cat-emoji">🎬</div><h4>Content creator</h4><p>Media</p></div>
+      <div class="cat-card" onclick="showUseCase('admin')" data-cat="admin"><div class="cat-emoji">📊</div><h4>Office / admin</h4><p>Business</p></div>
+      <div class="cat-card" onclick="showUseCase('jobseeker')" data-cat="jobseeker"><div class="cat-emoji">💼</div><h4>Job seeker</h4><p>Career</p></div>
+    </div>
+    <div class="use-case-panel" id="use-case-panel"></div>
+  </div>
+</section>
+
+<!-- TOOL FINDER -->
+<section class="section" id="tool-finder">
+  <div class="container">
+    <div class="text-center mb-8">
+      <div class="section-label" style="justify-content:center">Interactive</div>
+      <h2>Find the right AI tool</h2>
+      <p style="max-width:480px;margin:12px auto 0">Answer a few simple questions and get a plain-English recommendation matched to your needs and budget.</p>
+    </div>
+    <div class="tool-finder-wrap">
+      <div class="finder-progress">
+        <div class="finder-progress-bar done" id="prog-0"></div>
+        <div class="finder-progress-bar" id="prog-1"></div>
+        <div class="finder-progress-bar" id="prog-2"></div>
+        <div class="finder-progress-bar" id="prog-3"></div>
+      </div>
+      <div class="finder-step active" id="finder-step-0">
+        <div class="finder-question">What do you mainly need help with?</div>
+        <div class="finder-hint">Pick the option that sounds most useful right now.</div>
+        <div class="finder-options">
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Writing & emails')">✍️ Writing & emails</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Images & design')">🎨 Images & design</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Customer service')">💬 Customer service</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Social media')">📱 Social media</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Admin & automation')">⚡ Admin & automation</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Research & summaries')">🔍 Research & summaries</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Video & presentations')">🎬 Video & presentations</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'task','Business planning')">📋 Business planning</span>
+        </div>
+        <div class="finder-nav"><button class="btn btn-primary" onclick="finderNext(1)">Next step →</button></div>
+      </div>
+      <div class="finder-step" id="finder-step-1">
+        <div class="finder-question">What's your experience level with technology?</div>
+        <div class="finder-hint">Be honest — there's no wrong answer.</div>
+        <div class="finder-options">
+          <span class="finder-opt" onclick="selectFinderOpt(this,'skill','Beginner')">🌱 Complete beginner</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'skill','Comfortable')">💻 Comfortable with computers</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'skill','Business')">🏢 Business user</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'skill','Advanced')">🚀 Advanced / technical</span>
+        </div>
+        <div class="finder-nav">
+          <button class="btn btn-secondary" onclick="finderBack(0)">← Back</button>
+          <button class="btn btn-primary" onclick="finderNext(2)">Next step →</button>
+        </div>
+      </div>
+      <div class="finder-step" id="finder-step-2">
+        <div class="finder-question">What's your monthly budget for AI tools?</div>
+        <div class="finder-hint">Most of the best tools have a free tier — paid plans unlock more power.</div>
+        <div class="finder-options">
+          <span class="finder-opt" onclick="selectFinderOpt(this,'budget','Free only')">🆓 Free only</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'budget','Under £20/mo')">£ Under £20/month</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'budget','£20-100/mo')">££ £20–£100/month</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'budget','Business budget')">🏢 Business budget</span>
+        </div>
+        <div class="finder-nav">
+          <button class="btn btn-secondary" onclick="finderBack(1)">← Back</button>
+          <button class="btn btn-primary" onclick="finderNext(3)">Next step →</button>
+        </div>
+      </div>
+      <div class="finder-step" id="finder-step-3">
+        <div class="finder-question">What matters most to you?</div>
+        <div class="finder-hint">Pick your top priority.</div>
+        <div class="finder-options">
+          <span class="finder-opt" onclick="selectFinderOpt(this,'priority','Easiest to use')">🎯 Easiest to use</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'priority','Cheapest option')">💰 Cheapest option</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'priority','Best quality')">⭐ Best quality output</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'priority','Saves most time')">⏱️ Saves most time</span>
+          <span class="finder-opt" onclick="selectFinderOpt(this,'priority','Best for business')">📈 Best for business</span>
+        </div>
+        <div class="finder-nav">
+          <button class="btn btn-secondary" onclick="finderBack(2)">← Back</button>
+          <button class="btn btn-teal" onclick="showRecommendation()">Get my recommendation →</button>
+        </div>
+      </div>
+      <div class="recommendation-panel" id="recommendation-panel">
+        <h3 style="margin-bottom:6px">🎉 Your AI starter pack</h3>
+        <p style="margin-bottom:20px;font-size:.9rem">Based on your answers, here's what we'd suggest starting with.</p>
+        <div id="rec-tools"></div>
+        <div class="info-box mt-4">
+          <span>💡</span>
+          <p style="font-size:.83rem;margin:0">Recommendations are based on editorial assessment. Links marked ⭐ are affiliate links — we may earn a small commission at no cost to you. <a href="#affiliate-disclosure">Read our disclosure.</a></p>
+        </div>
+        <button class="btn btn-secondary mt-4" onclick="resetFinder()">← Start again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS & COMPARE -->
+<section class="section tools-section" id="compare">
+  <div class="container">
+    <div class="section-label">Honest Reviews</div>
+    <h2 style="margin-bottom:10px">Popular AI tools — compared honestly</h2>
+    <p style="margin-bottom:24px;max-width:560px">Every tool is written up in plain English. Pricing checked regularly. Affiliate links disclosed.</p>
+    <div class="tool-filters" id="tool-filters">
+      <button class="filter-btn active" onclick="filterTools('all',this)">All tools</button>
+      <button class="filter-btn" onclick="filterTools('free',this)">🆓 Free</button>
+      <button class="filter-btn" onclick="filterTools('beginner',this)">🌱 Beginner-friendly</button>
+      <button class="filter-btn" onclick="filterTools('writing',this)">✍️ Writing</button>
+      <button class="filter-btn" onclick="filterTools('image',this)">🎨 Images</button>
+      <button class="filter-btn" onclick="filterTools('automation',this)">⚡ Automation</button>
+      <button class="filter-btn" onclick="filterTools('business',this)">🏢 Business</button>
+      <button class="filter-btn" onclick="filterTools('video',this)">🎬 Video</button>
+    </div>
+    <div class="ad-placeholder">[ Sponsored placement — clearly labelled · <em>Interested in featuring here? Contact us.</em> ]</div>
+    <div class="tools-grid" id="tools-grid"></div>
+    <div style="margin-top:52px">
+      <h3 style="margin-bottom:8px;font-family:var(--font-display)">Comparison guides</h3>
+      <p style="margin-bottom:24px">Side-by-side comparisons on the tools people ask about most.</p>
+      <div class="grid-3" id="compare-cards"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section calc-section" id="calculator">
+  <div class="container">
+    <div class="section-label">Free Tool</div>
+    <h2 style="margin-bottom:10px">How much time could AI save you?</h2>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:40px;max-width:480px">Move the sliders to reflect your typical week, then see your estimated savings based on a conservative 30% time reduction.</p>
+    <div class="calc-wrap">
+      <div>
+        <div class="calc-field"><label>Hours/week on emails</label><div class="calc-input-row"><input type="range" min="0" max="20" value="5" id="c-emails" oninput="updateCalc()"><div class="calc-val" id="v-emails">5h</div></div></div>
+        <div class="calc-field"><label>Hours/week on admin tasks</label><div class="calc-input-row"><input type="range" min="0" max="20" value="5" id="c-admin" oninput="updateCalc()"><div class="calc-val" id="v-admin">5h</div></div></div>
+        <div class="calc-field"><label>Hours/week on customer replies</label><div class="calc-input-row"><input type="range" min="0" max="20" value="4" id="c-customer" oninput="updateCalc()"><div class="calc-val" id="v-customer">4h</div></div></div>
+        <div class="calc-field"><label>Hours/week on social media / content</label><div class="calc-input-row"><input type="range" min="0" max="20" value="3" id="c-social" oninput="updateCalc()"><div class="calc-val" id="v-social">3h</div></div></div>
+        <div class="calc-field"><label>Your hourly value (£)</label><div class="calc-input-row"><input type="range" min="10" max="200" value="30" step="5" id="c-rate" oninput="updateCalc()"><div class="calc-val" id="v-rate">£30</div></div></div>
+        <div class="calc-disclaimer">Estimate only. Actual savings depend on your tasks, tools, and consistency. AI typically saves 25–50% of time on repetitive communication tasks.</div>
+      </div>
+      <div class="calc-results">
+        <h3 style="color:#fff;margin-bottom:6px;font-family:var(--font-display)">Your estimated AI savings</h3>
+        <p style="font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:20px">Based on a conservative 30% saving</p>
+        <div class="calc-result-item"><span class="calc-result-label">Hours saved per week</span><span class="calc-result-val" id="r-hours">5.1h</span></div>
+        <div class="calc-result-item"><span class="calc-result-label">Hours saved per month</span><span class="calc-result-val" id="r-monthly-hours">22h</span></div>
+        <div class="calc-result-item"><span class="calc-result-label">Estimated monthly value</span><span class="calc-result-val" id="r-value">£660</span></div>
+        <div class="calc-result-item"><span class="calc-result-label">Estimated annual value</span><span class="calc-result-val" id="r-annual">£7,920</span></div>
+        <div style="padding-top:16px">
+          <p style="font-size:.84rem;color:rgba(255,255,255,.55);margin-bottom:12px">Suggested tools to start with:</p>
+          <div id="calc-tools" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+        </div>
+        <a href="#tool-finder" class="btn btn-teal" style="margin-top:20px;width:100%;justify-content:center">Get my AI starter plan →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- READINESS -->
+<section class="section" id="readiness">
+  <div class="container">
+    <div class="text-center mb-8">
+      <div class="section-label" style="justify-content:center">Free Quiz</div>
+      <h2>Is your business ready for AI?</h2>
+      <p style="max-width:480px;margin:10px auto 0">Answer 8 quick questions to find out how much AI could help — and where to start.</p>
+    </div>
+    <div class="readiness-wrap">
+      <div id="readiness-questions"></div>
+      <div class="score-bar-wrap mt-6">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-size:.88rem;font-weight:600;color:var(--text)">AI Readiness Score</span>
+          <span id="score-num" style="font-size:1.3rem;font-weight:700;color:var(--blue);font-family:var(--font-display)">0 / 100</span>
+        </div>
+        <div class="score-bar-bg"><div class="score-bar-fill" id="score-bar-fill"></div></div>
+        <div class="score-label"><span>Not ready yet</span><span>Some opportunity</span><span>Very AI-ready</span></div>
+      </div>
+      <div class="score-result" id="score-result"></div>
+      <div style="margin-top:20px;text-align:center">
+        <a href="#tool-finder" class="btn btn-primary" id="readiness-cta" style="display:none">See recommended tools →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI GUIDES -->
+<section class="section news-section" id="updates">
+  <div class="container">
+    <div class="section-label">Latest AI Guides</div>
+    <h2 style="margin-bottom:8px">Plain-English AI guides</h2>
+    <p style="margin-bottom:36px;max-width:520px">Practical, honest guides to help you understand AI tools, avoid common mistakes, and make better decisions — written for real people, not tech experts.</p>
+    <div class="grid-4" id="news-grid"></div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section" id="trust">
+  <div class="container">
+    <div class="text-center mb-8">
+      <div class="section-label" style="justify-content:center">Our Promise</div>
+      <h2>Honest AI advice matters</h2>
+      <p style="max-width:480px;margin:10px auto 0">We don't recommend every AI tool. We try them, test them, and only share what genuinely helps.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item"><div class="trust-icon">📖</div><h4>Plain English always</h4><p>No jargon. No unnecessary technical terms. If we can't explain it simply, we won't publish it.</p></div>
+      <div class="trust-item"><div class="trust-icon">🆓</div><h4>Free and paid options</h4><p>We always show free alternatives. We don't push paid tools if free ones do the job well enough.</p></div>
+      <div class="trust-item"><div class="trust-icon">🔗</div><h4>Affiliate links disclosed</h4><p>When links are affiliate links, we say so clearly. Our recommendations aren't influenced by commission.</p></div>
+      <div class="trust-item"><div class="trust-icon">⚠️</div><h4>AI warnings included</h4><p>We tell you where AI makes mistakes, where it shouldn't be trusted, and where human review is essential.</p></div>
+      <div class="trust-item"><div class="trust-icon">📅</div><h4>Last-checked dates shown</h4><p>AI tools change constantly. Every recommendation shows when it was last verified — usually every 3 months.</p></div>
+      <div class="trust-item"><div class="trust-icon">🎯</div><h4>Real use cases only</h4><p>We focus on what AI can actually do for real people, not marketing promises or theoretical capabilities.</p></div>
+    </div>
+    <div class="affiliate-disclaimer" id="affiliate-disclosure">
+      <strong style="font-size:.9rem">📋 Affiliate disclosure</strong>
+      <p style="font-size:.84rem;margin-top:6px">Some links on AI Tool 4 Me are affiliate links. This means we may earn a small commission if you sign up to a tool through our link, at no extra cost to you. Our editorial recommendations are based on genuine usefulness, beginner-friendliness, and value for money. We do not accept payment to change recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS CTA -->
+<section class="section-sm" id="business-cta" style="background:linear-gradient(135deg,var(--blue-light),var(--teal-light))">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;background:var(--surface);border-radius:var(--radius-lg);padding:32px 40px;border:1px solid var(--border);box-shadow:var(--shadow-lg)">
+      <div>
+        <span class="badge badge-blue" style="margin-bottom:10px">For Business Owners</span>
+
+        <h3 style="margin-bottom:6px">Want the right AI tools set up for your business?</h3>
+        <p style="max-width:480px;margin:0">Not sure where to start? We review your business, spot the biggest AI opportunities, and send you a plain-English report showing exactly what to use — and why.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0">
+        <a href="/free-ai-audit/" class="btn btn-primary">Request a free AI audit →</a>
+        <a href="#calculator" class="btn btn-secondary btn-sm" style="text-align:center">Calculate my savings first</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+
+<!-- ============================================================
+     TOTALAI SOLUTIONS — DONE FOR YOU SECTION
+     Links to the sister service for businesses that want
+     AI built and managed for them rather than DIY.
+     TODO: Replace href="#" with real TotalAI Solutions domain
+     once it goes live (e.g. https://totalaisolutions.com)
+     ============================================================ -->
+<section style="background:var(--ink,#1a1916);padding:80px 0;position:relative;overflow:hidden" id="done-for-you">
+
+  <!-- Background glow -->
+  <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(37,99,235,0.08) 0%,transparent 70%);border-radius:50%;pointer-events:none"></div>
+  <div style="position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(13,148,136,0.06) 0%,transparent 70%);border-radius:50%;pointer-events:none"></div>
+
+  <div class="container" style="position:relative;z-index:1">
+
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:48px">
+      <span style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#0d9488;display:block;margin-bottom:12px">Sister Service</span>
+      <h2 style="font-family:var(--font-display,'Fraunces',Georgia,serif);font-size:clamp(1.8rem,3.5vw,2.8rem);color:#fff;font-weight:600;line-height:1.15;margin-bottom:14px">
+        Want AI <em style="font-style:italic;color:#60a5fa">built and running</em><br>in your business?
+      </h2>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,0.55);max-width:540px;margin:0 auto;line-height:1.8">
+        AITool4Me.com helps you find and understand AI tools. 
+        Our sister service <strong style="color:rgba(255,255,255,0.85)">TotalAI Solutions</strong> builds and manages 
+        the whole system for you — so you don't have to touch the technology at all.
+      </p>
+    </div>
+
+    <!-- Two column layout -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto 40px">
+
+      <!-- DIY column -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px">
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px">This site — AI Tool 4 Me</div>
+        <h3 style="font-family:var(--font-display,'Fraunces',Georgia,serif);font-size:1.2rem;color:#fff;margin-bottom:12px;font-weight:600">Do it yourself</h3>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.5)"><span style="color:#0d9488;flex-shrink:0">✓</span>Compare AI tools side by side</li>
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.5)"><span style="color:#0d9488;flex-shrink:0">✓</span>Find the right tools for your business type</li>
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.5)"><span style="color:#0d9488;flex-shrink:0">✓</span>Calculate your potential time savings</li>
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.5)"><span style="color:#0d9488;flex-shrink:0">✓</span>Get a free AI opportunity report</li>
+          <li style="display:flex;gap:10px;padding:8px 0;font-size:.88rem;color:rgba(255,255,255,0.5)"><span style="color:#0d9488;flex-shrink:0">✓</span>Plain-English guides and comparisons</li>
+        </ul>
+        <div style="margin-top:18px;font-size:.8rem;color:rgba(255,255,255,0.25)">Free · No sign-up needed</div>
+      </div>
+
+      <!-- Done For You column -->
+      <div style="background:linear-gradient(135deg,rgba(37,99,235,0.12),rgba(13,148,136,0.08));border:1px solid rgba(37,99,235,0.3);border-radius:16px;padding:28px;position:relative">
+        <div style="position:absolute;top:16px;right:16px;background:#2563eb;color:#fff;font-size:.65rem;font-weight:700;padding:3px 9px;border-radius:4px;letter-spacing:.04em">SISTER SERVICE</div>
+        <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#60a5fa;margin-bottom:14px">TotalAI Solutions</div>
+        <h3 style="font-family:var(--font-display,'Fraunces',Georgia,serif);font-size:1.2rem;color:#fff;margin-bottom:12px;font-weight:600">Done for you</h3>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.7)"><span style="color:#60a5fa;flex-shrink:0">✓</span>AI receptionist — answers enquiries 24/7</li>
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.7)"><span style="color:#60a5fa;flex-shrink:0">✓</span>Automated appointment reminders</li>
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.7)"><span style="color:#60a5fa;flex-shrink:0">✓</span>Customer follow-up and review engine</li>
+          <li style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:.88rem;color:rgba(255,255,255,0.7)"><span style="color:#60a5fa;flex-shrink:0">✓</span>CRM integration and weekly reporting</li>
+          <li style="display:flex;gap:10px;padding:8px 0;font-size:.88rem;color:rgba(255,255,255,0.7)"><span style="color:#60a5fa;flex-shrink:0">✓</span>Built, managed and supported for you</li>
+        </ul>
+        <div style="margin-top:18px;font-size:.8rem;color:rgba(96,165,250,0.6)">From £197/month · Free consultation</div>
+      </div>
+
+    </div>
+
+    <!-- Pricing pills -->
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:36px">
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-family:var(--font-display,'Fraunces',Georgia,serif);font-size:1.5rem;color:#fff;font-weight:600">£197<span style="font-size:.9rem;font-weight:400;color:rgba(255,255,255,0.4)">/mo</span></div>
+        <div style="font-size:.75rem;color:rgba(255,255,255,0.35);margin-top:3px">Start package</div>
+      </div>
+      <div style="background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.3);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-family:var(--font-display,'Fraunces',Georgia,serif);font-size:1.5rem;color:#fff;font-weight:600">£397<span style="font-size:.9rem;font-weight:400;color:rgba(255,255,255,0.4)">/mo</span></div>
+        <div style="font-size:.75rem;color:rgba(96,165,250,0.7);margin-top:3px">Core package · Most popular</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-family:var(--font-display,'Fraunces',Georgia,serif);font-size:1.5rem;color:#fff;font-weight:600">£697<span style="font-size:.9rem;font-weight:400;color:rgba(255,255,255,0.4)">/mo</span></div>
+        <div style="font-size:.75rem;color:rgba(255,255,255,0.35);margin-top:3px">Full package</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center">
+      <p style="font-size:.9rem;color:rgba(255,255,255,0.4);margin-bottom:20px">
+        Ideal for accountants, dental practices, solicitors, estate agents, and small businesses across the UK and Ireland.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://totalai-solutions.com" rel="noopener" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:15px 32px;background:#2563eb;color:#fff;border-radius:10px;font-family:var(--font-body,'DM Sans',sans-serif);font-size:.95rem;font-weight:600;text-decoration:none;transition:all .2s;box-shadow:0 2px 12px rgba(37,99,235,.4)" onmouseover="this.style.background='#1d4ed8';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#2563eb';this.style.transform='none'">
+          Visit TotalAI Solutions →
+        </a>
+        <a href="/free-ai-audit.html" style="display:inline-flex;align-items:center;gap:8px;padding:15px 32px;background:transparent;color:#fff;border-radius:10px;font-family:var(--font-body,'DM Sans',sans-serif);font-size:.95rem;font-weight:500;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:all .2s" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='transparent'">
+          Get a free AI audit first
+        </a>
+      </div>
+      <p style="font-size:.76rem;color:rgba(255,255,255,0.25);margin-top:16px">
+        Free consultation · No obligation · UK &amp; Ireland
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="text-center mb-8">
+      <div class="section-label" style="justify-content:center">Common Questions</div>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- EMAIL -->
+
+<!-- EMAIL CHECKLIST CAPTURE — between tool finder and newsletter
+     TODO: Replace action="#" with Mailchimp/ConvertKit/Formspree endpoint -->
+<section style="padding:52px 0;background:#fff;border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="email-capture-box" style="max-width:660px;margin:0 auto">
+      <h3>📋 Free AI Starter Checklist</h3>
+      <p>Get the simple 7-step checklist for using AI in your business — without wasting money on the wrong tools. Used by beginners and small business owners across the UK.</p>
+      <form class="capture-form" action="https://formspree.io/f/xgobvqqq" method="POST" onsubmit="handleChecklist(event)">
+        <input type="hidden" name="_subject" value="AI Starter Checklist Signup — aitool4me.com"><input type="text" name="firstname" placeholder="First name" required autocomplete="given-name">
+        <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+        <button type="submit" class="btn-capture">Send me the checklist →</button>
+      </form>
+      <div class="capture-note">🔒 No spam. Just practical AI tips and honest tool recommendations. Unsubscribe anytime.</div>
+      <div id="checklist-ok" style="display:none;margin-top:10px;color:#16a34a;font-weight:600;font-size:.86rem">✅ On its way — check your inbox shortly!</div>
+    </div>
+  </div>
+</section>
+<script>
+function handleChecklist(e){
+  e.preventDefault();
+  var ok=document.getElementById('checklist-ok');
+  if(ok) ok.style.display='block';
+  e.target.style.display='none';
+}
+</script>
+<section class="email-section" id="newsletter">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;color:#7dd3fc">Weekly email</div>
+    <h2 style="margin-bottom:12px">Keep up with AI without the confusion</h2>
+    <p>Get a free weekly plain-English email showing what changed in AI, which tools are worth trying, and how small businesses can save time and money.</p>
+    <div class="email-form">
+      <input class="email-input" type="email" id="email-input" placeholder="Enter your email address">
+      <button class="btn btn-teal" onclick="handleEmailSignup()">Send me AI updates</button>
+    </div>
+    <div class="email-privacy">🔒 No spam. Unsubscribe anytime. We respect your privacy.</div>
+    <div id="email-success" style="display:none;margin-top:12px;color:#6ee7b7;font-weight:600">✅ You're in! First email on its way shortly.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+  <!-- Internal SEO link block — helps Google discover all pages -->
+  <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:28px;margin-top:0">
+    <div style="max-width:1160px;margin:0 auto;padding:0 24px">
+      <p style="font-size:.72rem;color:rgba(255,255,255,.25);margin-bottom:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600">All guides and tools on aitool4me.com</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px">
+        <a href="/what-is-ai/" style="font-size:.78rem;color:rgba(255,255,255,.35);transition:color .18s" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">What is AI?</a>
+        <a href="/best-ai-tools-for-beginners/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Best AI tools for beginners</a>
+        <a href="/best-ai-tools-for-small-business/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Best AI tools for small business</a>
+        <a href="/chatgpt-vs-claude-vs-gemini/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">ChatGPT vs Claude vs Gemini</a>
+        <a href="/best-free-ai-tools/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Best free AI tools</a>
+        <a href="/ai-for-taxi-companies/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI for taxi companies</a>
+        <a href="/ai-for-airbnb-hosts/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI for Airbnb hosts</a>
+        <a href="/ai-tools-for-social-media/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI tools for social media</a>
+        <a href="/ai-tools-for-customer-replies/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI tools for customer replies</a>
+        <a href="/ai-savings-calculator/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI savings calculator</a>
+        <a href="/free-ai-audit/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Free AI audit for your business</a>
+        <a href="/affiliate-programmes/" style="font-size:.78rem;color:rgba(255,255,255,.35)" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI affiliate programmes</a>
+      </div>
+    </div>
+  </div>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">AI Tool 4 Me</span>
+        <p>Stop guessing. Find your AI tool. Save time. AITool4Me.com helps everyday people and small businesses find the right AI tools and use them with confidence.</p>
+        <div style="margin-top:16px;display:flex;gap:10px">
+          <a href="#" style="color:rgba(255,255,255,.5);font-size:.8rem;border:1px solid rgba(255,255,255,.15);padding:5px 10px;border-radius:6px">Twitter/X</a>
+          <a href="#" style="color:rgba(255,255,255,.5);font-size:.8rem;border:1px solid rgba(255,255,255,.15);padding:5px 10px;border-radius:6px">LinkedIn</a>
+          <a href="#" style="color:rgba(255,255,255,.5);font-size:.8rem;border:1px solid rgba(255,255,255,.15);padding:5px 10px;border-radius:6px">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Learn AI</h5>
+        <a href="#what-is-ai">What is AI?</a>
+        <a href="#what-is-ai">AI for beginners</a>
+        <a href="#trust">AI safety</a>
+        <a href="#compare">Free AI tools</a>
+        <a href="#updates">AI news</a>
+      </div>
+      <div class="footer-col">
+        <h5>Compare</h5>
+        <a href="#compare">ChatGPT vs Claude</a>
+        <a href="#compare">Best AI tools</a>
+        <a href="#compare">AI for business</a>
+        <a href="#compare">AI automation</a>
+        <a href="#compare">Free vs paid AI</a>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="#calculator">Savings calculator</a>
+        <a href="#readiness">AI readiness score</a>
+        <a href="#tool-finder">Tool finder quiz</a>
+        <a href="#newsletter">Weekly AI email</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AI Tool 4 Me · aitool4me.com · All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">About</a>
+        <a href="mailto:hello@aitool4me.com">Contact</a>
+        <a href="/affiliate-disclosure.html">Affiliate disclosure</a>
+        <a href="/privacy.html">Privacy policy</a>
+        <a href="/terms.html">Terms of use</a>
+        <a href="/#cookie-banner">Cookie settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const useCaseData={taxi:{emoji:'🚕',title:'AI for taxi companies',intro:"AI can save taxi operators hours every week on admin, customer communication, and marketing — without hiring extra staff.",tasks:['Customer enquiry replies','Complaint handling letters','Driver notices and updates','Invoice wording and templates','Tender and contract documents','Website content and FAQs','Review replies (Google/TripAdvisor)','Social media posts','Booking confirmation messages','Lost property responses'],tools:['ChatGPT','Claude','Google Gemini','Canva','Grammarly'],tip:"Start with ChatGPT — type 'Reply to this customer complaint professionally: [paste complaint]' and you'll have a draft in seconds."},airbnb:{emoji:'🏠',title:'AI for Airbnb hosts',intro:"AI can help you handle guest communication, create better listings, and build a polished brand — even with just one property.",tasks:['Guest reply templates','Review response drafts','Listing descriptions','Local area guides','Cleaning checklists','Welcome booklets','Complaint replies','Social media posts','Pricing strategy summaries','House rules documents'],tools:['ChatGPT','Claude','Canva','Grammarly','Jasper'],tip:"Ask ChatGPT to 'write a warm, professional reply to a guest who left a 3-star review mentioning the wifi was slow' — personalise it and post."},sme:{emoji:'🏢',title:'AI for small business owners',intro:"AI is probably the biggest time-saver available to small businesses right now — and most of it costs less than a cup of coffee a day.",tasks:['Professional emails','Website content','Customer service replies','Quote and proposal wording','Marketing social posts','Admin system templates','Review management','Staff policies and procedures','Lead capture copy','Business planning documents'],tools:['ChatGPT','Claude','Canva','Zapier','Google Gemini','Notion AI'],tip:"The best starting point for most small business owners is ChatGPT Plus. It handles writing, research, and basic automation."},selfemployed:{emoji:'🧑‍💼',title:'AI for self-employed people',intro:"When you're working alone, AI becomes your assistant, copywriter, and admin support — all in one.",tasks:['Client email drafts','Invoicing templates','Proposal documents','LinkedIn and social content','Portfolio descriptions','Quote responses','Meeting summaries','Contract templates','Research and competitor analysis','Tax document summaries'],tools:['ChatGPT','Claude','Notion AI','Grammarly','Canva'],tip:"Use Claude for anything that needs careful, accurate writing — it tends to be more thoughtful and less prone to errors."},landlord:{emoji:'🏘️',title:'AI for landlords',intro:"From tenancy agreements to maintenance notices, AI can help landlords communicate professionally and save hours every month.",tasks:['Tenancy renewal letters','Maintenance notice templates','Deposit dispute responses','Inspection report summaries','Rent increase letters','Tenant welcome packs','Reference request replies','Letting agent communications','Property listing descriptions','Compliance document summaries'],tools:['ChatGPT','Claude','Grammarly','Canva','Google Gemini'],tip:"Always have a solicitor review legally-sensitive documents — AI can draft them, but a professional should check them."},estate:{emoji:'🏡',title:'AI for estate agents',intro:"AI can write property listings, handle enquiries, and help estate agents work faster and look more professional.",tasks:['Property listing descriptions','Buyer and seller email replies','Market update newsletters','Social media property posts','Viewings feedback summaries','Offer negotiation scripts','Website content','Client onboarding letters','Competitor analysis','Lead follow-up emails'],tools:['ChatGPT','Claude','Canva','Jasper','Grammarly'],tip:"Paste a property's basic details into ChatGPT and ask it to write a compelling listing — then add your local knowledge."},builder:{emoji:'🔨',title:'AI for builders and tradespeople',intro:"Not just for office workers — AI can save tradespeople serious time on quotes, invoices, and customer communication.",tasks:['Quote and estimate wording','Invoice templates','Customer update messages','Review reply drafts','Job completion letters','Website content','Social media posts','Material cost summaries','Contract terms templates','Complaint response letters'],tools:['ChatGPT','Google Gemini','Canva','Grammarly'],tip:"Voice-to-text AI tools (like Whisper in ChatGPT) mean you can describe a job verbally and get a written quote draft without typing a word."},salon:{emoji:'💇',title:'AI for beauty salons',intro:"AI can help beauty salons look polished online, handle bookings professionally, and market more effectively.",tasks:['Booking confirmation messages','Client follow-up emails','Social media captions','Promotional content','Review replies','Staff scheduling templates','Price list copy','Website homepage text','Treatment descriptions','Client consultation forms'],tools:['ChatGPT','Canva','Claude','Google Gemini'],tip:"Use Canva's AI features to create polished social media graphics for your treatments — no design experience needed."},restaurant:{emoji:'🍽️',title:'AI for restaurants and cafés',intro:"AI can help with menus, marketing, reviews, and customer communication — without a marketing budget.",tasks:['Menu descriptions','Review reply drafts','Social media captions','Special event promotions','Staff rota templates','Supplier email drafts','Food allergy policy documents','Customer complaint responses','Booking confirmation messages','Website content'],tools:['ChatGPT','Canva','Claude','Google Gemini','Grammarly'],tip:"Replying to every Google review matters for SEO. Use ChatGPT to draft personalised replies to all reviews in minutes."},student:{emoji:'🎓',title:'AI for students',intro:"AI can help you research, plan, summarise, and improve your work — but always follow your institution's AI policy.",tasks:['Essay planning and structure','Research summaries','Complex topic explanations','Revision flashcard creation','Proofreading and grammar checks','Presentation slide ideas','Cover letter drafts','Deadline planning','Note summarisation','Bibliography formatting'],tools:['ChatGPT','Claude','Perplexity','Grammarly','Notion AI'],tip:"⚠️ Important: Check your school or university AI policy before using AI in assessed work. Undisclosed AI use may count as academic dishonesty."},teacher:{emoji:'📚',title:'AI for teachers',intro:"AI can dramatically reduce planning time and help teachers create better, more personalised learning materials.",tasks:['Lesson plan creation','Worksheet and quiz generation','Differentiation for different abilities','Parent communication templates','Report writing assistance','Resource and activity ideas','Marking rubric creation','Curriculum planning','Assessment question banks','SEN support materials'],tools:['ChatGPT','Claude','Canva','Google Gemini','Grammarly'],tip:"Use Claude for anything requiring careful, measured language — especially for parent communication or sensitive student situations."},creator:{emoji:'🎬',title:'AI for content creators',intro:"AI is a content creator's secret weapon — generating ideas, scripts, captions, thumbnails, and more at speed.",tasks:['Video script drafts','YouTube title and description ideas','Social media captions','Blog post outlines','Podcast show notes','Thumbnail concept ideas','Brand name suggestions','Content calendar planning','Hashtag research','Sponsorship pitch emails'],tools:['ChatGPT','Claude','Canva','Runway','ElevenLabs','Synthesia'],tip:"Try Runway for AI video editing, ElevenLabs for voiceovers, and Canva for thumbnails. Together they can replace a small production team."},admin:{emoji:'📊',title:'AI for office and admin workers',intro:"If your job involves emails, documents, spreadsheets, or communication, AI can automate a significant part of your day.",tasks:['Email drafting and replies','Meeting summary notes','Document formatting','Data summarisation','Report writing','Presentation content','Process documentation','Internal communications','Scheduling assistance','Policy document drafting'],tools:['Microsoft Copilot','ChatGPT','Claude','Notion AI','Grammarly'],tip:"Microsoft Copilot is built into Microsoft 365 and can read your emails, summarise meetings, and draft Word documents without leaving your existing tools."},jobseeker:{emoji:'💼',title:'AI for job seekers',intro:"A strong CV, targeted cover letters, and confident interview prep — AI can help you stand out in a competitive market.",tasks:['CV writing and formatting','Cover letter personalisation','LinkedIn profile optimisation','Interview question practice','Job description analysis','Skills gap identification','Resignation letter drafts','Reference request emails','Career change planning','Salary research summaries'],tools:['ChatGPT','Claude','Grammarly','Perplexity','LinkedIn AI features'],tip:"Paste the job description into ChatGPT and ask it to help tailor your CV bullet points to match exactly what the employer is looking for."}};
+
+/* ── TOOL PRICING ──────────────────────────────────────────────────
+   Each tool has a pricing object with USD (primary), GBP, and EUR.
+   usd = the canonical price in US dollars (what the tool officially charges)
+   gbp/eur = honest approximations shown to UK/EU visitors
+   free = true means a genuine free tier exists (not just a trial)
+   flat = true means price does not change by region (e.g. M365)
+   TODO: Review all prices every 90 days. Update checked date when you do.
+   Last verified: June 2026
+──────────────────────────────────────────────────────────────── */
+const toolsData=[
+  {name:'ChatGPT',emoji:'🤖',bg:'#10a37f',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£16/mo',eur:'~€19/mo'},
+   best:'Writing, research, Q&A',filters:['writing','beginner','free'],level:'Beginner',
+   pros:'Most versatile free tool. Handles almost any task.',cons:'Free version has daily limits. Can make confident mistakes.',aff:true,checked:'June 2026'},
+
+  {name:'Claude',emoji:'🔵',bg:'#7c3aed',
+   pricing:{free:true,usd:'~$18/mo',gbp:'~£15/mo',eur:'~€17/mo'},
+   best:'Careful writing & summaries',filters:['writing','beginner'],level:'Beginner',
+   pros:'More thoughtful, measured responses. Great for business writing.',cons:'Slightly fewer third-party integrations than ChatGPT.',aff:true,checked:'June 2026'},
+
+  {name:'Google Gemini',emoji:'✨',bg:'#1a73e8',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£17/mo',eur:'~€19/mo'},
+   best:'Research & Google Workspace users',filters:['writing','free','beginner'],level:'Beginner',
+   pros:'Integrates with Gmail, Google Docs, Drive, and Search.',cons:'Still catching up to ChatGPT and Claude on some tasks.',aff:false,checked:'June 2026'},
+
+  {name:'Microsoft Copilot',emoji:'🪟',bg:'#0078d4',
+   pricing:{free:false,usd:'Included in M365',gbp:'Included in M365',eur:'Included in M365',flat:true},
+   best:'Microsoft Office users',filters:['writing','business'],level:'Business',
+   pros:'Built directly into Word, Excel, Outlook, and Teams.',cons:'Requires an active Microsoft 365 subscription.',aff:false,checked:'June 2026'},
+
+  {name:'Canva AI',emoji:'🎨',bg:'#00c4cc',
+   pricing:{free:true,usd:'~$15/mo',gbp:'~£10/mo',eur:'~€14/mo'},
+   best:'Images, design & social media',filters:['image','beginner','free'],level:'Beginner',
+   pros:'No design skills needed. Huge template library. AI image generation built in.',cons:'Free tier limits AI features. Best for standard social formats.',aff:true,checked:'June 2026'},
+
+  {name:'Zapier',emoji:'⚡',bg:'#ff4a00',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£17/mo',eur:'~€19/mo'},
+   best:'Workflow automation',filters:['automation','business'],level:'Intermediate',
+   pros:'Connects 6,000+ apps. No coding needed. Saves hours of admin.',cons:'Can get complex quickly. Cost scales with usage.',aff:true,checked:'June 2026'},
+
+  {name:'Make',emoji:'🔗',bg:'#6d00cc',
+   pricing:{free:true,usd:'~$9/mo',gbp:'~£7/mo',eur:'~€8/mo'},
+   best:'Advanced automation',filters:['automation','business'],level:'Advanced',
+   pros:'More powerful than Zapier. Much cheaper at scale.',cons:'Steeper learning curve — not beginner-friendly.',aff:true,checked:'June 2026'},
+
+  {name:'Perplexity',emoji:'🔍',bg:'#1fb8cd',
+   pricing:{free:true,usd:'~$20/mo',gbp:'~£15/mo',eur:'~€18/mo'},
+   best:'Research with cited sources',filters:['writing','free','beginner'],level:'Beginner',
+   pros:'Always cites sources. Excellent for research and fact-checking.',cons:'Not designed for creative writing or long-form content.',aff:false,checked:'June 2026'},
+
+  {name:'Grammarly',emoji:'✅',bg:'#15c39a',
+   pricing:{free:true,usd:'~$12/mo',gbp:'~£10/mo',eur:'~€11/mo'},
+   best:'Writing improvement & proofreading',filters:['writing','beginner','free'],level:'Beginner',
+   pros:'Works automatically inside your browser, email, and Google Docs.',cons:'Free version is limited. Can make writing feel slightly stiff.',aff:true,checked:'June 2026'},
+
+  {name:'Notion AI',emoji:'📝',bg:'#191919',
+   pricing:{free:false,usd:'Adds ~$10/mo',gbp:'Adds ~£7/mo',eur:'Adds ~€9/mo'},
+   best:'Notes, documents & team planning',filters:['writing','business'],level:'Intermediate',
+   pros:'AI built directly into your Notion workspace. Great for teams.',cons:'Only useful if you already use Notion.',aff:true,checked:'June 2026'},
+
+  {name:'Runway',emoji:'🎬',bg:'#e40171',
+   pricing:{free:true,usd:'~$15/mo',gbp:'~£12/mo',eur:'~€14/mo'},
+   best:'AI video creation & editing',filters:['video'],level:'Intermediate',
+   pros:'Impressive video generation quality. Improving rapidly.',cons:'Output quality varies. Free tier has strict limits.',aff:false,checked:'June 2026'},
+
+  {name:'ElevenLabs',emoji:'🎙️',bg:'#1e293b',
+   pricing:{free:true,usd:'~$5/mo',gbp:'~£4/mo',eur:'~€5/mo'},
+   best:'AI voiceovers & narration',filters:['video','business'],level:'Intermediate',
+   pros:'Remarkably realistic AI voices. Great for videos and podcasts.',cons:'Can sound slightly unnatural on the free tier.',aff:false,checked:'June 2026'},
+];
+
+const compareCardsData=[
+  {title:'ChatGPT vs Claude vs Gemini',desc:"The big three compared on writing quality, accuracy, ease of use, and price.",difficulty:'Beginner',bestFor:'Choosing your first AI tool',badge:'badge-blue',checked:'June 2026'},
+  {title:'Best free AI tools for beginners',desc:"You don't need to spend anything to get started. Here are the best free options.",difficulty:'Beginner',bestFor:'Anyone starting out',badge:'badge-green',checked:'June 2026'},
+  {title:'Best AI tools for small business',desc:"Practical AI that saves real time for business owners — all tested and reviewed.",difficulty:'Business',bestFor:'Small business owners',badge:'badge-teal',checked:'June 2026'},
+  {title:'Best AI website builders',desc:"Build a decent website without a developer — AI tools that actually work.",difficulty:'Beginner',bestFor:'Non-technical users',badge:'badge-purple',checked:'June 2026'},
+  {title:'Best AI tools for social media',desc:"Save hours on content creation with AI tools built for social platforms.",difficulty:'Beginner',bestFor:'Content creators',badge:'badge-blue',checked:'June 2026'},
+  {title:'Best AI automation tools',desc:"Connect your apps and automate your workflows — no coding required.",difficulty:'Intermediate',bestFor:'Business owners',badge:'badge-amber',checked:'June 2026'},
+  {title:'Best AI image generators',desc:"Create professional images, graphics, and marketing materials with AI.",difficulty:'Beginner',bestFor:'Designers & marketers',badge:'badge-purple',checked:'June 2026'},
+  {title:'AI tools actually worth paying for',desc:"With so many free options, which paid tools genuinely earn their keep?",difficulty:'Varies',bestFor:'Considering an upgrade',badge:'badge-teal',checked:'June 2026'},
+  {title:'Best AI tools for customer replies',desc:"Speed up customer service without sacrificing a personal touch.",difficulty:'Beginner',bestFor:'Customer-facing businesses',badge:'badge-blue',checked:'June 2026'},
+];
+
+const newsData=[
+  {tag:'Beginner Guide',tagClass:'badge-blue',title:'What AI can actually do — and what it cannot',summary:"AI is useful for writing, summarising, answering questions, and automating repetitive tasks. But it makes mistakes, sometimes confidently. This guide explains the difference between what AI is genuinely good at and where you should never rely on it alone.",impact:"Start here if you are new to AI. Understanding the limits is just as important as knowing the capabilities.",date:'',color:'#2563eb'},
+  {tag:'Free vs Paid',tagClass:'badge-teal',title:'Do you actually need to pay for AI tools?',summary:"Most leading AI tools have a genuinely useful free tier. For many small business tasks — writing emails, drafting replies, summarising documents — the free versions of ChatGPT, Claude, and Gemini are good enough to get real value.",impact:"Try free tools first. Only upgrade to a paid plan when you hit the limits regularly and the time saved justifies the cost.",date:'',color:'#0d9488'},
+  {tag:'Safety',tagClass:'badge-amber',title:'AI scams and fake tools: how to spot them',summary:"Not every site offering an AI tool is legitimate. Some charge for tools that are entirely free elsewhere. Others collect your data or deliver nothing useful. This guide explains how to check if an AI tool is genuine before you hand over any details.",impact:"Only sign up through official websites. Search the tool name plus official site if unsure, or check our comparison guides first.",date:'',color:'#d97706'},
+  {tag:'Practical Guide',tagClass:'badge-green',title:'How to write a good AI prompt — in plain English',summary:"The single biggest reason people think AI does not work is that they are not asking it the right way. A good prompt gives context, specifies the format you want, and tells the AI who it is writing for. This guide shows you exactly how.",impact:"Better prompts mean better results. Most people improve their AI output dramatically within the first week once they understand this.",date:'',color:'#16a34a'},
+];
+
+const faqData=[
+  {q:'What is AI in simple terms?',a:"AI (artificial intelligence) is software that can understand language, answer questions, write text, create images, and automate tasks. Think of it as a very capable assistant that never sleeps, never gets tired, and can help with a wide range of jobs — but one that needs supervision and can sometimes make mistakes."},
+  {q:'Can AI help my small business?',a:"Almost certainly yes. Most small businesses can save meaningful time on emails, customer replies, social media, admin, and marketing content. The best starting point is usually a general AI writing tool like ChatGPT or Claude."},
+  {q:'What is the best AI tool for beginners?',a:"ChatGPT (free version) is the most widely recommended starting point. It's free, easy to use, and handles a huge range of tasks. For writing and business communication specifically, Claude is also excellent."},
+  {q:'Are free AI tools good enough?',a:"For most everyday tasks — writing help, answering questions, summarising documents — yes, free tools are genuinely good enough. Paid plans unlock more usage, faster responses, and advanced features, but they're not necessary to get started."},
+  {q:'Can AI save me money?',a:"Yes, in two ways. It can reduce the time you spend on tasks (saving your own time or reducing the need for staff or outsourcing), and it can replace some paid services like copywriting, basic design, or VA work for straightforward tasks."},
+  {q:'Is AI always correct?',a:"No. AI tools can and do make mistakes — sometimes confidently. This is why AI works best when a human reviews the output, especially for anything important like legal, medical, financial, or sensitive content. Always treat AI output as a first draft."},
+  {q:'What should I not use AI for?',a:"Don't rely on AI alone for legal advice, medical decisions, tax filing, or financial decisions where a professional's judgement is required. AI can help you prepare questions or understand information, but a human expert should make the final call."},
+  {q:'How does this website make money?',a:"AI Tool 4 Me uses affiliate links (marked clearly), display advertising, and a business AI consultation service. Affiliate links mean we may earn a small commission when you sign up for a tool through our link — at no extra cost to you. This never changes our recommendations."},
+  {q:'How often are AI tool recommendations updated?',a:"We aim to verify pricing, features, and accuracy every 3 months. Every tool card shows a 'last checked' date. If you spot something out of date, use the 'Report outdated info' link and we'll update it quickly."},
+  {q:'Can someone set AI up for my business?',a:"Yes — that's exactly what our free business AI audit is for. We can review your business, identify the best AI opportunities, recommend the right tools, and help you get set up properly. Use the 'Request a free AI audit' button on this page."},
+];
+
+const readinessQs=['Do you answer the same customer questions repeatedly?','Do you spend hours every week writing emails or messages?','Do you create social media or marketing content?','Do you manage bookings, quotes, or admin manually?','Do you have a business website?','Do you use online forms or spreadsheets in your work?','Do you have any written processes or templates in place?','Would saving 5+ hours per week make a real difference to your business?'];
+
+const aiSearchResponses={taxi:{title:'🚕 AI for taxi companies',items:['Reply to customer complaints professionally','Write driver notices and announcements','Draft tender and contract documents','Create FAQ pages for your website','Generate social media posts']},airbnb:{title:'🏠 AI for Airbnb hosts',items:['Write guest welcome messages','Reply to reviews professionally','Improve your listing description','Create a local area guide','Draft cleaning checklists']},invoice:{title:'📋 AI for invoices and admin',items:['Generate professional invoice wording','Create payment terms templates','Write polite payment reminder emails','Draft quote and estimate letters']},email:{title:'✉️ AI for email writing',items:['Draft professional emails in seconds','Reply to complaints calmly and clearly','Follow up on unpaid invoices','Write cold outreach emails','Reply to job applications']},customer:{title:'💬 AI for customer replies',items:['Reply to complaints professionally','Write FAQ answers','Draft apology emails','Respond to negative reviews','Handle refund requests']},social:{title:'📱 AI for social media',items:['Write captions for Instagram and Facebook','Plan a weekly content calendar','Generate hashtag ideas','Write LinkedIn posts','Create promotional announcements']},website:{title:'🌐 AI for websites',items:['Write homepage copy','Create service descriptions','Write About Us pages','Generate FAQ content','Improve existing page copy']}};
+
+let finderAnswers={task:'',skill:'',budget:'',priority:''};
+let readinessAnswers=new Array(readinessQs.length).fill(null);
+
+function selectHeroPill(el){el.classList.toggle('selected');const s=document.querySelectorAll('.hero-pill.selected');const r=document.getElementById('hero-result');if(s.length>0){r.style.display='flex';document.getElementById('hero-result-text').textContent=`Recommended: ${Math.min(3,s.length+2)} beginner-friendly AI tools matched`;}else r.style.display='none';}
+
+function showUseCase(key){document.querySelectorAll('.cat-card').forEach(c=>c.classList.remove('active'));document.querySelector('[data-cat="'+key+'"]')?.classList.add('active');const d=useCaseData[key];if(!d)return;const panel=document.getElementById('use-case-panel');panel.innerHTML=`<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><span style="font-size:2rem">${d.emoji}</span><div><h3 style="margin-bottom:2px">${d.title}</h3><p style="font-size:.85rem;margin:0">${d.intro}</p></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:20px"><div><h4 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-light);margin-bottom:12px">AI can help with:</h4><div class="use-case-tags">${d.tasks.map(t=>`<span class="use-case-tag">${t}</span>`).join('')}</div></div><div><h4 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-light);margin-bottom:12px">Best starting tools:</h4><div class="tool-chips">${d.tools.map(t=>`<span class="tool-chip">${t}</span>`).join('')}</div><div class="trust-box mt-4"><span>💡</span><p style="margin:0;font-size:.83rem;color:var(--green)"><strong>Quick tip:</strong> ${d.tip}</p></div></div></div><div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#tool-finder" class="btn btn-primary btn-sm">Find tools for this →</a><a href="#calculator" class="btn btn-secondary btn-sm">Calculate my savings</a></div>`;panel.classList.add('visible');setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'nearest'}),100);}
+
+function handleAISearch(val){const v=val.toLowerCase();const result=document.getElementById('ai-search-result');let match=null;for(const[key,data]of Object.entries(aiSearchResponses)){if(v.includes(key)){match=data;break;}}if(!match&&v.length>3){match={title:'🤔 Here are some popular starting points',items:['Writing emails and messages','Replying to customers professionally','Creating social media content','Admin and document templates','Researching and summarising information']};}if(match){result.innerHTML=`<h4>${match.title}</h4><ul>${match.items.map(i=>`<li>${i}</li>`).join('')}</ul><p style="margin-top:8px;font-size:.8rem"><a href="#use-cases" style="color:var(--blue)">Browse all business types →</a></p>`;result.classList.add('visible');}else result.classList.remove('visible');}
+
+function selectFinderOpt(el,key,val){el.closest('.finder-options').querySelectorAll('.finder-opt').forEach(o=>o.classList.remove('selected'));el.classList.add('selected');finderAnswers[key]=val;}
+function finderNext(step){document.querySelectorAll('.finder-step').forEach(s=>s.classList.remove('active'));document.getElementById('finder-step-'+step).classList.add('active');for(let i=0;i<=step;i++)document.getElementById('prog-'+i).classList.add('done');}
+function finderBack(step){document.querySelectorAll('.finder-step').forEach(s=>s.classList.remove('active'));document.getElementById('finder-step-'+step).classList.add('active');}
+function showRecommendation(){document.querySelectorAll('.finder-step').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.finder-progress-bar').forEach(b=>b.classList.add('done'));const recs=getRecommendations();const panel=document.getElementById('recommendation-panel');document.getElementById('rec-tools').innerHTML=recs.map(r=>`<div class="rec-tool"><div class="rec-tool-info"><h4>${r.label}: ${r.name} ${r.aff?'⭐':''}</h4><p>${r.reason}</p></div><div class="rec-tool-btns"><a href="#" class="btn btn-primary btn-sm" onclick="return false">Try ${r.name} →</a><a href="#compare" class="btn btn-secondary btn-sm">Read review</a></div></div>`).join('');panel.classList.add('visible');}
+
+function getRecommendations(){const{task,skill,budget}=finderAnswers;let recs=[{label:'Best overall',name:'ChatGPT',reason:`A solid all-rounder for ${task||'most tasks'} — the free version is genuinely capable.`,aff:true},{label:'Best for careful writing',name:'Claude',reason:`More thoughtful and measured output, great for ${task||'business writing'}.`,aff:true}];if(task.includes('Image'))recs.push({label:'Best for images',name:'Canva AI',reason:'No design skills needed. Great templates and AI image generation built in.',aff:true});else if(task.includes('automation')||task.includes('Admin'))recs.push({label:'Best for automation',name:'Zapier',reason:'Connect all your apps and automate repetitive workflows — no coding needed.',aff:true});else if(task.includes('Research'))recs.push({label:'Best for research',name:'Perplexity',reason:'Always cites sources — ideal for research and fact-checking work.',aff:false});else if(task.includes('Video'))recs.push({label:'Best for video',name:'Runway',reason:'Impressive AI video generation — free tier available to try.',aff:false});else recs.push({label:'Best free option',name:'Google Gemini',reason:'Free and integrates with Google Docs, Gmail, and Drive — great if you already use Google.',aff:false});return recs;}
+
+function resetFinder(){finderAnswers={task:'',skill:'',budget:'',priority:''};document.getElementById('recommendation-panel').classList.remove('visible');document.querySelectorAll('.finder-progress-bar').forEach(b=>b.classList.remove('done'));document.getElementById('prog-0').classList.add('done');document.querySelectorAll('.finder-step').forEach(s=>s.classList.remove('active'));document.getElementById('finder-step-0').classList.add('active');document.querySelectorAll('.finder-opt').forEach(o=>o.classList.remove('selected'));}
+
+
+/* ── CURRENCY AUTO-DETECT ─────────────────────────────────────────
+   Detects visitor's likely region from browser locale.
+   Shows USD / GBP / EUR price first based on region.
+   Falls back to USD if locale undetected.
+   No API calls, no tracking — purely client-side browser locale.
+   ──────────────────────────────────────────────────────────────── */
+const userCurrency = (function(){
+  try {
+    const locale = navigator.language || navigator.languages[0] || 'en-US';
+    const lang = locale.toLowerCase();
+    if(lang.startsWith('en-gb') || lang === 'en-ie' || lang === 'cy' || lang === 'gd') return 'gbp';
+    if(lang.startsWith('en-au') || lang.startsWith('en-nz') || lang.startsWith('en-ca')) return 'usd';
+    // EU country codes
+    const euLocales = ['de','fr','es','it','nl','pt','pl','sv','da','fi','nb','ro','hu','cs','sk','hr','bg','el','lv','lt','et','sl','mt','ga','lb'];
+    if(euLocales.some(eu => lang.startsWith(eu))) return 'eur';
+    // Default to USD for en-US and anything else
+    return 'usd';
+  } catch(e){ return 'usd'; }
+})();
+
+function formatPrice(t){
+  if(!t.pricing) return t.price || 'Check site';
+  const p = t.pricing;
+  if(p.flat) return p.usd; // e.g. "Included in M365" — same everywhere
+  const primary = p[userCurrency] || p.usd;
+  const free = p.free ? 'Free / ' : '';
+  // Build secondary display (other two currencies, smaller)
+  const others = [];
+  if(userCurrency !== 'usd' && p.usd) others.push(p.usd);
+  if(userCurrency !== 'gbp' && p.gbp) others.push(p.gbp);
+  if(userCurrency !== 'eur' && p.eur) others.push(p.eur);
+  const secondary = others.length ? others.join(' · ') : '';
+  return {primary: free + primary, secondary};
+}
+
+const toolSVGs = {
+  'ChatGPT': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPT custom icon"><rect width="52" height="52" rx="14" fill="#0F766E"/><circle cx="26" cy="26" r="15" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.9"/><circle cx="26" cy="26" r="5" fill="#FFFFFF" opacity="0.25"/><text x="26" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">G</text></svg>`,
+  'Claude': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude custom icon"><rect width="52" height="52" rx="14" fill="#C15F3C"/><path d="M14 36 C19 16 33 16 38 36" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.28"/><text x="26" y="33" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="600" font-style="italic" fill="#FFFFFF">C</text></svg>`,
+  'Grammarly': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grammarly custom icon"><rect width="52" height="52" rx="14" fill="#12A37F"/><path d="M15 27 L23 35 L38 18" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">G</text></svg>`,
+  'Canva AI': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Canva custom icon"><rect width="52" height="52" rx="14" fill="#00AFC1"/><path d="M14 36 C19 15 34 15 39 36" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.25"/><text x="26" y="33" text-anchor="middle" font-family="Georgia, serif" font-size="27" font-weight="700" fill="#FFFFFF">C</text></svg>`,
+  'Zapier': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zapier custom icon"><rect width="52" height="52" rx="14" fill="#FF4A00"/><path d="M29 8 L15 29 H25 L22 44 L38 21 H28 Z" fill="#FFFFFF" opacity="0.25"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">Z</text></svg>`,
+  'Google Gemini': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Gemini custom icon"><rect width="52" height="52" rx="14" fill="#1A73E8"/><path d="M26 8 L30 22 L44 26 L30 30 L26 44 L22 30 L8 26 L22 22 Z" fill="#FFFFFF" opacity="0.9"/><circle cx="38" cy="14" r="3" fill="#FFFFFF" opacity="0.35"/><circle cx="14" cy="38" r="2.5" fill="#FFFFFF" opacity="0.25"/></svg>`,
+  'Microsoft Copilot': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Microsoft Copilot custom icon"><rect width="52" height="52" rx="14" fill="#0078D4"/><circle cx="21" cy="26" r="11" fill="#FFFFFF" opacity="0.24"/><circle cx="31" cy="26" r="11" fill="#FFFFFF" opacity="0.24"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">Co</text></svg>`,
+  'Make': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Make custom icon"><rect width="52" height="52" rx="14" fill="#6D00CC"/><circle cx="17" cy="17" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="26" cy="17" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="35" cy="17" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="17" cy="26" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="35" cy="26" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="17" cy="35" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="26" cy="35" r="3" fill="#FFFFFF" opacity="0.3"/><circle cx="35" cy="35" r="3" fill="#FFFFFF" opacity="0.3"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">M</text></svg>`,
+  'Perplexity': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Perplexity custom icon"><rect width="52" height="52" rx="14" fill="#1FB8CD"/><rect x="14" y="14" width="24" height="24" rx="6" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.32"/><path d="M14 26 H38 M26 14 V38" stroke="#FFFFFF" stroke-width="3" opacity="0.22" stroke-linecap="round"/><text x="26" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">P</text></svg>`,
+  'Notion AI': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Notion AI custom icon"><rect width="52" height="52" rx="14" fill="#191919"/><rect x="15" y="11" width="22" height="30" rx="5" fill="#FFFFFF" opacity="0.15"/><path d="M20 20 H32 M20 26 H31 M20 32 H28" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" opacity="0.3"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">N</text></svg>`,
+  'Runway': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Runway custom icon"><rect width="52" height="52" rx="14" fill="#E40171"/><path d="M20 15 L39 26 L20 37 Z" fill="#FFFFFF" opacity="0.26"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">R</text></svg>`,
+  'ElevenLabs': `<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ElevenLabs custom icon"><rect width="52" height="52" rx="14" fill="#0F172A"/><rect x="14" y="15" width="4" height="22" rx="2" fill="#FFFFFF" opacity="0.25"/><rect x="22" y="10" width="4" height="32" rx="2" fill="#FFFFFF" opacity="0.2"/><rect x="30" y="15" width="4" height="22" rx="2" fill="#FFFFFF" opacity="0.25"/><rect x="38" y="20" width="4" height="12" rx="2" fill="#FFFFFF" opacity="0.18"/><text x="26" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="800" fill="#FFFFFF">11</text></svg>`,
+};
+
+function buildToolsGrid(){
+  document.getElementById('tools-grid').innerHTML=toolsData.map(t=>{
+    const priceData = formatPrice(t);
+    const primaryPrice = typeof priceData === 'object' ? priceData.primary : priceData;
+    const secondaryPrice = typeof priceData === 'object' && priceData.secondary ? priceData.secondary : '';
+    const priceHTML = secondaryPrice
+      ? `<div class="tool-price">${primaryPrice}</div>
+         <div class="tool-price-alt" title="Approximate prices in other currencies">${secondaryPrice}</div>`
+      : `<div class="tool-price">${primaryPrice}</div>`;
+    return `<div class="tool-card" data-filters="${t.filters.join(' ')}">
+      <div class="tool-card-head">
+        <div style="display:flex;align-items:center;gap:12px">
+          ${toolSVGs[t.name] ? '<div style="width:52px;height:52px;flex-shrink:0">'+toolSVGs[t.name]+'</div>' : '<div class="tool-logo" style="background:'+t.bg+'20;color:'+t.bg+'">'+t.emoji+'</div>'}
+          <div>
+            <h3 style="color:var(--text)">${t.name} ${t.aff?'<span style="font-size:.7rem;color:var(--amber)">⭐ Affiliate</span>':''}</h3>
+            ${priceHTML}
+          </div>
+        </div>
+        <span class="badge badge-blue">${t.level}</span>
+      </div>
+      <p><strong style="color:var(--text);font-size:.83rem">Best for:</strong> ${t.best}</p>
+      <div class="tool-card-tags">${t.filters.map(f=>`<span class="badge badge-teal">${f}</span>`).join('')}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+        <div style="background:var(--green-light);border-radius:6px;padding:8px;font-size:.78rem"><strong style="color:var(--green);display:block;margin-bottom:2px">✅ Pro</strong>${t.pros}</div>
+        <div style="background:var(--red-light);border-radius:6px;padding:8px;font-size:.78rem"><strong style="color:var(--red);display:block;margin-bottom:2px">⚠️ Con</strong>${t.cons}</div>
+      </div>
+      <div class="tool-card-footer">
+        <a href="#" onclick="return false" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">Try tool →</a>
+        <a href="#" onclick="return false" class="btn btn-secondary btn-sm">Review</a>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+        <span class="last-checked">Last checked: ${t.checked}</span>
+        <span class="report-link" onclick="alert('Thanks! We will review this shortly.')">Report outdated info</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+function filterTools(filter,btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.tool-card').forEach(card=>{if(filter==='all'||card.dataset.filters.includes(filter))card.classList.remove('hidden');else card.classList.add('hidden');});}
+
+function buildCompareCards(){document.getElementById('compare-cards').innerHTML=compareCardsData.map(c=>`<div class="compare-card"><div class="compare-card-top"><span class="badge ${c.badge}">${c.difficulty}</span><span class="last-checked">Last checked: ${c.checked}</span></div><h3>${c.title}</h3><p>${c.desc}</p><div class="compare-meta"><span class="badge badge-teal">Best for: ${c.bestFor}</span></div><div style="display:flex;justify-content:space-between;align-items:center"><a href="#" onclick="return false" class="btn btn-outline-blue btn-sm">Compare tools →</a><span class="report-link" onclick="alert('Thanks! We will review this shortly.')">Report outdated info</span></div></div>`).join('');}
+
+function updateCalc(){const emails=+document.getElementById('c-emails').value,admin=+document.getElementById('c-admin').value,customer=+document.getElementById('c-customer').value,social=+document.getElementById('c-social').value,rate=+document.getElementById('c-rate').value;document.getElementById('v-emails').textContent=emails+'h';document.getElementById('v-admin').textContent=admin+'h';document.getElementById('v-customer').textContent=customer+'h';document.getElementById('v-social').textContent=social+'h';document.getElementById('v-rate').textContent='£'+rate;const total=emails+admin+customer+social;const savedW=(total*.30).toFixed(1);const savedM=(savedW*4.3).toFixed(0);const valM=(savedM*rate).toFixed(0);const valY=(valM*12).toFixed(0);document.getElementById('r-hours').textContent=savedW+'h';document.getElementById('r-monthly-hours').textContent=savedM+'h';document.getElementById('r-value').textContent='£'+Number(valM).toLocaleString();document.getElementById('r-annual').textContent='£'+Number(valY).toLocaleString();let suggested=[];if(emails>2||customer>2)suggested.push('ChatGPT','Claude');if(social>2)suggested.push('Canva');if(admin>4)suggested.push('Zapier');if(!suggested.length)suggested=['ChatGPT','Gemini'];document.getElementById('calc-tools').innerHTML=[...new Set(suggested)].map(t=>`<span class="tool-chip" style="background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.2)">${t}</span>`).join('');}
+
+function buildReadiness(){document.getElementById('readiness-questions').innerHTML=readinessQs.map((q,i)=>`<div class="readiness-q" id="rq-${i}"><p>${i+1}. ${q}</p><div class="toggle-wrap"><button class="toggle-btn yes" onclick="setReadiness(${i},true,this)">Yes</button><button class="toggle-btn no" onclick="setReadiness(${i},false,this)">No</button></div></div>`).join('');}
+
+function setReadiness(idx,val,btn){readinessAnswers[idx]=val;document.getElementById('rq-'+idx).querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');updateScore();}
+
+function updateScore(){const answered=readinessAnswers.filter(a=>a!==null).length;const yeses=readinessAnswers.filter(a=>a===true).length;const score=answered>0?Math.round((yeses/readinessQs.length)*100):0;document.getElementById('score-num').textContent=score+' / 100';document.getElementById('score-bar-fill').style.width=score+'%';if(answered>=4){const result=document.getElementById('score-result');const cta=document.getElementById('readiness-cta');let band,color,bg,advice;if(score<=30){band='Not ready yet';color='var(--red)';bg='var(--red-light)';advice="Start with reading our AI basics guide. Once you understand what AI can do, you'll spot the opportunities in your own work.";}else if(score<=60){band='Some AI opportunity';color='var(--amber)';bg='var(--amber-light)';advice="You have some tasks that AI could help with. A good starting point is ChatGPT free — try it for email drafting this week.";}else if(score<=80){band='Strong AI opportunity';color='var(--blue)';bg='var(--blue-light)';advice="AI could make a real difference for you. We'd recommend starting with ChatGPT or Claude and using our tool finder to get a full recommendation.";}else{band='Very AI-ready!';color='var(--teal)';bg='var(--teal-light)';advice="You're in a great position to benefit from AI significantly. Consider a full AI setup — our free business audit can map this out for you.";}result.innerHTML=`<div style="background:${bg};border-radius:10px;padding:16px 20px;border:1.5px solid ${color}30"><strong style="color:${color};font-size:1rem">${score}/100 — ${band}</strong><p style="margin-top:6px;font-size:.88rem;color:var(--text)">${advice}</p></div>`;result.classList.add('visible');cta.style.display='inline-flex';}}
+
+function buildNews(){document.getElementById('news-grid').innerHTML=newsData.map(n=>`<div class="card news-card"><div class="news-card-img" style="background:${n.color}"></div><div class="news-meta"><span class="badge ${n.tagClass}">${n.tag}</span></div><h3>${n.title}</h3><p>${n.summary}</p><div class="news-impact"><strong>What this means for you:</strong>${n.impact}</div><a href="#" onclick="return false" class="btn btn-secondary btn-sm mt-4">Read the guide →</a></div>`).join('');}
+
+function buildFAQ(){document.getElementById('faq-list').innerHTML=faqData.map((f,i)=>`<div class="faq-item" id="faq-${i}"><div class="faq-q" onclick="toggleFAQ(${i})"><h4>${f.q}</h4><span class="faq-icon">+</span></div><div class="faq-a"><p>${f.a}</p></div></div>`).join('');}
+function toggleFAQ(i){document.getElementById('faq-'+i).classList.toggle('open');}
+
+function handleEmailSignup(){const email=document.getElementById('email-input').value;if(!email||!email.includes('@')){alert('Please enter a valid email address.');return;}document.getElementById('email-success').style.display='block';document.getElementById('email-input').value='';/* TODO: Connect to Mailchimp / ConvertKit / Klaviyo */}
+
+document.getElementById('hamburger').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('open');});
+function closeMobileMenu(){document.getElementById('mobile-menu').classList.remove('open');}
+
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+
+/* Update currency note label after detection */
+document.addEventListener('DOMContentLoaded', function(){
+  const label = document.getElementById('currency-label');
+  if(label){
+    const labels = {usd:'USD ($)', gbp:'GBP (£)', eur:'EUR (€)'};
+    label.textContent = labels[userCurrency] || 'USD ($)';
+  }
+});
+buildToolsGrid();buildCompareCards();buildNews();buildFAQ();buildReadiness();updateCalc();
+setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));},200);
+
+/* ---- COOKIE CONSENT ---- */
+function setCookie(n,v,d){const e=new Date();e.setTime(e.getTime()+(d*24*60*60*1000));document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/';}
+function getCookie(n){const c=document.cookie.split(';');for(let i=0;i<c.length;i++){let x=c[i].trim();if(x.startsWith(n+'='))return x.substring(n.length+1);}return null;}
+function acceptCookies(all){setCookie('peai_consent',all?'all':'essential',365);document.getElementById('cookie-banner').style.display='none';if(all){/* TODO: initialise Google Analytics / AdSense tracking here */console.log('Full tracking consent given');}}
+function openPrivacy(){document.getElementById('privacy-modal').style.display='flex';}
+function closePrivacy(){document.getElementById('privacy-modal').style.display='none';}
+window.addEventListener('load',()=>{if(!getCookie('peai_consent')){setTimeout(()=>{document.getElementById('cookie-banner').style.display='flex';},1200);}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePrivacy();});
+</script>
+
+<!-- ============================================================
+     COOKIE CONSENT BANNER
+     Required for GDPR compliance and Google AdSense approval
+     ============================================================ -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:2px solid #e4e1d8;box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:18px 24px;font-family:'DM Sans',-apple-system,sans-serif;">
+  <div style="max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <div style="flex:1;min-width:260px;">
+      <strong style="font-size:.92rem;color:#1a1916;display:block;margin-bottom:4px">🍪 We use cookies</strong>
+      <p style="font-size:.82rem;color:#6b6860;margin:0;line-height:1.5;">We use cookies to improve your experience, show relevant ads, and understand how people use AI Tool 4 Me. Some links are affiliate links — <button onclick="openPrivacy()" style="background:none;border:none;color:#2563eb;cursor:pointer;font-size:.82rem;padding:0;font-family:inherit;text-decoration:underline;">read our full Privacy Policy</button>.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;">
+      <button onclick="acceptCookies(false)" style="padding:9px 18px;border-radius:8px;border:1.5px solid #e4e1d8;background:transparent;color:#6b6860;font-size:.83rem;font-weight:500;cursor:pointer;font-family:inherit;transition:all .18s;" onmouseover="this.style.borderColor='#2563eb';this.style.color='#2563eb'" onmouseout="this.style.borderColor='#e4e1d8';this.style.color='#6b6860'">Essential only</button>
+      <button onclick="acceptCookies(true)" style="padding:9px 20px;border-radius:8px;border:none;background:#2563eb;color:#fff;font-size:.83rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .18s;box-shadow:0 2px 8px rgba(37,99,235,.3);" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">Accept all cookies ✓</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PRIVACY POLICY MODAL
+     Required for AdSense approval — covers data, cookies, affiliates
+     ============================================================ -->
+<div id="privacy-modal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);">
+  <div style="background:#fff;border-radius:16px;max-width:720px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.25);font-family:'DM Sans',-apple-system,sans-serif;">
+    <div style="position:sticky;top:0;background:#fff;border-bottom:1px solid #e4e1d8;padding:20px 28px;display:flex;justify-content:space-between;align-items:center;border-radius:16px 16px 0 0;">
+      <strong style="font-size:1.1rem;color:#1a1916;">Privacy Policy — AI Tool 4 Me</strong>
+      <button onclick="closePrivacy()" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:#6b6860;padding:4px 8px;border-radius:6px;transition:background .15s;" onmouseover="this.style.background='#f1efe9'" onmouseout="this.style.background='none'">×</button>
+    </div>
+    <div style="padding:28px;font-size:.88rem;color:#4b4945;line-height:1.8;">
+      <p style="font-size:.8rem;color:#9c9a94;margin-bottom:20px;">Last updated: June 2026 · Applies to aitool4me.com (and .com)</p>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">1. Who we are</h3>
+      <p style="margin-bottom:20px;">AI Tool 4 Me is a UK-based website that helps everyday people and small business owners understand and compare AI tools. We are not an AI company — we are an independent guide and comparison service. For privacy queries, contact us at: <strong>privacy@aitool4me.com</strong> <!-- TODO: update with real email --></p>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">2. What data we collect</h3>
+      <p style="margin-bottom:8px;">We may collect the following:</p>
+      <ul style="margin:0 0 20px 18px;">
+        <li style="margin-bottom:5px;"><strong>Email address</strong> — if you sign up for our newsletter (voluntary)</li>
+        <li style="margin-bottom:5px;"><strong>Usage data</strong> — pages visited, time spent, clicks (via Google Analytics, if you accept cookies)</li>
+        <li style="margin-bottom:5px;"><strong>Cookie data</strong> — see Section 4 below</li>
+        <li style="margin-bottom:5px;"><strong>Enquiry data</strong> — if you contact us or request a business AI audit</li>
+      </ul>
+      <p style="margin-bottom:20px;">We do <strong>not</strong> collect payment information, sell your data to third parties, or use your data for profiling.</p>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">3. How we use your data</h3>
+      <ul style="margin:0 0 20px 18px;">
+        <li style="margin-bottom:5px;">To send you the newsletter you signed up for (you can unsubscribe anytime)</li>
+        <li style="margin-bottom:5px;">To improve the website based on how people use it</li>
+        <li style="margin-bottom:5px;">To show relevant advertisements via Google AdSense (with your consent)</li>
+        <li style="margin-bottom:5px;">To respond to business enquiries</li>
+      </ul>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">4. Cookies</h3>
+      <p style="margin-bottom:10px;">We use two categories of cookies:</p>
+      <div style="background:#f8f7f4;border-radius:8px;padding:14px 18px;margin-bottom:20px;">
+        <p style="margin-bottom:8px;"><strong style="color:#1a1916;">Essential cookies</strong> — always active. Store your cookie preference so we don't ask every visit. No tracking.</p>
+        <p style="margin:0;"><strong style="color:#1a1916;">Analytics &amp; advertising cookies</strong> — only set with your consent. Used by Google Analytics (usage data) and Google AdSense (relevant ads). You can withdraw consent at any time by clearing your cookies or using our "Essential only" option.</p>
+      </div>
+      <p style="margin-bottom:20px;">We use Google AdSense to display advertisements. Google may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalised advertising at <a href="https://www.google.com/settings/ads" target="_blank" style="color:#2563eb;">google.com/settings/ads</a>.</p>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">5. Affiliate links</h3>
+      <p style="margin-bottom:20px;">Some links on AI Tool 4 Me are affiliate links. If you click a link and sign up to a service, we may earn a commission at no extra cost to you. We only recommend tools we have genuinely assessed as useful. Affiliate relationships do not influence our editorial recommendations. All affiliate links are clearly labelled.</p>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">6. Third-party services</h3>
+      <ul style="margin:0 0 20px 18px;">
+        <li style="margin-bottom:5px;"><strong>Google AdSense</strong> — advertising (with consent). <a href="https://policies.google.com/privacy" target="_blank" style="color:#2563eb;">Google Privacy Policy</a></li>
+        <li style="margin-bottom:5px;"><strong>Google Analytics</strong> — website analytics (with consent)</li>
+        <li style="margin-bottom:5px;"><strong>Email provider</strong> (Mailchimp / ConvertKit — to be confirmed) — newsletter delivery</li>
+        <li style="margin-bottom:5px;"><strong>Google Fonts</strong> — font loading (may log your IP; no personal data stored)</li>
+      </ul>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">7. Your rights (UK GDPR)</h3>
+      <p style="margin-bottom:8px;">As a UK resident you have the right to:</p>
+      <ul style="margin:0 0 20px 18px;">
+        <li style="margin-bottom:4px;">Access the personal data we hold about you</li>
+        <li style="margin-bottom:4px;">Request correction or deletion of your data</li>
+        <li style="margin-bottom:4px;">Withdraw consent for marketing or analytics at any time</li>
+        <li style="margin-bottom:4px;">Lodge a complaint with the ICO at <a href="https://ico.org.uk" target="_blank" style="color:#2563eb;">ico.org.uk</a></li>
+      </ul>
+      <p style="margin-bottom:20px;">To exercise any right, email: <strong>privacy@aitool4me.com</strong></p>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">8. Data retention</h3>
+      <p style="margin-bottom:20px;">Newsletter subscribers: retained until you unsubscribe. Analytics data: retained for 14 months (Google Analytics default). Enquiry data: retained for 2 years or until you request deletion.</p>
+
+      <h3 style="font-size:1rem;color:#1a1916;margin:0 0 8px;font-family:'DM Sans',sans-serif;">9. Changes to this policy</h3>
+      <p style="margin-bottom:24px;">We may update this policy as the site grows. The date at the top will always reflect the latest version. Significant changes will be noted in our newsletter.</p>
+
+      <div style="background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:14px 18px;">
+        <p style="margin:0;font-size:.82rem;color:#1e40af;"><strong>Plain English summary:</strong> We don't sell your data. We use cookies for ads and analytics only if you say yes. Affiliate links are always labelled. You can email us to delete anything we hold about you.</p>
+      </div>
+    </div>
+    <div style="padding:20px 28px;border-top:1px solid #e4e1d8;display:flex;gap:10px;justify-content:flex-end;">
+      <button onclick="acceptCookies(false);closePrivacy();" style="padding:10px 20px;border-radius:8px;border:1.5px solid #e4e1d8;background:transparent;color:#6b6860;font-size:.85rem;font-weight:500;cursor:pointer;font-family:inherit;">Essential cookies only</button>
+      <button onclick="acceptCookies(true);closePrivacy();" style="padding:10px 22px;border-radius:8px;border:none;background:#2563eb;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;font-family:inherit;box-shadow:0 2px 8px rgba(37,99,235,.3);">Accept all &amp; close</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
